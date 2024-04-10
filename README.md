@@ -1,23 +1,34 @@
+
+![Logo](https://upload.wikimedia.org/wikipedia/commons/1/15/Formula_E_Wordmark_full_colour.png)
+
+
 # Mahindra Challenge 2024 | FIAP
 
 Welcome to the Formula E Interactive Website Project! This project aims to create an engaging online platform for Formula E fans, featuring interactive elements and gamification to increase interaction and popularity of the sport.
-
 ## Features
 
-1. **Circuits and Races:** Users can explore detailed information about different racing circuits and simulate virtual races.
+- **Circuits and Races:** Users can explore detailed information about different racing circuits and simulate virtual races.
 
-2. **Statistics and Standings:** Real-time statistics are provided for recent races, including pilot and team scores, as well as overall standings.
+- **Statistics and Standings:** Real-time statistics are provided for recent races, including pilot and team scores, as well as overall standings.
 
-3. **Car Exploration:** Users can virtually explore participating cars, accessing details on technical specifications and performance history.
+- **Car Exploration:** Users can virtually explore participating cars, accessing details on technical specifications and performance history.
 
-4. **Interactive Dashboards:** Interactive dashboards are included for dynamically visualizing data and information in an engaging manner.
+- **Interactive Dashboards:** Interactive dashboards are included for dynamically visualizing data and information in an engaging manner.
 
-5. **Access to Past Races:** Past race broadcasts are available for users to re-watch at their convenience.
+- **Access to Past Races:** Past race broadcasts are available for users to re-watch at their convenience.
+## Lessons Learned
 
-## Getting Started
+What did you learn while building this project? What challenges did you face and how did you overcome them?
 
-To get started with the Formula E Interactive Website, simply visit [link] and explore the various features available.
+
+## Tech Stack
+
+**Client:** React, TailwindCSS
+
+**Server:** Java, Spring Boot
+
 
 ## License
 
-This project is licensed under the [License Name] License - see the [LICENSE.md](LICENSE.md) file for details.
+[MIT](LICENSE.md)
+
