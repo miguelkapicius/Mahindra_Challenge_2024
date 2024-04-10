@@ -1,15 +1,23 @@
 # Mahindra Challenge 2024 | FIAP
 
-This project aims to develop a website dedicated to Formula E, the world-class electric car racing category. The main goal is to increase visibility and interaction with the public, offering an engaging and informative online platform for Formula E fans and enthusiasts.
+Welcome to the Formula E Interactive Website Project! This project aims to create an engaging online platform for Formula E fans, featuring interactive elements and gamification to increase interaction and popularity of the sport.
 
-## Features:
+## Features
 
-- Circuits and Races: Provide detailed information about different racing circuits and allow users to simulate virtual races.
+1. **Circuits and Races:** Users can explore detailed information about different racing circuits and simulate virtual races.
 
-- Statistics and Standings: Display real-time statistics on recent races, pilot and team scores, as well as overall standings.
+2. **Statistics and Standings:** Real-time statistics are provided for recent races, including pilot and team scores, as well as overall standings.
 
-- Car Exploration: Enable users to virtually explore participating cars, with details on technical specifications and performance history.
+3. **Car Exploration:** Users can virtually explore participating cars, accessing details on technical specifications and performance history.
 
-- Interactive Dashboards: Include interactive dashboards for dynamically visualizing data and information in an engaging manner.
+4. **Interactive Dashboards:** Interactive dashboards are included for dynamically visualizing data and information in an engaging manner.
 
-- Access to Past Races: Make past race broadcasts available so that the audience can re-watch them.
+5. **Access to Past Races:** Past race broadcasts are available for users to re-watch at their convenience.
+
+## Getting Started
+
+To get started with the Formula E Interactive Website, simply visit [link] and explore the various features available.
+
+## License
+
+This project is licensed under the [License Name] License - see the [LICENSE.md](LICENSE.md) file for details.
