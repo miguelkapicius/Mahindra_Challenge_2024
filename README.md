@@ -1,5 +1,5 @@
 
-![Logo](https://upload.wikimedia.org/wikipedia/commons/1/15/Formula_E_Wordmark_full_colour.png)
+![Logo](https://1000logos.net/wp-content/uploads/2020/04/Mahindra-Logo-2012.png)
 
 
 # Mahindra Challenge 2024 | FIAP
