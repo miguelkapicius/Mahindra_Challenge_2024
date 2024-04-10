@@ -30,5 +30,5 @@ What did you learn while building this project? What challenges did you face and
 
 ## License
 
-[MIT](https://github.com/miguelkapicius/Mahindra_Challenge_2024/blob/main/LICENSE.md)
+[MIT](LICENSE)
 
