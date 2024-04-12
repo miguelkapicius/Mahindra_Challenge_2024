@@ -23,9 +23,10 @@ What did you learn while building this project? What challenges did you face and
 
 ## Tech Stack
 
-**Client:** React, TailwindCSS
-
-**Server:** Java, Spring Boot
+ ![Flask](https://img.shields.io/badge/Flask-E51937.svg?style=for-the-badge&logo=flask&logoColor=white)&nbsp;
+ ![React](https://img.shields.io/badge/React-E51937.svg?style=for-the-badge&logo=react&logoColor=white)&nbsp;
+ ![React](https://img.shields.io/badge/Leaflet-E51937.svg?style=for-the-badge&logo=leaflet&logoColor=white)&nbsp;
+ 
 
 
 ## License
