@@ -1,5 +1,6 @@
 import { useContext, createContext, useState } from "react"
 import {CaretDoubleLeft, CaretDoubleRight} from '@phosphor-icons/react'
+import { NavLink } from "react-router-dom"
 
 const SidebarContext = createContext()
 
@@ -8,7 +9,7 @@ export default function Sidebar({ children }) {
   
   return (
     <aside className="h-screen w-max">
-      <nav className="h-full flex flex-col bg-zinc-900  shadow-sm">
+      <nav className="h-full flex flex-col bg-slate-900  shadow-sm">
         <div className="p-4 pb-2 flex justify-between items-center mb-4">
           <img
             src="/mahindra-logo.png"
@@ -43,7 +44,7 @@ export default function Sidebar({ children }) {
           >
             <div className="leading-4">
               <h4 className="font-semibold">Miguel Kapicius</h4>
-              <span className="text-xs text-slate-500">miguelkapicius@gmail.com</span>
+              <span className="text-xs text-indigo-700">miguelkapicius@gmail.com</span>
             </div>
           </div>
         </div>
@@ -52,19 +53,20 @@ export default function Sidebar({ children }) {
   )
 }
 
-export function SidebarItem({ icon, text, active, alert }) {
+export function SidebarItem({ icon, text, href, active, alert }) {
   const { expanded } = useContext(SidebarContext)
   
   return (
-    <li
+    <NavLink
+    to={href}
       className={`
         relative flex items-center py-2 px-3 my-1
         font-medium rounded-md cursor-pointer
         transition-colors group
         ${
           active
-            ? "bg-red-900"
-            : "hover:bg-red-800"
+            ? "bg-indigo-900"
+            : "hover:bg-indigo-800"
         }
     `}
     >
@@ -88,7 +90,7 @@ export function SidebarItem({ icon, text, active, alert }) {
         <div
           className={`
           absolute left-full rounded-md px-2 py-1 ml-6
-          bg-slate-800 text-sm
+          bg-indigo-900 text-sm
           invisible opacity-20 -translate-x-3 transition-all
           group-hover:visible group-hover:opacity-100 group-hover:translate-x-0
       `}
@@ -96,6 +98,6 @@ export function SidebarItem({ icon, text, active, alert }) {
           {text}
         </div>
       )}
-    </li>
+    </NavLink>
   )
 }
