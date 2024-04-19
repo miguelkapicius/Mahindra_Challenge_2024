@@ -61,20 +61,20 @@ export default function Sidebar({ children }) {
 // Definição do componente de item da barra lateral
 export function SidebarItem({ icon, text, href, alert }) {
   const { expanded } = useContext(SidebarContext)
-  const location = useLocation(); //Obtenha o objeto de localização atual
-  const isActive = location.pathname === href; // Verifique se a rota atual corresponde ao href do item
+  const location = useLocation(); // Obtém o objeto de localização atual do React Router
+  const isActive = location.pathname === href; // Verifica se a rota atual é igual ao href do item da barra lateral
   
   return (
     <NavLink
-    to={href}
+    to={href} // Define o destino do link com o atributo href
       className={`
         relative flex items-center py-2 px-3 my-1
         font-medium rounded-md cursor-pointer
         transition-colors group
         ${
           isActive
-            ? "bg-indigo-900"
-            : "hover:bg-indigo-800"
+            ? "bg-indigo-700" // Define a cor de fundo como indigo-700 se o item estiver ativo
+            : "hover:bg-indigo-900" // Define a cor de fundo como indigo-800 quando o item é destacado
         }
     `}
     >
