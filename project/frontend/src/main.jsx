@@ -6,15 +6,21 @@ import "./index.css";
 // Configurando o React Router
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import Home from "./routes/Home.jsx";
 import Rankings from "./routes/Rankings.jsx";
 import Races from "./routes/Races.jsx";
 import Statistics from "./routes/Statistics.jsx";
+import League from "./routes/League.jsx";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <App />,
         children: [
+            {
+                path: "/",
+                element: <Home />
+            },
             {
                 path: "/races",
                 element: <Races />,
@@ -27,6 +33,10 @@ const router = createBrowserRouter([
                 path: "/rankings",
                 element: <Rankings />,
             },
+            {
+                path: "/league",
+                element: <League />
+            }
         ],
     },
 ]);
