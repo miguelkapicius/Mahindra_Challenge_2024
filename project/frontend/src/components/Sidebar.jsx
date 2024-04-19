@@ -1,10 +1,15 @@
+// Importação dos módulos necessários do React
 import { useContext, createContext, useState } from "react"
 import {CaretDoubleLeft, CaretDoubleRight} from '@phosphor-icons/react'
-import { NavLink } from "react-router-dom"
+import { NavLink, useLocation } from "react-router-dom"
 
-const SidebarContext = createContext()
+// Criação e exportação do contexto da barra lateral
+const SidebarContext = createContext() 
 
+// Definição do componente da barra lateral
 export default function Sidebar({ children }) {
+
+  // Estado para controlar a expansão da barra lateral
   const [expanded, setExpanded] = useState(true)
   
   return (
@@ -53,8 +58,11 @@ export default function Sidebar({ children }) {
   )
 }
 
-export function SidebarItem({ icon, text, href, active, alert }) {
+// Definição do componente de item da barra lateral
+export function SidebarItem({ icon, text, href, alert }) {
   const { expanded } = useContext(SidebarContext)
+  const location = useLocation(); //Obtenha o objeto de localização atual
+  const isActive = location.pathname === href; // Verifique se a rota atual corresponde ao href do item
   
   return (
     <NavLink
@@ -64,7 +72,7 @@ export function SidebarItem({ icon, text, href, active, alert }) {
         font-medium rounded-md cursor-pointer
         transition-colors group
         ${
-          active
+          isActive
             ? "bg-indigo-900"
             : "hover:bg-indigo-800"
         }
