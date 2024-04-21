@@ -1,8 +1,11 @@
 
+document.title = 'E-Pit | Races'
 
 function Races() {
     return (
-            <h1>Races</h1>
+        <>
+        
+        </>
     );
 }
 

@@ -1,8 +1,11 @@
 
+document.title = 'E-Pit | Statistics'
 
 function Statistics() {
     return (
-        <h1>Stats</h1>
+        <>
+        
+        </>
     );
 }
 

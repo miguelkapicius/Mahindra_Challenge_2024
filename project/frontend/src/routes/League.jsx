@@ -1,7 +1,11 @@
 
+document.title = 'E-Pit | League'
+
 function League() {
     return (
-            <h1>League</h1>
+        <>
+        
+        </>
     );
 }
 
