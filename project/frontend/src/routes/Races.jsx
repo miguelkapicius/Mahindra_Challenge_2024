@@ -1,3 +1,5 @@
+import { Speedometer } from "../components/Speedometer";
+
 function Races() {
     return (
         <>
@@ -22,8 +24,8 @@ function Races() {
                         <article className="row-span-4 col-span-1 flex items-center justify-center">
                             bateria
                         </article>
-                        <article className="row-span-2 col-span-2 flex items-center justify-center">
-                            velocimetro
+                        <article className="row-span-2 col-span-2 container">
+                            <Speedometer />
                         </article>
                         <article className="row-span-2 col-span-1 flex items-center justify-center">
                             localização
