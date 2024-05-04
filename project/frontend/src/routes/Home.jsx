@@ -1,6 +1,5 @@
 import { BarChart } from "../components/BarChart";
 import Card from "../components/Card";
-import { RankingTableChart } from "../components/RankingTableChart";
 
 document.title = "E-Pit | Dashboard";
 
@@ -19,7 +18,6 @@ function Home() {
                 <Card style="col-span-3 row-span-4 hover:scale-105 p-6 bg-slate-900/40"></Card>
                 <Card style="col-span-3 row-span-4 hover:scale-105 p-6 bg-slate-900/40"></Card>
                 <Card style="col-span-2 row-span-12 hover:scale-105 p-6 bg-slate-900/40">
-                    <RankingTableChart />
                 </Card>
                 <Card style="col-span-6 row-span-8 hover:scale-105 p-6 bg-slate-900/40">
                     <BarChart />
