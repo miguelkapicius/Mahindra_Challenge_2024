@@ -34,10 +34,6 @@ function App() {
   
       // Define o título da página usando document.title
       document.title = "E-Pit | " + pageTitle || 'E-Pit';
-      const h1Element = document.getElementById('h1')
-      if(h1Element) {
-        h1Element.innerText = pageTitle
-      }
     }, [location.pathname]); // Atualiza o efeito sempre que a rota atual mudar
   
     return (
@@ -72,9 +68,8 @@ function App() {
                     />
                 </Sidebar>
             </section>
-            <section className="p-10 w-[100%] h-[90vh]">
+            <section className="p-10 w-full h-[90vh]">
                 {/* Titulo altera conforme a pagina que foi acessada */}
-                <h1 id="h1" className="text-3xl font-semibold mb-10" /> 
                 {/* Renderiza as paginas dinamicas */}
                 <Outlet /> 
             </section>

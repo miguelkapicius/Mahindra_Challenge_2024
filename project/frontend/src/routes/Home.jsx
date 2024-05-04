@@ -5,9 +5,13 @@ document.title = "E-Pit | Dashboard";
 function Home() {
     return (
         <>
+            <h1 className="text-3xl font-semibold mb-10">Dashboard</h1>
+
             <section className="grid h-full grid-cols-12 grid-rows-12 gap-5">
                 <Card style="col-span-3 row-span-4">
-                    <h5 className="mb-5 text-2xl font-bold tracking-tight">Ranking</h5>
+                    <h5 className="mb-5 text-2xl font-bold tracking-tight">
+                        Ranking
+                    </h5>
                     <p className="text-5xl font-bold">1335</p>
                 </Card>
                 <Card style="col-span-3 row-span-4"></Card>
