@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Chart } from "react-google-charts";
 
 function getRandomNumber() {
-  return Math.random() * 350;
+  return Math.floor(Math.random() * (350 - 200) + 200);
 }
 
 export function getData() {
@@ -17,8 +17,10 @@ export const options = {
   height: 150,
   redFrom: 300,
   redTo: 350,
+  redColor: '#e11d48',
   yellowFrom: 250,
   yellowTo: 300,
+  yellowColor: '#4f46e5',
   minorTicks: 3,
   max: 350,
   animation:{
