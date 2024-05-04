@@ -68,7 +68,7 @@ function App() {
                     />
                 </Sidebar>
             </section>
-            <section className="p-10 w-full h-[90vh]">
+            <section className="p-8 w-full h-[100vh]">
                 {/* Titulo altera conforme a pagina que foi acessada */}
                 {/* Renderiza as paginas dinamicas */}
                 <Outlet /> 
