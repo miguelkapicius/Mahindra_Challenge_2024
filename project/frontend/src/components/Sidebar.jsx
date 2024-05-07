@@ -80,7 +80,7 @@ export function SidebarItem({ icon, text, href, alert }) {
     >
       {icon}
       <span
-        className={`overflow-hidden transition-all w-0 2xl:${
+        className={`mobile:max-2xl:hidden 2xl:overflow-hidden transition-all w-0 2xl:${
           expanded ? "w-32 2xl:ml-3" : "w-0"
         }`}
       >
