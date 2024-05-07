@@ -7,7 +7,7 @@ function Home() {
     return (
         <>
 
-            <section className="grid h-max 2xl:h-full w-screen mobile:max-2xl:p-10 grid-cols-12 mobile:max-2xl:grid-cols-1 grid-rows-12 gap-5 flex-grow">
+            <section className="grid h-max 2xl:h-full w-screen mobile:max-2xl:p-6 grid-cols-12 mobile:max-2xl:grid-cols-1 grid-rows-12 gap-5 flex-grow">
 
                 <Card style="col-span-3 mobile:max-2xl:col-span-1 mobile:max-2xl:h-96 row-span-4 2xl:hover:scale-105 p-6 bg-slate-900/40">
                     <h5 className="mb-5 text-2xl font-bold tracking-tight">
