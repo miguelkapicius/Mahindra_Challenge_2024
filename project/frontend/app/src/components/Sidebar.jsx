@@ -34,25 +34,6 @@ export default function Sidebar({ children }) {
         <SidebarContext.Provider value={{ expanded }}>
           <ul className="xl:flex-1 xl:px-3 mobile:max-xl:flex mobile:max-xl:justify-center gap-4">{children}</ul>
         </SidebarContext.Provider>
-
-        <div className="border-t flex p-3 mobile:max-xl:hidden">
-          <img
-            src="https://ui-avatars.com/api/?background=c7d2fe&color=3730a3&bold=true"
-            alt=""
-            className="w-10 h-10 rounded-md"
-          />
-          <div
-            className={`
-              flex justify-between items-center
-              overflow-hidden transition-all ${expanded ? "w-32 ml-3" : "w-0"}
-          `}
-          >
-            <div className="leading-4">
-              <h4 className="font-semibold">Miguel Kapicius</h4>
-              <span className="text-xs text-indigo-700">miguelkapicius@gmail.com</span>
-            </div>
-          </div>
-        </div>
       </nav>
     </aside>
   )
