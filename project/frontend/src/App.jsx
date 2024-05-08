@@ -37,38 +37,38 @@ function App() {
     }, [location.pathname]); // Atualiza o efeito sempre que a rota atual mudar
   
     return (
-        <div className="flex mobile:max-2xl:flex-col-reverse">
-            <section className="mobile:max-2xl:">
+        <div className="flex mobile:max-xl:flex-col-reverse">
+            <section className="mobile:max-xl:">
                 <Sidebar>
                     <SidebarItem
-                        icon={<SquaresFour size={32} />}
+                        icon={<SquaresFour size={24} />}
                         text="Dashboard"
                         href="/"
                     />
                     <SidebarItem
-                        icon={<FlagCheckered size={32} />}
+                        icon={<FlagCheckered size={24} />}
                         text="Races"
                         href="/races"
                         alert
                     />
                     <SidebarItem
-                        icon={<TrendUp size={32} />}
+                        icon={<TrendUp size={24} />}
                         text="Statistics"
                         href="/statistics"
                     />
                     <SidebarItem
-                        icon={<Trophy size={32} />}
+                        icon={<Trophy size={24} />}
                         text="Rankings"
                         href="/rankings"
                     />
                     <SidebarItem
-                        icon={<ShieldSlash size={32} />}
+                        icon={<ShieldSlash size={24} />}
                         text="League"
                         href="/league"
                     />
                 </Sidebar>
             </section>
-            <section className="2xl:p-8 w-full h-[100vh]">
+            <section className="xl:p-8 w-full h-[100vh]">
                 {/* Titulo altera conforme a pagina que foi acessada */}
                 {/* Renderiza as paginas dinamicas */}
                 <Outlet /> 

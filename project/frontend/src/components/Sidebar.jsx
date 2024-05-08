@@ -13,29 +13,29 @@ export default function Sidebar({ children }) {
   const [expanded, setExpanded] = useState(true)
   
   return (
-    <aside className="2xl:h-screen 2xl:w-max mobile:max-2xl:fixed mobile:max-2xl:bottom-0 mobile:max-2xl:w-full mobile:max-2xl:mt-8 z-50">
-      <nav className="h-full flex flex-col mobile:max-2xl:flex-row mobile:max-2xl:justify-center bg-slate-900  shadow-sm">
-        <div className="p-4 pb-2 flex justify-between items-center mb-4 mobile:max-2xl:mb-0 mobile:max-2xl:p-0 ">
+    <aside className="xl:h-screen xl:w-max mobile:max-xl:fixed mobile:max-xl:bottom-0 mobile:max-xl:w-full mobile:max-xl:mt-8 z-50">
+      <nav className="h-full flex flex-col mobile:max-xl:flex-row mobile:max-xl:justify-center bg-slate-900  shadow-sm">
+        <div className="p-4 pb-2 flex justify-between items-center mb-4 mobile:max-xl:mb-0 mobile:max-xl:p-0 ">
           <img
             src="/mahindra-logo.png"
-            className={`overflow-hidden transition-all duration-500 mobile:max-2xl:hidden ${
+            className={`overflow-hidden transition-all duration-500 mobile:max-xl:hidden ${
               expanded ? "w-32" : "w-0"
             }`}
             alt=""
           />
           <button
             onClick={() => setExpanded((curr) => !curr)}
-            className="p-1.5 rounded-lg hover:opacity-80 duration-200 mobile:max-2xl:hidden"
+            className="p-1.5 rounded-lg hover:opacity-80 duration-200 mobile:max-xl:hidden"
           >
             {expanded ? <CaretDoubleLeft size={20} /> : <CaretDoubleRight size={20} />}
           </button>
         </div>
 
         <SidebarContext.Provider value={{ expanded }}>
-          <ul className="2xl:flex-1 2xl:px-3 mobile:max-2xl:flex mobile:max-2xl:justify-center mobile:max-2xl:gap-8">{children}</ul>
+          <ul className="xl:flex-1 xl:px-3 mobile:max-xl:flex mobile:max-xl:justify-center gap-4">{children}</ul>
         </SidebarContext.Provider>
 
-        <div className="border-t flex p-3 mobile:max-2xl:hidden">
+        <div className="border-t flex p-3 mobile:max-xl:hidden">
           <img
             src="https://ui-avatars.com/api/?background=c7d2fe&color=3730a3&bold=true"
             alt=""
@@ -80,15 +80,15 @@ export function SidebarItem({ icon, text, href, alert }) {
     >
       {icon}
       <span
-        className={`mobile:max-2xl:hidden 2xl:overflow-hidden transition-all w-0 ${
-          expanded ? "w-32 2xl:ml-3" : "w-0"
+        className={`mobile:max-xl:hidden xl:overflow-hidden transition-all w-0 ${
+          expanded ? "w-32 xl:ml-3" : "w-0"
         }`}
       >
         {text}
       </span>
       {alert && (
         <div
-          className={`absolute right-2 size-2 rounded bg-red-500 border animate-pulse mobile:max-2xl:top-2 ${
+          className={`absolute right-2 size-2 rounded bg-red-500 border animate-pulse mobile:max-xl:top-2 ${
             expanded ? "" : "top-2"
           }`}
         />
@@ -101,7 +101,7 @@ export function SidebarItem({ icon, text, href, alert }) {
           bg-indigo-900 text-sm
           invisible opacity-20 -translate-x-3 transition-all
           group-hover:visible group-hover:opacity-100 group-hover:translate-x-0
-          mobile:max-2xl:hidden
+          mobile:max-xl:hidden
       `}
         >
           {text}
