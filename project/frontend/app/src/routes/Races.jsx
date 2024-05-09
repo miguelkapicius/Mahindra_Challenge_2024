@@ -4,9 +4,9 @@ function Races() {
     return (
         <>
             <div className="flex h-full gap-4">
-                <section className="w-1/2 h-full border border-gray-900 rounded-lg"></section>
-                <section className="w-1/2 h-full border border-gray-900 rounded-lg">
-                    <header className="py-2 bg-indigo-700 text-center rounded-t-lg">
+                <section className="w-1/2 h-full border border-gray-900 bg-secoundary rounded-lg"></section>
+                <section className="w-1/2 h-full border border-gray-900 bg-secoundary rounded-lg">
+                    <header className="py-2 bg-primary text-center rounded-t-lg">
                         <span className="uppercase font-light">
                             Felipe Massa
                         </span>

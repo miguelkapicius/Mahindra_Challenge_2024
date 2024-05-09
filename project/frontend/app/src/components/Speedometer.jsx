@@ -17,10 +17,10 @@ export const options = {
   height: 150,
   redFrom: 300,
   redTo: 350,
-  redColor: '#e11d48',
+  redColor: '#0D0D0D',
   yellowFrom: 250,
   yellowTo: 300,
-  yellowColor: '#4f46e5',
+  yellowColor: '#5271FF',
   minorTicks: 3,
   max: 350,
   animation:{
