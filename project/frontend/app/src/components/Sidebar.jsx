@@ -14,10 +14,10 @@ export default function Sidebar({ children }) {
   
   return (
     <aside className="xl:h-screen xl:w-max mobile:max-xl:fixed mobile:max-xl:bottom-0 mobile:max-xl:w-full mobile:max-xl:mt-8 z-50">
-      <nav className="h-full flex flex-col mobile:max-xl:flex-row mobile:max-xl:justify-center bg-slate-900  shadow-sm">
+      <nav className="h-full flex flex-col mobile:max-xl:flex-row mobile:max-xl:justify-center bg-secoundary  shadow-sm">
         <div className="p-4 pb-2 flex justify-between items-center mb-4 mobile:max-xl:mb-0 mobile:max-xl:p-0 ">
           <img
-            src="/mahindra-logo.png"
+            src="/logo-white-blue.png"
             className={`overflow-hidden transition-all duration-500 mobile:max-xl:hidden ${
               expanded ? "w-32" : "w-0"
             }`}
@@ -54,8 +54,8 @@ export function SidebarItem({ icon, text, href, alert }) {
         transition-colors group
         ${
           isActive
-            ? "bg-indigo-700" // Define a cor de fundo como indigo-700 se o item estiver ativo
-            : "hover:bg-indigo-900" // Define a cor de fundo como indigo-800 quando o item é destacado
+            ? "bg-white text-primary"// Define a cor de fundo se o item estiver ativo
+            : "text-white hover:text-primary duration-0" // Define a cor de fundo quando nao esta ativo
         }
     `}
     >
@@ -79,7 +79,7 @@ export function SidebarItem({ icon, text, href, alert }) {
         <div
           className={`
           absolute left-full rounded-md px-2 py-1 ml-6
-          bg-indigo-900 text-sm
+          bg-white text-sm text-secoundary
           invisible opacity-20 -translate-x-3 transition-all
           group-hover:visible group-hover:opacity-100 group-hover:translate-x-0
           mobile:max-xl:hidden
