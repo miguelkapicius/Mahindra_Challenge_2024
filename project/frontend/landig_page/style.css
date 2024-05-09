@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Proza Libre", sans-serif;
+    color: var(--secoundary);
+}
+
+:root {
+    --primary: #09090b;
+    --secoundary: #fafafa;
+    --tertiary: #5271ff;
+}
+
+body {
+    background-color: var(--primary);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 2.5rem;
+}
+
+img {
+    width: 15%;
+}
+
+ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.botao {
+    padding: 0.3rem 1rem;
+    background-color: var(--tertiary);
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-family: "Orbitron", sans-serif;
+}
+
+.estudo {
+    text-transform: uppercase;
+    font-family: "Orbitron", sans-serif;
+}
