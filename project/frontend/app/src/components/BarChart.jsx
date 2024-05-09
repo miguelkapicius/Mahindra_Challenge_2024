@@ -13,7 +13,7 @@ export const data = [
 export const options = {
     title: "Your Points",
     backgroundColor: "transparent",
-    colors: ["#4338ca", "#e2e8f0"],
+    colors: ["#5271FF", "#e2e8f0"],
     titleTextStyle: {
       color: "#e2e8f0",
       fontSize: 24,
