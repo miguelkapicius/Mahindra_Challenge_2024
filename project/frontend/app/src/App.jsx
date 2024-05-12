@@ -37,7 +37,7 @@ function App() {
     }, [location.pathname]); // Atualiza o efeito sempre que a rota atual mudar
   
     return (
-        <div className="flex mobile:max-xl:flex-col-reverse w-full">
+        <div className="flex mobile:max-xl:flex-col-reverse h-screen w-full">
             <section className="">
                 <Sidebar>
                     <SidebarItem
@@ -68,7 +68,7 @@ function App() {
                     />
                 </Sidebar>
             </section>
-            <section className="xl:p-8 mr-32 w-full">
+            <section className="p-8 w-screen">
                 {/* Titulo altera conforme a pagina que foi acessada */}
                 {/* Renderiza as paginas dinamicas */}
                 <Outlet /> 

@@ -25,7 +25,7 @@ export default function Sidebar({ children }) {
           />
           <button
             onClick={() => setExpanded((curr) => !curr)}
-            className="p-1.5 rounded-lg hover:opacity-80 duration-200 mobile:max-xl:hidden"
+            className="p-1.5 rounded-lg hover:opacity-80 duration-500 mobile:max-xl:hidden"
           >
             {expanded ? <CaretDoubleLeft size={20} /> : <CaretDoubleRight size={20} />}
           </button>

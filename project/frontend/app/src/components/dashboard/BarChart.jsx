@@ -5,9 +5,9 @@ export const data = [
   ["Day", "You", "Friends"],
   ["Today", 200, 180],
   ["Yesterday", 220, 210],
-  ["02/05", 250, 240],
   ["01/05", 280, 270],
-  ["30/04", 300, 290],
+  ["02/05", 280, 270],
+  ["03/05", 280, 270],
 ];
 
 export const options = {
@@ -38,10 +38,10 @@ export const options = {
   },
 };
 
-export function BarChart() {
+export default function BarChart() {
     return (
         <Chart
-            chartType="BarChart"
+            chartType="ColumnChart"
             width="100%"
             height="100%"
             data={data}
