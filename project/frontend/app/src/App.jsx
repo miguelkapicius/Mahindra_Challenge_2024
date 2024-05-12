@@ -37,8 +37,8 @@ function App() {
     }, [location.pathname]); // Atualiza o efeito sempre que a rota atual mudar
   
     return (
-        <div className="flex mobile:max-xl:flex-col-reverse">
-            <section className="mobile:max-xl:">
+        <div className="flex mobile:max-xl:flex-col-reverse w-full">
+            <section className="">
                 <Sidebar>
                     <SidebarItem
                         icon={<SquaresFour size={24} />}
@@ -68,7 +68,7 @@ function App() {
                     />
                 </Sidebar>
             </section>
-            <section className="xl:p-8 w-full h-[100vh]">
+            <section className="xl:p-8 mr-32 w-full">
                 {/* Titulo altera conforme a pagina que foi acessada */}
                 {/* Renderiza as paginas dinamicas */}
                 <Outlet /> 
