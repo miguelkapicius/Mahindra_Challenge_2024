@@ -127,7 +127,36 @@ i {
     width: 20rem;
     background-color: #09090ba9;
     margin-top: 3rem;
-    padding: 0.8rem;
-    border: 1px solid #374151;
-    border-radius: 0rem 0rem 40% 0rem;
+    border: 1px solid var(--tertiary);;
+    border-radius: 0rem 0rem 0rem 0rem;
+
+}
+
+.community h2 {
+    text-align: center;
+    font-family: "Orbitron", sans-serif;
+    font-size: 2.8rem;
+    margin-top: 4rem;
+    color: var(--tertiary);
+    text-transform: uppercase;
+}
+
+.community article {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+.square-2 h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.8rem 0rem;
+    font-family: "Orbitron", sans-serif;
+    color: var(--tertiary);
+    text-transform: uppercase;
+   
+}
+
+.square-2 p {
+    text-align: center;
 }
