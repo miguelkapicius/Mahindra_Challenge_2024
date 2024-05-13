@@ -23,9 +23,6 @@ export const options = {
         color: "#e2e8f0",
       },
     },
-    chartArea: {
-        width: "70%",
-    },
     hAxis: {
       textStyle: {
           color: "#e2e8f0", // Define a cor branca para o texto do eixo horizontal
@@ -41,7 +38,7 @@ export const options = {
 export default function BarChart() {
     return (
         <Chart
-            chartType="ColumnChart"
+            chartType="BarChart"
             width="100%"
             height="100%"
             data={data}
