@@ -10,12 +10,10 @@ function Home() {
     return (
         <>
             <div className="flex gap-4 h-full">
-                <Card style="w-3/4 h-full bg-transparent">
+                <Card style="w-3/4 h-full rounded-lg">
                     <Header />
-                    <section className="flex h-full">
-                        <Card style="w-2/3 h-1/2 px-0">
-                            <BarChart />
-                        </Card>
+                    <section className="flex h-full gap-2">
+
                     </section>
                 </Card>
                 <Card style="w-1/4 h-full rounded-lg">

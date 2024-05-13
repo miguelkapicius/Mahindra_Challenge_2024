@@ -1,5 +1,6 @@
-import { Coins, SketchLogo, Diamond, UserCircle } from "@phosphor-icons/react";
+import { Coins, SketchLogo, ShootingStar } from "@phosphor-icons/react";
 import CoinsValue from "./CoinsValue";
+import UserAvatar from "../UserAvatar";
 
 export default function Header() {
     return (
@@ -10,7 +11,7 @@ export default function Header() {
             </div>
             <div className="flex items-center gap-8">
                 <CoinsValue>
-                    <Diamond size={24} className="text-primary" />
+                    <ShootingStar size={24} className="text-primary" />
                     <span>2639</span>
                 </CoinsValue>
                 <CoinsValue>
@@ -22,9 +23,7 @@ export default function Header() {
                     <span>250</span>
                 </CoinsValue>
             </div>
-            <div>
-                <img className="rounded-full size-12" src="https://i.pravatar.cc" alt="" />
-            </div>
+            <UserAvatar src="https://i.pravatar.cc" />
         </header>
     );
 }
