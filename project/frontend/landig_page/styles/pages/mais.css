@@ -16,8 +16,8 @@ body#mais section {
 }
 
 section {
-    height: 50vh;
-    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -27,6 +27,40 @@ section {
 section.gradient h2 {
     font-family: "Orbitron";
     font-size: 4rem;
+}
+
+main.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16rem;
+    margin: 8rem auto;
+}
+
+main.about > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+div.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-content span {
+    font-size: 1.5rem;
+}
+
+main.about h2 {
+    max-width: 40%;
+}
+
+main.about p {
+    max-width: 50%;
+    color: #737373;
+    text-align: justify;
 }
 
 .text-gradient {

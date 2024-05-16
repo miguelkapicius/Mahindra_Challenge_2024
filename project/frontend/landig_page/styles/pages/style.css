@@ -14,10 +14,6 @@ body {
     overflow-x: hidden;
 }
 
-section {
-    padding: 0 2.5rem;
-}
-
 div.content {
     display: flex;
     flex-direction: column;
