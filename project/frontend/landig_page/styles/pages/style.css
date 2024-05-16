@@ -7,8 +7,6 @@
     color: var(--secoundary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: auto;
-    -moz-osx-font-smoothing: auto;
 }
 
 :root {
@@ -22,38 +20,8 @@ body {
     overflow-x: hidden;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 0rem;
-}
-
 section {
     padding: 0 2.5rem;
-}
-
-img {
-    width: 10%;
-}
-
-ul {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-}
-
-.botao {
-    padding: 0.5rem 1rem;
-    background-color: var(--tertiary);
-    border-radius: 10px;
-    text-transform: uppercase;
-    font-family: "Orbitron", sans-serif;
-}
-
-.estudo {
-    text-transform: uppercase;
-    font-family: "Orbitron", sans-serif;
 }
 
 div.content {
@@ -63,20 +31,13 @@ div.content {
     gap: 1rem;
 }
 
+.content a {
+    max-width: max-content;
+}
+
 div.content p {
     font-style: italic;
     font-size: 1.3rem;
-}
-
-div.content a {
-    padding: 1rem;
-    background-color: var(--tertiary);
-    width: max-content;
-    border-radius: 10px;
-    font-family: "Orbitron", sans-serif;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 0.8rem;
 }
 
 h1 {

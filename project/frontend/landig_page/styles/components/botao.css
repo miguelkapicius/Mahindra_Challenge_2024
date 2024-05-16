@@ -1,0 +1,22 @@
+.botao {
+    padding: 0.5rem 1rem;
+    background-color: var(--tertiary);
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+}
+
+.botao:hover {
+    background-color: #5f7cff;
+}
+
+.navlink {
+    text-transform: uppercase;
+    font-family: "Orbitron", sans-serif;
+}
+
+.navlink:hover {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
