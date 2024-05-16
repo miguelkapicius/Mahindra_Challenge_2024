@@ -1,0 +1,38 @@
+.square {
+    height: 14rem;
+    width: 14rem;
+    background-color: #09090ba9;
+    margin-top: 3rem;
+    padding: 0.8rem;
+    border: 1px solid #374151;
+}
+
+.square > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.square-2 {
+    height: 20rem;
+    width: 20rem;
+    background-color: #09090ba9;
+    margin-top: 3rem;
+    border: 1px solid var(--tertiary);;
+    border-radius: 0rem 0rem 0rem 0rem;
+
+}
+
+.square-2 h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.8rem 0rem;
+    font-family: "Orbitron", sans-serif;
+    color: var(--tertiary);
+    text-transform: uppercase;
+   
+}
+
+.square-2 p {
+    text-align: center;
+}

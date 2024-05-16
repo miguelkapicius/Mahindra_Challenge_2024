@@ -1,6 +1,13 @@
 @import "components/botao.css";
 @import "components/carousel.css";
+@import "components/square.css";
 @import "layout/header.css";
 @import "pages/estudo.css";
 @import "pages/mais.css";
 @import "pages/style.css";
+
+:root {
+    --primary: #09090b;
+    --secoundary: #fafafa;
+    --tertiary: #5271ff;
+}
