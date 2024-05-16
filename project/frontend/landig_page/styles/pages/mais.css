@@ -63,6 +63,23 @@ main.about p {
     text-align: justify;
 }
 
+ul.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+ul.features-list strong {
+    display: block;
+}
+
+ul.features-list li {
+    color: #737373;
+    width: 50%;
+    text-align: justify;
+    
+}
+
 .text-gradient {
     text-transform: uppercase;
     font-family: "Orbitron";

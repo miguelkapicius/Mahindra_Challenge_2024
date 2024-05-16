@@ -11,3 +11,13 @@
     --secoundary: #fafafa;
     --tertiary: #5271ff;
 }
+
+::-webkit-scrollbar {
+    background-color: #19191d;
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--secoundary);
+    border-radius: 4px;
+}

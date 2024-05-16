@@ -10,13 +10,3 @@
 .botao:hover {
     background-color: #5f7cff;
 }
-
-.navlink {
-    text-transform: uppercase;
-    font-family: "Orbitron", sans-serif;
-}
-
-.navlink:hover {
-    text-decoration: underline;
-    text-underline-offset: 8px;
-}
