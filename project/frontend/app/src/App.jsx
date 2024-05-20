@@ -68,7 +68,7 @@ function App() {
                     />
                 </Sidebar>
             </section>
-            <section className="p-8 w-screen">
+            <section className="xl:p-2 p-8 w-screen">
                 {/* Titulo altera conforme a pagina que foi acessada */}
                 {/* Renderiza as paginas dinamicas */}
                 <Outlet /> 

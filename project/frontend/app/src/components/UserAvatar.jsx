@@ -24,7 +24,7 @@ export default function UserAvatar({ user, src }) {
             </div>
 
             {showOptions && (
-                <div className="bg-secoundary/50 p-2 flex flex-col gap-1 absolute top-full right-0 mt-2 rounded-lg ring-1 z-50 ring-white/20 duration-300">
+                <div className="bg-secoundary/50 p-2 w-max flex flex-col gap-1 absolute top-full right-0 mt-2 rounded-lg ring-1 z-50 ring-white/20 duration-300">
                     <button
                         className="hover:bg-secoundary/60 duration-200 rounded-lg px-4 py-2 flex items-center gap-2"
                         onClick={() => handleOptionClick("profile")}
