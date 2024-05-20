@@ -1,18 +1,8 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: "Proza Libre", sans-serif;
-    color: var(--secoundary);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+body#home {
+    display: flex;
+    flex-direction: column;
 }
 
-body {
-    background-color: var(--primary);
-    overflow-x: hidden;
-}
 
 div.content {
     display: flex;
@@ -30,11 +20,7 @@ div.content p {
     font-size: 1.3rem;
 }
 
-h1 {
-    font-size: 5rem;
-    font-family: "Orbitron", sans-serif;
 
-}
 
 article.features {
     display: flex;

@@ -32,3 +32,18 @@ ul {
 i {
     font-size: 2rem;
 }
+
+@media (max-width: 1023px) {
+
+    .navlink {
+        text-align: center;
+    }
+
+    .botao {
+        padding: 0.1rem 0.5rem;
+    }
+
+    i {
+        font-size: 1rem;
+    }
+}

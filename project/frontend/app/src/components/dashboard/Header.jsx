@@ -4,7 +4,7 @@ import UserAvatar from "../UserAvatar";
 
 export default function Header() {
     return (
-        <header className="flex items-center justify-between mb-10 xl:mb-5">
+        <header className="flex items-center justify-between mb-10">
             <div className="flex items-center gap-4">
                 <img src="/favicon.png" alt="E-Pit Logo" className="size-8" />
                 <span className="font-extrabold text-2xl">Season 12</span>

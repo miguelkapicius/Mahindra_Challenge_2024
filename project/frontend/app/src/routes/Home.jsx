@@ -10,20 +10,21 @@ document.title = "E-Pit | Dashboard";
 function Home() {
     return (
         <>
-            <div className="flex xl:gap-2 gap-4 h-full">
-                <Card style="w-4/5 h-full rounded-lg">
+            <div className="flex gap-4 h-full">
+                <Card style="w-3/4 h-full rounded-lg">
                     <Header />
                     <section className="grid h-full gap-2 grid-cols-2 grid-rows-7">
                         <article className="col-span-1 row-span-4 bg-secoundary rounded-lg">
                             <BarChart />
                         </article>
                         <article className="col-span-1 row-span-6 bg-secoundary rounded-lg">
+                            <SlideShow />
                         </article>
                         <article className="col-span-1 row-span-2 bg-secoundary rounded-lg">
                         </article>
                     </section>
                 </Card>
-                <Card style="w-2/6 h-full rounded-lg">
+                <Card style="w-1/4 h-full rounded-lg">
                     <header className="flex justify-between items-center mb-10">
                         <h2 className="text-xl">Friends</h2>
                         <UserPlus
