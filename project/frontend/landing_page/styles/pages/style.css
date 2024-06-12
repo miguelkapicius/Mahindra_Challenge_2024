@@ -101,19 +101,19 @@ article.features {
 }
 
 .newsletter {
-  padding: 1.5rem 5rem;
+  padding: 5rem;
+  width: 100%;
 }
 
 .container-flex {
   display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
   gap: 1.5rem;
 }
 
 div.newsletter-form {
-  padding: 1.5rem;
-  border: 1px solid var(--secoundary);
   width: 40%;
 }
 
@@ -159,24 +159,42 @@ div.newsletter-form {
 }
 
 .points-section {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pilots-wrap {
   display: flex;
   gap: 1.5rem;
   height: 100%;
-  width: 60%;
-  align-items: center;
+  width: 100%;
+  align-items: start;
   margin-top: 30px;
 }
 
 .pilots-container {
-  width: 17.4rem;
+  width: 100%;
   height: 22.4rem;
 }
 
 #pilot-container-1 {
   background: url(../../assets/Card-Piloto-Azul.png);
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 #pilot-container-2 {
   background: url(../../assets/Card-Piloto.png);
   background-repeat: no-repeat;
+  background-position: center;
+}
+
+#points-img {
+  background: url(../../assets/points-chart.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 30rem;
 }
