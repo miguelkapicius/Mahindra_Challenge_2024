@@ -1,3 +1,7 @@
+#mais {
+    padding: 0rem 5rem;
+}
+
 main.about > div {
     display: flex;
     flex-direction: column;
