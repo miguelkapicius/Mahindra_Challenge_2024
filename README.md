@@ -32,5 +32,3 @@ What did you learn while building this project? What challenges did you face and
 ## License
 
 [MIT](LICENSE)
-
-https://prod.liveshare.vsengsaas.visualstudio.com/join?9645132AC7365FC89599F649B51A6E256706
