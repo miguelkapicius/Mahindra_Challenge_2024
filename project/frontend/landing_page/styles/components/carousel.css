@@ -1,8 +1,0 @@
-div.carousel {
-    width: 100vw;
-    height: 105vh;
-    background-size: cover;
-    background-position: center;
-    transition: background-image 1s ease-in-out;
-    background-attachment: fixed;
-}
