@@ -178,33 +178,3 @@ export function RankingTable() {
         </div>
     );
 }
-
-{
-    /* <table className="w-full">
-                <thead className="text-xs text-zinc-200">
-                    <tr>
-                        <th className="font-light uppercase py-4 text-left">
-                            Position
-                        </th>
-                        <th className="font-light uppercase py-4 text-left">
-                            Username
-                        </th>
-                        <th className="font-light uppercase py-4 text-right">
-                            Points
-                        </th>
-                    </tr>
-                </thead>
-                <tbody className="">
-                    {rankings.map((ranking, index) => (
-                        <tr className="border-t border-zinc-800">
-                        <td className="py-2 text-left">{index+1}</td>
-                        <td className="py-2 text-left truncate max-w-20 ">
-                            {ranking.username}
-                        </td>
-                        <td className="py-2 text-right">{ranking.points}</td>
-                    </tr>
-                    ))}
-                    
-                </tbody>
-            </table> */
-}
