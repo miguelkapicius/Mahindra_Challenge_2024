@@ -4,4 +4,14 @@
 
 * {
   min-width: 0;
+  font-family: "Inter", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: #18181b;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #09090b;
 }
