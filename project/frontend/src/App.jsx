@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
-import { RankingTable } from "./components/Rankings/RankingTable";
 
 export function App() {
     return (
