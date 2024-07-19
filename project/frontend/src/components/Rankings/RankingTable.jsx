@@ -54,7 +54,7 @@ const sortedRankings = rankings.sort((a, b) => b.points - a.points);
 
 export function RankingTable() {
     return (
-        <div className="w-full bg-zinc-950/95 lg:rounded-lg p-2 lg:w-5xl shadow-shape space-y-4">
+        <div className="w-full bg-zinc-950/90 lg:rounded-lg p-2 lg:w-5xl shadow-shape space-y-4">
             <div className="flex p-4 justify-between items-center bg-zinc-900 rounded-lg text-xs font-light text-zinc-50 shadow-shape">
                 <span className="uppercase w-1/6">Position</span>
                 <span className="uppercase w-3/6">Username</span>
