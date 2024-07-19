@@ -1,7 +1,7 @@
 export function RankingsPage() {
     return (
-        <div className="bg-bg-image">
-
+        <div>
+            <h1>Rankings</h1>
         </div>
     )
 }
