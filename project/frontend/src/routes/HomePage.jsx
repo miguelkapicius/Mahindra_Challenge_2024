@@ -1,7 +1,9 @@
 export function HomePage() {
     return (
-        <div>
-            <h1>Home</h1>
+        <div className="h-screen">
+            <div className="h-1/2 bg-zinc-900">
+
+            </div>
         </div>
     )
 }
