@@ -1,4 +1,4 @@
-import { Waypoints } from "lucide-react";
+import { RankingTableItem } from "./RankingTableItem";
 
 export function RankingTable() {
     const ranking = [
@@ -165,30 +165,14 @@ export function RankingTable() {
     return (
         <div className="w-full space-y-2 p-2 lg:p-0">
             {sortedRanking.map((rankings, index) => (
-                <div
+                <RankingTableItem
                     key={index + 1}
-                    className="w-full flex items-center justify-around rounded bg-zinc-900 p-2 shadow-shape"
-                >
-                    <div className="flex w-2/3 gap-4 items-center">
-                        <span className="w-1/4 text-blue-800"># {index + 1}</span>
-                        <img
-                            src={rankings.avatar}
-                            className="w-1/4 rounded bg-zinc-950"
-                        />
-                        <div className="w-2/4">
-                            <span className="block text-sm text-zinc-200 leading-6 truncate">
-                                {rankings.username}
-                            </span>
-                            <span className="block text-xs text-zinc-500 truncate">
-                                {rankings.team}
-                            </span>
-                        </div>
-                    </div>
-                    <div className="rounded bg-zinc-800 shadow-shape p-2 flex items-center gap-2">
-                        <Waypoints className="size-4" />
-                        <span>{rankings.points}</span>
-                    </div>
-                </div>
+                    position={index + 1}
+                    avatar={rankings.avatar}
+                    username={rankings.username}
+                    points={rankings.points}
+                    team={rankings.team}
+                />
             ))}
         </div>
     );

@@ -5,10 +5,64 @@ import {
     Users,
     Waypoints,
 } from "lucide-react";
+import { RankingTableItem } from "../components/Rankings/RankingTableItem";
 
 export function ProfilePage() {
+    const friends = [
+        {
+            username: "miguelkapicius",
+            points: 3500,
+            team: "Electra",
+            avatar: "https://placehold.co/400/png",
+        },
+        {
+            username: "thiagostoso",
+            points: 3200,
+            team: "Delicios",
+            avatar: "https://placehold.co/400/png",
+        },
+        {
+            username: "gauchola",
+            points: 4000,
+            team: "Bonde do RS",
+            avatar: "https://placehold.co/400/png",
+        },
+        {
+            username: "miguelkapicius",
+            points: 3500,
+            team: "Electra",
+            avatar: "https://placehold.co/400/png",
+        },
+        {
+            username: "thiagostoso",
+            points: 3200,
+            team: "Delicios",
+            avatar: "https://placehold.co/400/png",
+        },
+        {
+            username: "gauchola",
+            points: 4000,
+            team: "Bonde do RS",
+            avatar: "https://placehold.co/400/png",
+        },
+        {
+            username: "miguelkapicius",
+            points: 3500,
+            team: "Electra",
+            avatar: "https://placehold.co/400/png",
+        },
+        {
+            username: "thiagostoso",
+            points: 3200,
+            team: "Delicios",
+            avatar: "https://placehold.co/400/png",
+        },
+    ];
+
+    const sortedFriends = friends.sort((a, b) => b.points - a.points);
+
     return (
-        <div className="h-screen">
+        <div className="h-screen space-y-6">
             <div className="bg-zinc-900 flex p-2 gap-4">
                 <img
                     src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?q=80&w=1966&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -49,35 +103,19 @@ export function ProfilePage() {
                             Send invite <ArrowRight />
                         </button>
                     </div>
-                    <div className="flex flex-col gap-2">
-                        <div
-                            className="w-full flex items-center justify-around rounded bg-blue-950 p-2 shadow-shape"
-                        >
-                            <div className="flex w-2/3 gap-4 items-center">
-                                <span className="w-1/4 text-blue-800">
-                                    # 11
-                                </span>
-                                <img
-                                    src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?q=80&w=1966&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                    className="w-1/4 rounded bg-zinc-950"
-                                />
-                                <div className="w-2/4">
-                                    <span className="block text-sm text-zinc-200 leading-6 truncate">
-                                        thiagostoso
-                                    </span>
-                                    <span className="block text-xs text-zinc-500 truncate">
-                                        delicios
-                                    </span>
-                                </div>
-                            </div>
-                            <div className="rounded bg-zinc-800 shadow-shape p-2 flex items-center gap-2">
-                                <Waypoints className="size-4" />
-                                <span>3500</span>
-                            </div>
-                        </div>
-                        
-                    </div>
                 </div>
+            </div>
+            <div className="flex flex-col gap-2 p-2">
+                {sortedFriends.map((friend, index) => (
+                    <RankingTableItem
+                        key={index + 1}
+                        position={index + 1}
+                        avatar={friend.avatar}
+                        points={friend.points}
+                        team={friend.team}
+                        username={friend.username}
+                    />
+                ))}
             </div>
         </div>
     );
