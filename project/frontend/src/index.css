@@ -15,3 +15,21 @@
 ::-webkit-scrollbar-thumb {
   background-color: #09090b;
 }
+
+ /* Estiliza a barra de fundo no Webkit (Chrome, Safari) */
+ progress::-webkit-progress-bar {
+  background-color: #09090b;
+  border-radius: 0.25rem;
+}
+
+/* Estiliza a parte preenchida no Webkit (Chrome, Safari) */
+progress::-webkit-progress-value {
+  background-color: #f4f4f5;
+  border-radius: 0.25rem;
+}
+
+/* Estiliza a barra de fundo no Firefox */
+progress::-moz-progress-bar {
+  background-color: #09090b;
+  border-radius: 0.25rem;
+}
