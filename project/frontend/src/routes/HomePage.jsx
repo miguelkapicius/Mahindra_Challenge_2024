@@ -9,9 +9,9 @@ export function HomePage() {
                 />
             </div>
             <div className="p-2">
-                <div className="bg-blue-900 p-2 rounded">
-                    <div className="flex flex-col gap-6">
-                        <div className="flex items-center justify-between">
+                <div className="bg-zinc-900 p-2 rounded">
+                    <div className="flex flex-col gap-2">
+                        <div className="bg-zinc-950 shadow-shape p-2 rounded flex items-center justify-between">
                             <div className="flex items-center gap-2">
                                 <img
                                     className="rounded-full size-12 bg-zinc-900 pt-1"
@@ -30,21 +30,15 @@ export function HomePage() {
                                 <span className=""># 10</span>
                             </div>
                         </div>
-                        <div className="flex justify-between items-center">
-                            <div className="flex flex-col py-1">
-                                <span className="block text-sm leading-6 text-zinc-300">
-                                    Track success
-                                </span>
-                                <progress
-                                    className="h-2 rounded "
-                                    value={32}
-                                    max={100}
-                                />
+                        <div className="flex gap-2 justify-between items-center">
+                            <div className="bg-zinc-950 w-1/3 rounded shadow-shape p-2">
+                                <span className="text-center block text-xs">Velocidade</span>
                             </div>
-                            <div>
-                                <span className="font-medium bg-zinc-900 p-2 rounded shadow-shape">
-                                    312 pts
-                                </span>
+                            <div className="bg-zinc-950 w-1/3 rounded shadow-shape p-2">
+                                <span className="text-center block text-xs">Energia</span>
+                            </div>
+                            <div className="bg-zinc-950 w-1/3 rounded shadow-shape p-2">
+                                <span className="text-center block text-xs">Volta</span>
                             </div>
                         </div>
                     </div>
