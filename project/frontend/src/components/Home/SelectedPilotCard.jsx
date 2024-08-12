@@ -1,6 +1,6 @@
 export function SelectedPilotCard() {
     return (
-        <div className="bg-blue-900 p-2 rounded">
+        <div className="bg-blue-700 p-2 rounded size-full" data-swapy-item="b">
             <div className="flex flex-col gap-6">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
