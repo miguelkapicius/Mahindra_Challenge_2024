@@ -3,7 +3,7 @@ import Flag from "react-flagkit";
 
 export function PilotCard() {
     return (
-        <div className="bg-zinc-900 h-full rounded-lg p-2 flex flex-col gap-4 shadow-shape duration-500 ease-in-out">
+        <div className="bg-zinc-900 h-max rounded-lg p-2 flex flex-col gap-4 shadow-shape">
             <img
                 draggable={false}
                 src="https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/4a390151-89af-4931-9907-bcbaabb5a152.png"
