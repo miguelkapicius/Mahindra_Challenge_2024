@@ -2,8 +2,11 @@ import { useState } from "react";
 import { Header } from "../components/Fantasy/Header";
 import { PilotCard } from "../components/Fantasy/PilotCard";
 import { Lineup } from "../components/Fantasy/Lineup";
+import { useOutletContext } from "react-router-dom";
 
 export function FantasyPage() {
+
+    const data = useOutletContext();
     const [isLineupSelected, setIsLineupSelected] = useState(false);
 
     function handleLineupSelect() {
@@ -36,11 +39,11 @@ export function FantasyPage() {
                         Lineup
                     </span>
                 </div>
-                {isLineupSelected ? <Lineup /> : <PilotCard />}
+                {isLineupSelected ? <Lineup data={data} /> : <PilotCard />}
             </div>
             <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <PilotCard />
-                <Lineup />
+                <Lineup data={data} />
             </div>
         </div>
     );

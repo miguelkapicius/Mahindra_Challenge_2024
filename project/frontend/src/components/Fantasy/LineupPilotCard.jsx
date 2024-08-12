@@ -1,12 +1,13 @@
 import { CircleDollarSign } from "lucide-react";
 import Flag from "react-flagkit";
 
-export function LineupPilotCard({image, firstName, lastName, country, team, price}) {
+export function LineupPilotCard({image, firstName, lastName, country, team, price, position}) {
     return (
         <div
-            className="bg-zinc-950/80 p-2 rounded flex flex-col gap-2 h-max"
+            className="bg-zinc-950/80 p-2 rounded flex flex-col gap-2 h-max relative"
         >
             <img className="bg-zinc-800 rounded" src={image} />
+            <span className="absolute top-0 left-0 p-2 bg-blue-600 rounded-l text-xs">{position}</span>
             <div>
                 <span className="block">
                     {firstName}
