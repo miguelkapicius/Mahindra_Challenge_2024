@@ -1,14 +1,14 @@
 export function HomePage() {
     return (
-        <div className="h-screen">
-            <div className="h-1/2 bg-zinc-900">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-2 gap-4">
+            <div className="bg-zinc-900">
                 <img
-                    className="size-full"
+                    className="size-full rounded"
                     src="https://www.autocar.co.uk/sites/autocar.co.uk/files/images/car-reviews/first-drives/legacy/80-f1-2021-season-circuit-guide-brazil.jpg"
                     alt=""
                 />
             </div>
-            <div className="p-2">
+            <div className="">
                 <div className="bg-blue-900 p-2 rounded">
                     <div className="flex flex-col gap-6">
                         <div className="flex items-center justify-between">
