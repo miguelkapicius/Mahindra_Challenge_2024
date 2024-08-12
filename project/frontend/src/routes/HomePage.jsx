@@ -45,10 +45,10 @@ export function HomePage() {
             <div className="bg-zinc-900/40 rounded row-span-2 xl:col-span-1 xl:row-span-6" data-swapy-slot="2">
                 {getItemById(slotItems["2"])}
             </div>
-            <div className="bg-zinc-900/40 rounded row-span-10 xl:col-span-4 xl:row-span-6" data-swapy-slot="3">
+            <div className="bg-zinc-900/40 rounded row-span-5 xl:col-span-4 xl:row-span-6" data-swapy-slot="3">
                 {getItemById(slotItems["3"])}
             </div>
-            <div className="bg-zinc-900/40 rounded row-span-8 xl:col-span-2 xl:row-span-full" data-swapy-slot="4">
+            <div className="bg-zinc-900/40 rounded row-span-1 xl:col-span-2 xl:row-span-full" data-swapy-slot="4">
                 {getItemById(slotItems["4"])}
             </div>
         </div>
