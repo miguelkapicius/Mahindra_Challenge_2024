@@ -1,55 +1,23 @@
 import { Map } from "../components/Home/Map";
 import { RaceRanking } from "../components/Home/RaceRanking";
 import { SelectedPilotCard } from "../components/Home/SelectedPilotCard";
-import { createSwapy } from "swapy";
-import { useEffect } from "react";
+import { useOutletContext } from "react-router-dom";
+import { ThreeScene } from "../components/Home/ThreeScene";
 
-const DEFAULT = {
-  1: "a",
-  2: "b",
-  3: "c",
-  4: null,
-};
-
-function getItemById(itemId) {
-  switch (itemId) {
-      case "a":
-          return <Map />;
-      case "b":
-          return <SelectedPilotCard />;
-      case "c":
-          return <RaceRanking />;
-  }
-}
 
 export function HomePage() {
-
-    const slotItems = localStorage.getItem("slotItem")
-        ? JSON.parse(localStorage.getItem("slotItem"))
-        : DEFAULT;
-    useEffect(() => {
-        const container = document.querySelector("#container");
-        const swapy = createSwapy(container, {
-          animation: 'dynamic' // or spring or none
-        });
-        swapy.onSwap(({ data }) => {
-            localStorage.setItem("slotItem", JSON.stringify(data.object));
-        });
-    }, []);
+    const data = useOutletContext();
 
     return (
-        <div id="container" className="p-2 grid gap-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-6 grid-rows-12 h-screen">
-            <div className="bg-zinc-900/40 rounded row-span-4 xl:col-span-3 xl:row-span-6" data-swapy-slot="1">
-                {getItemById(slotItems["1"])}
+        <div id="container" className="p-2 grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-5 grid-rows-12 h-screen">
+            <div className="bg-zinc-900/40 rounded row-span-4 md:col-span-2 md:row-span-6 lg:order-2 lg:col-span-2 lg:row-span-6">
+                <Map />
             </div>
-            <div className="bg-zinc-900/40 rounded row-span-2 xl:col-span-1 xl:row-span-6" data-swapy-slot="2">
-                {getItemById(slotItems["2"])}
+            <div className="bg-zinc-900/40 rounded row-span-2 md:col-span-2 md:row-span-2 lg:order-3 lg:col-span-3 lg:row-span-6">
+                <SelectedPilotCard />
             </div>
-            <div className="bg-zinc-900/40 rounded row-span-5 xl:col-span-4 xl:row-span-6" data-swapy-slot="3">
-                {getItemById(slotItems["3"])}
-            </div>
-            <div className="bg-zinc-900/40 rounded row-span-1 xl:col-span-2 xl:row-span-full" data-swapy-slot="4">
-                {getItemById(slotItems["4"])}
+            <div className="bg-zinc-900/40 rounded row-span-5 md:col-span-2 md:row-span-4 lg:order-1 lg:col-span-2 lg:row-span-12">
+                <RaceRanking data={data} />
             </div>
         </div>
     );

@@ -18,7 +18,7 @@
     "react-flagkit": "^2.0.4",
     "react-router-dom": "^6.25.1",
     "sort-by": "^1.2.0",
-    "swapy": "^0.1.1"
+    "three": "^0.167.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

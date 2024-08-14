@@ -8,12 +8,13 @@
 }
 
 ::-webkit-scrollbar {
-  width: 0.5rem;
-  background-color: #18181b;
+  width: 0.2rem;
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #09090b;
+  background-color: #ffffff41;
+  border-radius: 4px;
 }
 
  /* Estiliza a barra de fundo no Webkit (Chrome, Safari) */
