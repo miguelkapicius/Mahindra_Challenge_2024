@@ -10,7 +10,7 @@ export function Lineup({data}) {
     }
 
     return (
-        <div className="max-w-2xl grid grid-cols-2 lg:grid-cols-3 lg:col-span-2 gap-2 overflow-y-auto p-2 bg-zinc-900 rounded shadow-shape">
+        <div className="max-w-2xl grid grid-cols-2 lg:grid-cols-3 lg:col-span-2 gap-2 overflow-y-auto h-screen p-2 bg-zinc-900 rounded shadow-shape">
             {data.pilots.map((pilot) => (
                 <LineupPilotCard
                     key={pilot.position}

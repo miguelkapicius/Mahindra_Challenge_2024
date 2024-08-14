@@ -3,82 +3,77 @@ import { Link, useLocation } from "react-router-dom";
 
 export function Navbar() {
     const location = useLocation();
-    const activeCSS = "lg:border-l-2 lg:border-blue-600 lg:bg-gradient-to-r from-blue-500/50 to-zinc-950 text-blue-600 lg:text-zinc-100"
+    const activeCSS = "rounded bg-zinc-800 shadow-shape text-zinc-100 transition-all duration-300";
 
     return (
-        <div className="fixed bottom-0 shadow-shape z-50 w-full px-6 h-14 bg-zinc-800 border-t border-zinc-700 lg:bg-zinc-950 lg:h-full lg:w-64 lg:border-r lg:border-zinc-800 lg:border-t-0 lg:flex lg:flex-col lg:space-y-16">
-            <div className="hidden lg:block">
-                <span className="text-3xl flex items-center gap-2">
-                    <Trophy /> E-Pit
-                </span>
+        <aside className="fixed bottom-0 shadow-shape lg:shadow-none text-zinc-400 z-50 w-full px-6 h-14 bg-zinc-800 lg:w-max lg:h-screen lg:bg-transparent p-6">
+            <div className="lg:flex lg:flex-col lg:gap-2 lg:h-full lg:shadow-shape lg:p-6 lg:rounded lg:bg-zinc-900">
+                <div className="hidden lg:block">
+                    <span className="text-3xl flex items-center gap-2">
+                        <Trophy /> E-Pit
+                    </span>
+                </div>
+                <nav className="flex items-center h-full justify-around gap-6 lg:h-max lg:flex-col lg:items-start">
+                    <Link
+                        to={"/"}
+                        draggable="false"
+                        className={`p-2 size-max flex justify-center gap-4 lg:w-full lg:justify-start ${
+                            location.pathname === "/" ? `${activeCSS}` : ""
+                        }`}
+                    >
+                        <House />
+                        <span className="hidden lg:block">Home</span>
+                    </Link>
+                    <Link
+                        to={"/fantasy"}
+                        draggable="false"
+                        className={`p-2 size-max flex justify-center gap-4 lg:w-full lg:justify-start ${
+                            location.pathname === "/fantasy"
+                                ? `${activeCSS}`
+                                : ""
+                        }`}
+                    >
+                        <Gamepad2 />
+                        <span className="hidden lg:block">Fantasy</span>
+                    </Link>
+                    <Link
+                        to={"/rankings"}
+                        draggable="false"
+                        className={`p-2 size-max flex justify-center gap-4 lg:w-full lg:justify-start ${
+                            location.pathname === "/rankings"
+                                ? `${activeCSS}`
+                                : ""
+                        }`}
+                    >
+                        <Trophy />
+                        <span className="hidden lg:block">Rankings</span>
+                    </Link>
+                    <Link
+                        to={"/statistics"}
+                        draggable="false"
+                        className={`p-2 size-max flex justify-center gap-4 lg:w-full lg:justify-start ${
+                            location.pathname === "/statistics"
+                                ? `${activeCSS}`
+                                : ""
+                        }`}
+                    >
+                        <AreaChart />
+                        <span className="hidden lg:block">Statistics</span>
+                    </Link>
+                    <Link
+                        to={"/profile"}
+                        draggable="false"
+                        className={`p-2 size-max flex justify-center gap-4 lg:w-full lg:justify-start ${
+                            location.pathname === "/profile"
+                                ? `${activeCSS}`
+                                : ""
+                        }`}
+                    >
+                        <User />
+                        <span className="hidden lg:block">Profile</span>
+                    </Link>
+                </nav>
             </div>
-            <div className="flex items-center h-full justify-around gap-6 lg:h-max lg:flex-col lg:items-start">
-                <Link
-                    to={"/"}
-                    draggable="false"
-
-                    className={`p-2 size-max flex justify-center gap-4 lg:w-full lg:justify-start ${
-                        location.pathname === "/"
-                            ? `${activeCSS}`
-                            : ""
-                    }`}
-                >
-                    <House />
-                    <span className="hidden lg:block">Home</span>
-                </Link>
-                <Link
-                    to={"/fantasy"}
-                    draggable="false"
-
-                    className={`p-2 size-max flex justify-center gap-4 lg:w-full lg:justify-start ${
-                        location.pathname === "/fantasy"
-                            ? `${activeCSS}`
-                            : ""
-                    }`}
-                >
-                    <Gamepad2 />
-                    <span className="hidden lg:block">Fantasy</span>
-                </Link>
-                <Link
-                    to={"/rankings"}
-                    draggable="false"
-
-                    className={`p-2 size-max flex justify-center gap-4 lg:w-full lg:justify-start ${
-                        location.pathname === "/rankings"
-                            ? `${activeCSS}`
-                            : ""
-                    }`}
-                >
-                    <Trophy />
-                    <span className="hidden lg:block">Rankings</span>
-                </Link>
-                <Link
-                    to={"/statistics"}
-                    draggable="false"
-
-                    className={`p-2 size-max flex justify-center gap-4 lg:w-full lg:justify-start ${
-                        location.pathname === "/statistics"
-                            ? `${activeCSS}`
-                            : ""
-                    }`}
-                >
-                    <AreaChart />
-                    <span className="hidden lg:block">Statistics</span>
-                </Link>
-                <Link
-                    to={"/profile"}
-                    draggable="false"
-
-                    className={`p-2 size-max flex justify-center gap-4 lg:w-full lg:justify-start ${
-                        location.pathname === "/profile"
-                            ? `${activeCSS}`
-                            : ""
-                    }`}
-                >
-                    <User />
-                    <span className="hidden lg:block">Profile</span>
-                </Link>
-            </div>
-        </div>
+        </aside>
     );
 }

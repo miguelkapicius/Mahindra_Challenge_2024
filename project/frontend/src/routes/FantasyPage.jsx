@@ -17,7 +17,7 @@ export function FantasyPage() {
     }
 
     return (
-        <div className="p-2 *:mb-4">
+        <div className="p-2 *:mb-4 mx-auto max-w-5xl">
             <Header />
             <div className="md:hidden space-y-4">
                 <div className="rounded bg-zinc-900 flex items-center shadow-shape">

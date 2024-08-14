@@ -1,7 +1,7 @@
 export function RaceRanking({ data }) {
     return (
         <div
-            className="px-2 space-y-1 bg-zinc-950 rounded h-full overflow-auto"
+            className="px-2 space-y-1 bg-zinc-950 rounded h-screen overflow-y-auto"
         >
             {data.pilots.sort((a, b) => a.position - b.position).map((pilot) => (
                 <div
@@ -14,7 +14,7 @@ export function RaceRanking({ data }) {
                             src={pilot.image}
                         />
                         <div className="">
-                            <span className="block">
+                            <span className="block truncate pr-2">
                                 {pilot.firstName} {pilot.lastName}
                             </span>
                             <span className="block text-xs text-zinc-400">

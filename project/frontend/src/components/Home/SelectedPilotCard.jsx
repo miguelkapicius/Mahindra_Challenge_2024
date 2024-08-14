@@ -2,7 +2,7 @@ import { BatteryFull, Flag, Gauge } from "lucide-react";
 
 export function SelectedPilotCard() {
     return (
-        <div className="flex p-4 bg-zinc-900 h-max rounded flex-col gap-6">
+        <div className="flex p-4 bg-zinc-900 h-max rounded flex-col gap-2">
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                     <img
@@ -21,7 +21,7 @@ export function SelectedPilotCard() {
                 </div>
             </div>
             <div className="flex justify-between items-center">
-                <div className="flex gap-4 justify-around items-center py-1">
+                <div className="flex flex-col md:flex-row gap-2 justify-around items-start py-1">
                     <div className="flex items-center gap-2 shadow-shape p-2 rounded text-green-500">
                         <BatteryFull size={24} />
                         <span className="text-xs">98%</span>
@@ -34,11 +34,11 @@ export function SelectedPilotCard() {
                         <Flag size={24} />
                         <span className="text-xs">80%</span>
                     </div>
-                </div>
-                <div>
-                    <span className="font-medium bg-zinc-900 p-2 rounded shadow-shape">
-                        312 pts
-                    </span>
+                    <div>
+                        <span className="flex items-center gap-2 shadow-shape p-2 rounded">
+                            312 pts
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>

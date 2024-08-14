@@ -2,7 +2,7 @@ import { StatisticsTeam } from "../components/Statistics/StatisticsTeam";
 
 export function StatisticsPage({ logo }) {
     return (
-        <div>
+        <div className="mx-auto max-w-5xl">
             <div className="flex flex-col gap-2 p-2">
                 <StatisticsTeam
                     teamName="ABT CUPRA"
