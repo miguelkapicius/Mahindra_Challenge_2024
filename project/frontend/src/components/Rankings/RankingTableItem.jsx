@@ -3,15 +3,17 @@ import { Waypoints } from "lucide-react";
 export function RankingTableItem({avatar, username, team, points, position}) {
     return (
         <div
-            className="w-full flex items-center justify-around rounded bg-zinc-900 p-2 shadow-shape"
+            className="max-w-5xl flex items-center justify-between rounded bg-zinc-900 p-2 shadow-shape"
         >
-            <div className="flex w-2/3 gap-4 items-center">
-                <span className="w-1/4 text-blue-800"># {position}</span>
-                <img
-                    src={avatar}
-                    className="w-1/4 rounded bg-zinc-950"
-                />
-                <div className="w-2/4">
+            <div className="flex w-full h-10 gap-4 items-center">
+                <div className="flex h-full items-center lg:gap-6">
+                    <span className="w-10 text-blue-800"># {position}</span>
+                    <img
+                        src={avatar}
+                        className="rounded h-full bg-zinc-950 object-cover"
+                    />
+                </div>
+                <div className="">
                     <span className="block text-sm text-zinc-200 leading-6 truncate">
                         {username}
                     </span>
@@ -20,7 +22,7 @@ export function RankingTableItem({avatar, username, team, points, position}) {
                     </span>
                 </div>
             </div>
-            <div className="rounded bg-zinc-800 shadow-shape p-2 flex items-center gap-2">
+            <div className="rounded bg-zinc-800 w-max shadow-shape p-2 flex items-center gap-2">
                 <Waypoints className="size-4" />
                 <span>{points}</span>
             </div>

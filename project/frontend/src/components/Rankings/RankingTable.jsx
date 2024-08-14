@@ -163,7 +163,7 @@ export function RankingTable() {
     const sortedRanking = ranking.sort((a, b) => b.points - a.points);
 
     return (
-        <div className="w-full space-y-2 p-2 lg:p-0">
+        <div className="space-y-2 p-2 lg:p-0">
             {sortedRanking.map((rankings, index) => (
                 <RankingTableItem
                     key={index + 1}

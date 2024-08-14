@@ -62,7 +62,7 @@ export function ProfilePage() {
     const sortedFriends = friends.sort((a, b) => b.points - a.points);
 
     return (
-        <div className="h-screen space-y-6">
+        <div className="h-screen space-y-6 max-w-5xl">
             <div className="bg-zinc-900 flex p-2 gap-4">
                 <img
                     src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?q=80&w=1966&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -105,7 +105,7 @@ export function ProfilePage() {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col gap-2 p-2">
+            <div className="flex flex-col gap-2">
                 {sortedFriends.map((friend, index) => (
                     <RankingTableItem
                         key={index + 1}

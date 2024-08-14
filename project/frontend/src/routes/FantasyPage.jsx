@@ -5,7 +5,6 @@ import { Lineup } from "../components/Fantasy/Lineup";
 import { useOutletContext } from "react-router-dom";
 
 export function FantasyPage() {
-
     const data = useOutletContext();
     const [isLineupSelected, setIsLineupSelected] = useState(false);
 
@@ -41,9 +40,13 @@ export function FantasyPage() {
                 </div>
                 {isLineupSelected ? <Lineup data={data} /> : <PilotCard />}
             </div>
-            <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <PilotCard />
-                <Lineup data={data} />
+            <div className="hidden md:flex gap-2">
+                <div className="max-w-xl">
+                    <PilotCard />
+                </div>
+                <div className="mx-auto w-full">
+                    <Lineup data={data} />
+                </div>
             </div>
         </div>
     );
