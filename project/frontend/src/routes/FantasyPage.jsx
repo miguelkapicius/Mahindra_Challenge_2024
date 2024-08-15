@@ -3,9 +3,19 @@ import { Header } from "../components/Fantasy/Header";
 import { PilotCard } from "../components/Fantasy/PilotCard";
 import { Lineup } from "../components/Fantasy/Lineup";
 import { useOutletContext } from "react-router-dom";
+import { useEffect } from "react";
 
 export function FantasyPage() {
     const data = useOutletContext();
+    const [userData, setUserData] = useState(null)
+    useEffect(() => {
+        fetch('/users.json')
+          .then((response) => response.json())
+          .then((jsonData) => setUserData(jsonData))
+          .catch((error) => console.error('Error fetching data:', error));
+      }, []);
+
+
     const [isLineupSelected, setIsLineupSelected] = useState(false);
 
     function handleLineupSelect() {
@@ -38,16 +48,23 @@ export function FantasyPage() {
                 </div>
                 {isLineupSelected ? <Lineup data={data} /> : (
                     <>
-
-                        <PilotCard />
-                        <PilotCard />
+                        {userData?.users?.pilots?.length > 0 ? (
+                            data.users.pilots.map((pilot) => (
+                                <PilotCard pilot={pilot} key={pilot.name} />
+                            ))
+                        ) : (
+                            <p>No pilots available</p>
+                        )}
                     </>
                 )}
             </div>
-            <div className="hidden md:flex gap-2">
+            <div className="hidden max-h-[80vh] md:flex items-stretch gap-2">
                 <div className="max-w-xl flex gap-2">
-                    <PilotCard />
-                    <PilotCard />
+                    {
+                        data.users.pilots.map((userPilots) => (
+                            <PilotCard pilot={userPilots} key={userPilots.name} />
+                        ))
+                    }
                 </div>
                 <div className="mx-auto w-full">
                     <Lineup data={data} />

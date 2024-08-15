@@ -18,7 +18,7 @@ export function App() {
     return (
         <div className="lg:flex lg:max-w-7xl lg:mx-auto min-h-screen lg:py-6 ">
             <Navbar />
-            <main className="mb-14 lg:mb-0  flex-1">
+            <main className="mb-16 lg:mb-0  flex-1">
                 <Outlet context={data} />
             </main>
         </div>

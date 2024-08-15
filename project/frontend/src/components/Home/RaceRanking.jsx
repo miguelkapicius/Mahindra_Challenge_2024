@@ -1,7 +1,7 @@
 export function RaceRanking({ data }) {
     return (
         <div
-            className="px-2 space-y-1 bg-zinc-950 rounded h-screen overflow-y-auto"
+            className="pr-2 space-y-1 bg-zinc-950 rounded h-screen pb-10 overflow-y-auto"
         >
             {data.pilots.sort((a, b) => a.position - b.position).map((pilot) => (
                 <div

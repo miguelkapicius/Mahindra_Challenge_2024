@@ -1,0 +1,33 @@
+{
+    "users": [
+        {
+            "username": "miguelkapicius",
+            "points": 3500,
+            "coins": 10000,
+            "pilots": [
+                {
+                    "position": 4,
+                    "firstName": "Oliver",
+                    "lastName": "Rowland",
+                    "team": "Nissan",
+                    "country": "GB",
+                    "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/00098f8a-69be-4f84-a7ac-baedcc5f9e9c.png",
+                    "price": 118.0,
+                    "points": 250,
+                    "wins": 3
+                },
+                {
+                    "position": 2,
+                    "firstName": "Mitch",
+                    "lastName": "Evans",
+                    "team": "Jaguar",
+                    "country": "NZ",
+                    "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/2543b91c-2543-4835-b9fc-17b5fbc79cb1.png",
+                    "price": 140.0,
+                    "points": 250,
+                    "wins": 3
+                }
+            ]
+        }
+    ]
+}

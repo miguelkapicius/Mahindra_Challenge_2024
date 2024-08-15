@@ -7,7 +7,9 @@
             "team": "Andretti",
             "country": "GB",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/candid/small/6c47b61a-5bb4-4ae4-9e0a-63a411de0782.png",
-            "price": 150.0
+            "price": 150.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 10,
@@ -16,7 +18,9 @@
             "team": "Penske",
             "country": "BE",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/candid/small/3f4d9ccc-0453-410c-8542-225bd2ebf280.png",
-            "price": 130.0
+            "price": 130.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 20,
@@ -25,7 +29,9 @@
             "team": "ERT",
             "country": "BR",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/candid/small/b768b851-5611-40be-8687-a0974e3d2754.png",
-            "price": 110.0
+            "price": 110.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 9,
@@ -34,7 +40,9 @@
             "team": "Envision",
             "country": "NL",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/candid/small/ba3d3d66-41de-4b1e-bfd6-7f318b2ec2af.png",
-            "price": 110.0
+            "price": 110.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 24,
@@ -43,7 +51,9 @@
             "team": "Envision",
             "country": "SE",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/candid/small/ec44be2a-3898-425d-97ff-4c0857bdfcd9.png",
-            "price": 100.0
+            "price": 100.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 14,
@@ -52,7 +62,9 @@
             "team": "McLaren",
             "country": "GB",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/2174278b-4213-4688-9f72-8e982bc87e8e.png",
-            "price": 120.0
+            "price": 120.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 8,
@@ -61,7 +73,9 @@
             "team": "Maserati",
             "country": "DE",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/a4aa14e5-3812-425a-a4b6-310b4ad7023c.png",
-            "price": 115.0
+            "price": 115.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 13,
@@ -70,7 +84,9 @@
             "team": "McLaren",
             "country": "GB",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/dbd8e835-4091-4449-a94d-9dd5e064ac79.png",
-            "price": 115.0
+            "price": 115.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 22,
@@ -79,7 +95,9 @@
             "team": "McLaren",
             "country": "GB",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/dc2f3772-e0d8-4e10-9948-d6c23a35e501.png",
-            "price": 115.0
+            "price": 115.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 2,
@@ -88,7 +106,9 @@
             "team": "Jaguar",
             "country": "NZ",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/2543b91c-2543-4835-b9fc-17b5fbc79cb1.png",
-            "price": 140.0
+            "price": 140.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 23,
@@ -97,7 +117,9 @@
             "team": "ABT Cupra",
             "country": "BR",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/4a390151-89af-4931-9907-bcbaabb5a152.png",
-            "price": 95.0
+            "price": 95.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 6,
@@ -106,7 +128,9 @@
             "team": "Porshe",
             "country": "PT",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/fcc99980-3e5d-4a96-856a-8773641ceebe.png",
-            "price": 110.0
+            "price": 110.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 27,
@@ -115,7 +139,9 @@
             "team": "Envision",
             "country": "EE",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/39e823df-00bf-4d6c-a6e9-e5ffb039569e.png",
-            "price": 85.0
+            "price": 85.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 11,
@@ -124,7 +150,9 @@
             "team": "Envision",
             "country": "CH",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/d001837f-806a-4ccf-adac-3f5dccee21ed.png",
-            "price": 100.0
+            "price": 100.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 15,
@@ -133,7 +161,9 @@
             "team": "Andretti",
             "country": "FR",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/ef604bcc-19fe-4463-9667-97933cbf0065.png",
-            "price": 95.0
+            "price": 95.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 21,
@@ -142,7 +172,9 @@
             "team": "Maserati",
             "country": "IN",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/318cdf28-d80e-41de-b7fc-d4584f7d6117.png",
-            "price": 90.0
+            "price": 90.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 18,
@@ -151,7 +183,9 @@
             "team": "Mahindra",
             "country": "NL",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/8bd68290-c0ad-43b6-a1ce-ee162b7d8914.png",
-            "price": 100.0
+            "price": 100.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 26,
@@ -160,7 +194,9 @@
             "team": "Mahindra",
             "country": "GB",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/a5448f8d-b112-439d-b68e-c1349be4b945.png",
-            "price": 85.0
+            "price": 85.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 28,
@@ -169,7 +205,9 @@
             "team": "Nissan",
             "country": "BR",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/efa9836e-81fa-4644-9bcb-f132d5befb5f.png",
-            "price": 85.0
+            "price": 85.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 4,
@@ -178,7 +216,9 @@
             "team": "Nissan",
             "country": "GB",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/00098f8a-69be-4f84-a7ac-baedcc5f9e9c.png",
-            "price": 118.0
+            "price": 118.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 17,
@@ -187,7 +227,9 @@
             "team": "Nissan",
             "country": "FR",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/98935f8b-1c15-4ede-af6c-d5ea47eb95b0.png",
-            "price": 100.0
+            "price": 100.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 5,
@@ -196,7 +238,9 @@
             "team": "DS Penske",
             "country": "FR",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/3d5b4033-31b9-442b-a0b5-183d51ebde5e.png",
-            "price": 115.0
+            "price": 115.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 19,
@@ -205,7 +249,9 @@
             "team": "ERT",
             "country": "GB",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/0bdc60a2-9884-45b3-848d-3ffecf12fd59.png",
-            "price": 100.0
+            "price": 100.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 3,
@@ -214,7 +260,9 @@
             "team": "Jaguar",
             "country": "NZ",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/47579af2-ce5a-4ba9-800b-b6821ca934e3.png",
-            "price": 135.0
+            "price": 135.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 16,
@@ -223,7 +271,9 @@
             "team": "Mahindra",
             "country": "CH",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/728b2253-b9d4-47dd-9051-e970bff2a62f.png",
-            "price": 100.0
+            "price": 100.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 12,
@@ -232,7 +282,9 @@
             "team": "ABT Cupra",
             "country": "CH",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/d8e6e6f6-4bce-4848-860b-8d88383983d1.png",
-            "price": 105.0
+            "price": 105.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 25,
@@ -241,7 +293,9 @@
             "team": "ABT Cupra",
             "country": "ZA",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/d09eeb9a-569b-4f70-bab5-1610a2d352ea.png",
-            "price": 90.0
+            "price": 90.0,
+            "points": 250,
+            "wins": 3
         },
         {
             "position": 1,
@@ -250,7 +304,40 @@
             "team": "Porshe",
             "country": "DE",
             "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/4b62fd44-831d-4b01-9f11-2aaf2c47075c.png",
-            "price": 200.0
+            "price": 200.0,
+            "points": 250,
+            "wins": 3
+        }
+    ],
+    "teams": [
+        {
+            "name": "ABT Cupra",
+            "logo": "https://static-files.formula-e.pulselive.com/badges/c57e46c4-8163-44f6-9c0d-b74579d51000.svg",
+            "stats": {
+                "wins": 14,
+                "podiums": 47,
+                "races": 115
+            },
+            "pilots": [
+                {
+                    "position": 23,
+                    "firstName": "Lucas",
+                    "lastName": "Di Grassi",
+                    "team": "ABT Cupra",
+                    "country": "BR",
+                    "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/4a390151-89af-4931-9907-bcbaabb5a152.png",
+                    "price": 95.0
+                },
+                {
+                    "position": 12,
+                    "firstName": "Nico",
+                    "lastName": "Muller",
+                    "team": "ABT Cupra",
+                    "country": "CH",
+                    "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/d8e6e6f6-4bce-4848-860b-8d88383983d1.png",
+                    "price": 105.0
+                }
+            ]
         }
     ]
 }
