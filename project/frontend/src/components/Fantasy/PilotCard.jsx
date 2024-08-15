@@ -25,7 +25,7 @@ export function PilotCard({pilot}) {
                 </div>
                 <div className="w-1/2 rounded-lg bg-zinc-800 flex justify-center items-center gap-2 py-2">
                     <img
-                        src={pilot.image}
+                        src={pilot.teamImage}
                         className="rounded-lg"
                     />
                 </div>

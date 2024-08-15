@@ -7,16 +7,20 @@ import { useEffect } from "react";
 
 export function FantasyPage() {
     const data = useOutletContext();
-    const [userData, setUserData] = useState(null)
+    const [userData, setUserData] = useState(null);
+    const [isLineupSelected, setIsLineupSelected] = useState(false);
+
+
     useEffect(() => {
         fetch('/users.json')
-          .then((response) => response.json())
-          .then((jsonData) => setUserData(jsonData))
-          .catch((error) => console.error('Error fetching data:', error));
-      }, []);
+            .then((response) => response.json())
+            .then((jsonData) => setUserData(jsonData))
+            .catch((error) => console.error('Error fetching data:', error));
+    }, []);
 
-
-    const [isLineupSelected, setIsLineupSelected] = useState(false);
+    if (!userData) {
+        return <div>Loading...</div>;
+    }
 
     function handleLineupSelect() {
         setIsLineupSelected(true);
@@ -48,23 +52,19 @@ export function FantasyPage() {
                 </div>
                 {isLineupSelected ? <Lineup data={data} /> : (
                     <>
-                        {userData?.users?.pilots?.length > 0 ? (
-                            data.users.pilots.map((pilot) => (
-                                <PilotCard pilot={pilot} key={pilot.name} />
-                            ))
-                        ) : (
-                            <p>No pilots available</p>
-                        )}
+                        {
+                            userData.users[0].pilots.map((pilot, index) => (
+                                <PilotCard pilot={pilot} key={index} />
+                            ))}
                     </>
                 )}
             </div>
             <div className="hidden max-h-[80vh] md:flex items-stretch gap-2">
                 <div className="max-w-xl flex gap-2">
                     {
-                        data.users.pilots.map((userPilots) => (
-                            <PilotCard pilot={userPilots} key={userPilots.name} />
-                        ))
-                    }
+                        userData.users[0].pilots.map((pilot, index) => (
+                            <PilotCard pilot={pilot} key={index} />
+                        ))}
                 </div>
                 <div className="mx-auto w-full">
                     <Lineup data={data} />

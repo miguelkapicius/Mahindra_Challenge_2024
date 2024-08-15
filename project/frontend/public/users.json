@@ -12,6 +12,7 @@
                     "team": "Nissan",
                     "country": "GB",
                     "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/00098f8a-69be-4f84-a7ac-baedcc5f9e9c.png",
+                    "teamImage": "https://static-files.formula-e.pulselive.com/badges/6c04a435-8357-42f6-8360-5305d00050ee.svg",
                     "price": 118.0,
                     "points": 250,
                     "wins": 3
@@ -23,6 +24,7 @@
                     "team": "Jaguar",
                     "country": "NZ",
                     "image": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/2543b91c-2543-4835-b9fc-17b5fbc79cb1.png",
+                    "teamImage": "https://static-files.formula-e.pulselive.com/badges/05dab754-2899-411b-9c4e-72311a36cc9c.svg",
                     "price": 140.0,
                     "points": 250,
                     "wins": 3
