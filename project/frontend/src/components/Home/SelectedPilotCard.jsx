@@ -21,7 +21,7 @@ export function SelectedPilotCard() {
                 </div>
             </div>
             <div className="flex justify-between items-center">
-                <div className="flex flex-col md:flex-row gap-2 justify-around items-start py-1">
+                <div className="flex flex-wrap gap-2 justify-around items-start py-1">
                     <div className="flex items-center gap-2 shadow-shape p-2 rounded text-green-500">
                         <BatteryFull size={24} />
                         <span className="text-xs">98%</span>
@@ -34,8 +34,8 @@ export function SelectedPilotCard() {
                         <Flag size={24} />
                         <span className="text-xs">80%</span>
                     </div>
-                    <div>
-                        <span className="flex items-center gap-2 shadow-shape p-2 rounded">
+                    <div className="flex-1">
+                        <span className="flex justify-center items-center gap-2 shadow-shape p-2 rounded">
                             312 pts
                         </span>
                     </div>

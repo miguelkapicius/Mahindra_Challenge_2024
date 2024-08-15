@@ -34,3 +34,13 @@ progress::-moz-progress-bar {
   background-color: #09090b;
   border-radius: 0.25rem;
 }
+
+:root {
+  font-size: 80,5%;
+}
+
+@media (min-width: 768px) {
+  :root {
+      font-size: 90%; /* Ajusta o tamanho base para telas maiores */
+  }
+}

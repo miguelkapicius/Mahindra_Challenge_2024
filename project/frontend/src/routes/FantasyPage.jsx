@@ -23,25 +23,30 @@ export function FantasyPage() {
                 <div className="rounded bg-zinc-900 flex items-center shadow-shape">
                     <span
                         onClick={handleYourPilotSelect}
-                        className={`font-light w-1/2 text-center py-2 rounded-l ${
-                            isLineupSelected ? "bg-zinc-900" : "bg-zinc-800"
-                        }`}
+                        className={`font-light w-1/2 text-center py-2 rounded-l ${isLineupSelected ? "bg-zinc-900" : "bg-zinc-800"
+                            }`}
                     >
-                        Your Pilot
+                        Your Team
                     </span>
                     <span
                         onClick={handleLineupSelect}
-                        className={`font-light w-1/2 text-center py-2 rounded-r ${
-                            isLineupSelected ? "bg-zinc-800" : "bg-zinc-900"
-                        }`}
+                        className={`font-light w-1/2 text-center py-2 rounded-r ${isLineupSelected ? "bg-zinc-800" : "bg-zinc-900"
+                            }`}
                     >
                         Lineup
                     </span>
                 </div>
-                {isLineupSelected ? <Lineup data={data} /> : <PilotCard />}
+                {isLineupSelected ? <Lineup data={data} /> : (
+                    <>
+
+                        <PilotCard />
+                        <PilotCard />
+                    </>
+                )}
             </div>
             <div className="hidden md:flex gap-2">
-                <div className="max-w-xl">
+                <div className="max-w-xl flex gap-2">
+                    <PilotCard />
                     <PilotCard />
                 </div>
                 <div className="mx-auto w-full">
