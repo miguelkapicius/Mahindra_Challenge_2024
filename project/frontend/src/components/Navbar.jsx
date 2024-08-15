@@ -7,10 +7,10 @@ export function Navbar() {
 
     return (
         <aside className="fixed bottom-0 flex items-center shadow-shape lg:static lg:shadow-none text-zinc-400 z-50 w-full px-6 h-14 bg-zinc-800 lg:w-max lg:h-screen lg:bg-transparent">
-            <div className="lg:flex lg:flex-col lg:gap-2 lg:h-full lg:shadow-shape lg:p-6 lg:rounded lg:bg-zinc-900">
+            <div className="flex-1 lg:flex-col lg:gap-2 lg:h-full lg:shadow-shape lg:p-6 lg:rounded lg:bg-zinc-900">
                 <div className="hidden lg:block">
                 </div>
-                <nav className="flex items-center h-full justify-around gap-6 lg:h-max lg:flex-col lg:items-start">
+                <nav className="flex items-center justify-around lg:h-max lg:flex-col lg:items-start">
                     <Link
                         to={"/"}
                         draggable="false"
