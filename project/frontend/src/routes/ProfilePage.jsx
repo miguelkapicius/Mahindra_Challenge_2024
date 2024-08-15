@@ -63,7 +63,7 @@ export function ProfilePage() {
 
     return (
         <div className="space-y-6 md:space-y-0 md:flex gap-6 items-start mx-auto max-w-5xl">
-            <div className="bg-zinc-900 w-2/3 h-20 flex p-2 gap-4">
+            <div className="bg-zinc-900 w-2/3 h-20 flex p-2 gap-4 rounded shadow-shape">
                 <img
                     src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?q=80&w=1966&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     className="object-cover rounded"
@@ -83,7 +83,7 @@ export function ProfilePage() {
                 </div>
             </div>
             <div className="flex flex-col gap-6 w-full">
-                <div className="bg-blue-900 px-2 py-6 space-y-6">
+                <div className="bg-blue-900 px-2 py-6 space-y-6 rounded">
                     <div className="flex gap-2 items-center">
                         <span className="flex w-1/2 justify-center font-medium bg-zinc-900 px-4 rounded py-1 items-center gap-2 shadow-shape">
                             <Waypoints />

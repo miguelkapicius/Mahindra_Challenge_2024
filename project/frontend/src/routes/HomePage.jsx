@@ -11,10 +11,10 @@ export function HomePage() {
         <div
             className="grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-auto max-w-5xl"
         >
-            <div className="rounded md:col-span-2 lg:order-2 lg:col-span-2">
+            <div className="rounded md:col-span-2 lg:order-2 lg:col-span-3">
                 <Map />
             </div>
-            <div className="rounded row-span-2 md:col-span-2 lg:order-3 lg:col-span-2">
+            <div className="rounded row-span-2 md:col-span-2 lg:order-3 lg:col-span-3">
                 <div className="p-2 lg:p-0 rounded flex flex-col gap-2">
                     <SelectedPilotCard />
                     <SelectedPilotCard />
@@ -23,7 +23,6 @@ export function HomePage() {
             <div className="rounded row-span-5 md:col-span-2 lg:order-1 lg:col-span-1">
                 <RaceRanking data={data} />
             </div>
-            <aside className="hidden md:flex rounded lg:order-4 lg:col-span-1"></aside>
         </div>
     );
 }

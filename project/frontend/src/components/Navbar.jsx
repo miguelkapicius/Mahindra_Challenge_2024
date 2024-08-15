@@ -6,12 +6,9 @@ export function Navbar() {
     const activeCSS = "rounded bg-zinc-800 shadow-shape text-zinc-100 transition-all duration-300";
 
     return (
-        <aside className="fixed bottom-0 shadow-shape lg:shadow-none text-zinc-400 z-50 w-full px-6 h-14 bg-zinc-800 lg:w-max lg:h-screen lg:bg-transparent p-6">
+        <aside className="fixed bottom-0 flex items-center shadow-shape lg:static lg:shadow-none text-zinc-400 z-50 w-full px-6 h-14 bg-zinc-800 lg:w-max lg:h-screen lg:bg-transparent">
             <div className="lg:flex lg:flex-col lg:gap-2 lg:h-full lg:shadow-shape lg:p-6 lg:rounded lg:bg-zinc-900">
                 <div className="hidden lg:block">
-                    <span className="text-3xl flex items-center gap-2">
-                        <Trophy /> E-Pit
-                    </span>
                 </div>
                 <nav className="flex items-center h-full justify-around gap-6 lg:h-max lg:flex-col lg:items-start">
                     <Link
@@ -46,7 +43,7 @@ export function Navbar() {
                         }`}
                     >
                         <Trophy />
-                        <span className="hidden lg:block">Rankings</span>
+                        <span className="hidden lg:block">Leaderboard</span>
                     </Link>
                     <Link
                         to={"/statistics"}
