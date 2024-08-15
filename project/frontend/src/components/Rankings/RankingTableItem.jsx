@@ -5,7 +5,7 @@ export function RankingTableItem({avatar, username, team, points, position}) {
         <div
             className="flex items-center justify-between rounded bg-zinc-900 p-2 shadow-shape"
         >
-            <div className="flex w-full h-10 gap-4 items-center">
+            <div className="flex flex-1 w-full h-10 gap-4 items-center">
                 <div className="flex h-full items-center lg:gap-6">
                     <span className="w-10 text-blue-800"># {position}</span>
                     <img
@@ -23,7 +23,7 @@ export function RankingTableItem({avatar, username, team, points, position}) {
                 </div>
             </div>
             <div className="rounded bg-zinc-800 w-max shadow-shape p-2 flex items-center gap-2">
-                <Waypoints className="size-4" />
+                <Waypoints className="size-5" />
                 <span>{points}</span>
             </div>
         </div>

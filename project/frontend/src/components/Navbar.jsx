@@ -10,7 +10,7 @@ export function Navbar() {
             <div className="flex-1 lg:flex-col lg:gap-2 lg:h-full lg:shadow-shape lg:p-6 lg:rounded lg:bg-zinc-900">
                 <div className="hidden lg:block">
                 </div>
-                <nav className="flex items-center justify-around lg:h-max lg:flex-col lg:items-start">
+                <nav className="flex items-center gap-2 justify-around lg:h-max lg:flex-col lg:items-start">
                     <Link
                         to={"/"}
                         draggable="false"
