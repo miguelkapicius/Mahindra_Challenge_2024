@@ -34,9 +34,9 @@ export function LineupPilotCard({pilot}) {
                     <span className="text-xs text-center flex-1">{pilot.team}</span>
                 </div>
             </div>
-            <div onMouseEnter={handleBuyButtonIn} onMouseLeave={handleBuyButtonOut} className="bg-blue-800 hover:bg-green-700 cursor-pointer duration-200 p-2 rounded">
+            <div onMouseEnter={handleBuyButtonIn} onMouseLeave={handleBuyButtonOut} className="bg-blue-800 hover:bg-green-700 h-10 cursor-pointer duration-200 p-2 rounded">
                 <span className="flex justify-center gap-2">
-                    <CircleDollarSign /> {isBuyButtonText}
+                    <CircleDollarSign className={isBuyButtonText === 'Buy Pilot' ? 'hidden' : ''} /> {isBuyButtonText}
                 </span>
             </div>
         </div>

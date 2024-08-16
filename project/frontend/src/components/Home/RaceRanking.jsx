@@ -1,12 +1,12 @@
 export function RaceRanking({ data }) {
     return (
         <div
-            className="pr-2 space-y-1 bg-zinc-950 rounded h-screen pb-10 overflow-y-auto"
+            className="pr-2 space-y-2 bg-zinc-950 rounded h-screen pb-10 overflow-y-auto"
         >
             {data.pilots.sort((a, b) => a.position - b.position).map((pilot) => (
                 <div
                     key={pilot.position}
-                    className="flex items-center justify-between shadow-shape bg-zinc-900 p-2 rounded"
+                    className="flex items-center justify-between shadow-shape bg-zinc-900 h-16 p-2 rounded"
                 >
                     <div className="flex items-center gap-2">
                         <img

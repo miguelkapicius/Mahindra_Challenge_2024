@@ -3,7 +3,7 @@ import { Waypoints } from "lucide-react";
 export function RankingTableItem({avatar, username, team, points, position}) {
     return (
         <div
-            className="flex items-center justify-between rounded bg-zinc-900 p-2 shadow-shape"
+            className="flex items-center justify-between rounded bg-zinc-900 p-2 h-16 shadow-shape"
         >
             <div className="flex flex-1 w-full h-10 gap-4 items-center">
                 <div className="flex h-full items-center lg:gap-6">
