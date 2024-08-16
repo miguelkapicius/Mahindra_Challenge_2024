@@ -1,7 +1,19 @@
 import { CircleDollarSign } from "lucide-react";
+import { useState } from "react";
 import Flag from "react-flagkit";
 
 export function LineupPilotCard({pilot}) {
+
+    const [isBuyButtonText, setIsBuyButtonText] = useState(pilot.price)
+
+    function handleBuyButtonIn() {
+        setIsBuyButtonText("Buy Pilot")
+    }
+
+    function handleBuyButtonOut() {
+        setIsBuyButtonText(pilot.price)
+    }
+
     return (
         <div
             className="bg-zinc-950/80 p-2 rounded flex justify-between flex-col gap-2 relative"
@@ -22,9 +34,9 @@ export function LineupPilotCard({pilot}) {
                     <span className="text-xs text-center flex-1">{pilot.team}</span>
                 </div>
             </div>
-            <div className="bg-blue-800 p-2 rounded">
+            <div onMouseEnter={handleBuyButtonIn} onMouseLeave={handleBuyButtonOut} className="bg-blue-800 hover:bg-green-700 cursor-pointer duration-200 p-2 rounded">
                 <span className="flex justify-center gap-2">
-                    <CircleDollarSign /> {pilot.price}
+                    <CircleDollarSign /> {isBuyButtonText}
                 </span>
             </div>
         </div>
