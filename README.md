@@ -23,9 +23,10 @@ What did you learn while building this project? What challenges did you face and
 
 ## Tech Stack
 
- ![Flask](https://img.shields.io/badge/Flask-E51937.svg?style=for-the-badge&logo=flask&logoColor=white)&nbsp;
+ ![Express](https://img.shields.io/badge/Express-E51937.svg?style=for-the-badge&logo=express&logoColor=white)&nbsp;
+ ![Mongoose](https://img.shields.io/badge/Mongoose-E51937.svg?style=for-the-badge&logo=mongoose&logoColor=white)&nbsp;
  ![React](https://img.shields.io/badge/React-E51937.svg?style=for-the-badge&logo=react&logoColor=white)&nbsp;
- ![React](https://img.shields.io/badge/Leaflet-E51937.svg?style=for-the-badge&logo=leaflet&logoColor=white)&nbsp;
+ ![Tailwind CSS](https://img.shields.io/badge/Tailwind-E51937.svg?style=for-the-badge&logo=tailwindcss&logoColor=white)&nbsp;
  
 
 
