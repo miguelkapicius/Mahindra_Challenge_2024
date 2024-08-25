@@ -18,7 +18,7 @@ export function LineupPilotCard({pilot}) {
         <div
             className="bg-zinc-950/80 p-2 rounded flex justify-between flex-col gap-2 relative"
         >
-            <img className="bg-zinc-800 w-full h-auto rounded object-cover" src={pilot.image} />
+            <img className="bg-zinc-800 w-full h-auto rounded object-cover" src={pilot.image} loading="lazy" fetchPriority="low" />
             <span className="absolute top-0 left-0 p-2 bg-blue-600 rounded-l text-xs">{pilot.position}</span>
             <div>
                 <span className="block">

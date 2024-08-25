@@ -11,6 +11,7 @@ export function RankingTableItem({avatar, username, team, points, position}) {
                     <img
                         src={avatar}
                         className="rounded h-full bg-zinc-950 object-cover"
+                        loading="lazy"
                     />
                 </div>
                 <div className="">

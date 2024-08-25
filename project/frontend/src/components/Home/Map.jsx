@@ -6,6 +6,7 @@ export function Map() {
                 src="/map.png"
                 alt=""
                 draggable="false"
+                loading="lazy"
             />
         </div>
     );

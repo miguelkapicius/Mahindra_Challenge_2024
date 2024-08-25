@@ -10,6 +10,8 @@ export function PilotCard({ pilot }) {
                 draggable={false}
                 src={pilot.image}
                 className="rounded-lg bg-zinc-800 p-2"
+                loading="lazy"
+                fetchPriority="high"
             />
             <div className="flex justify-between items-center">
                 <span>

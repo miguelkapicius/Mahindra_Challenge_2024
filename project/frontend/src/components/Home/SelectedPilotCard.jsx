@@ -8,6 +8,8 @@ export function SelectedPilotCard() {
                     <img
                         className="rounded-full size-12 bg-zinc-500 pt-1"
                         src="https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/4a390151-89af-4931-9907-bcbaabb5a152.png"
+                        loading="lazy"
+                        
                     />
                     <div className="">
                         <span className="block">Lucas Di Grassi</span>

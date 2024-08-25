@@ -12,6 +12,7 @@ export function RaceRanking({ data }) {
                         <img
                             className="rounded-full size-12 bg-zinc-950 pt-1"
                             src={pilot.image}
+                            loading="lazy"
                         />
                         <div className="">
                             <span className="block truncate pr-2">
