@@ -1,4 +1,6 @@
+"use client"
 
+import { TrendingUp } from "lucide-react"
 import { CartesianGrid, Line, LineChart, XAxis } from "recharts"
 
 import {
@@ -38,7 +40,7 @@ export function WinsChart() {
   return (
     <Card className="w-full">
       <CardHeader>
-        <CardTitle>Wins Rate</CardTitle>
+        <CardTitle>Wins Chart</CardTitle>
         <CardDescription>January - June 2024</CardDescription>
       </CardHeader>
       <CardContent>

@@ -1,7 +1,7 @@
 import { PodiumsChart } from "@/components/TeamsStats/PodiumsChart";
 import { PointsChart } from "@/components/TeamsStats/PointsChart";
 import { WinsChart } from "@/components/TeamsStats/WinsChart";
-import { Card, CardContent} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import {
     Table,
     TableBody,
@@ -35,8 +35,6 @@ const pilots = [
 ];
 
 export function TeamStats() {
-
-
     return (
         <section className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="col-span-full bg-red-400 h-60 rounded drop-shadow-lg flex justify-center items-center">
@@ -44,7 +42,7 @@ export function TeamStats() {
                     Mahindra
                 </h2>
             </div>
-            <div className="col-span-full h-max flex flex-col md:flex-row gap-6">
+            <div className="col-span-full flex flex-col md:flex-row gap-6">
                 <WinsChart />
                 <PodiumsChart />
                 <PointsChart />

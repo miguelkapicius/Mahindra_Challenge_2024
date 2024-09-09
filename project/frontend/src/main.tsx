@@ -13,6 +13,7 @@ import { UsersLeaderboard } from "./routes/UsersLeaderboard.tsx";
 import { RaceHistory } from "./routes/RaceHistory.tsx";
 import { SustainabilityInMotion } from "./routes/SustainabilityInMotion.tsx";
 import { FriendsRivals } from "./routes/FriendsRivals.tsx";
+import { TeamStats } from "./routes/TeamStats.tsx";
 
 const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
             {
                 path: "/teams",
                 element: <Teams />,
+            },
+            {
+                path: "/teams/:team",
+                element: <TeamStats />,
             },
             {
                 path: "/pilots",
