@@ -12,9 +12,9 @@ import { CoinsIcon } from "lucide-react";
 const pilots = [
     {
         id: 1,
-        name: "Max Verstappen",
-        image: "/images/pilots/max-verstappen.jpg",
-        team: "Red Bull",
+        name: "Edoardo Mortara",
+        image: "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/728b2253-b9d4-47dd-9051-e970bff2a62f.png",
+        team: "Mahindra",
         points: 100,
         price: 100,
     },
