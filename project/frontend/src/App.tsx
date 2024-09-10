@@ -1,9 +1,10 @@
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { Coins } from "./components/Coins";
 import { ModeToggle } from "./components/mode-toggle";
 import { Navbar } from "./components/Navbar";
 import { Notification } from "./components/Notifications";
-import { Search } from "./components/Search";
+import { Button } from "./components/ui/button";
+import { Users } from "lucide-react";
 
 export function App() {
     return (
@@ -13,11 +14,15 @@ export function App() {
                     <div className="flex flex-1 items-center gap-2 w-full sm:w-auto">
                         <ModeToggle />
                         <Notification />
+                        <Button size="icon" variant="outline" className="p-0">
+                            <NavLink to="/friends-rivals">
+                                <Users size={20} />
+                            </NavLink>
+                        </Button>
                         <Navbar />
                     </div>
                     <div className="flex items-center gap-2 w-full sm:w-auto">
                         <Coins />
-                        <Search />
                     </div>
                 </header>
                 <main className="mb-6">

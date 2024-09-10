@@ -89,7 +89,7 @@ const posts = [
 
 export function Posts() {
     return (
-        <section className="space-y-6">
+        <section className="space-y-6 pb-6">
             {posts.map((post) => (
                 <Card>
                     <CardHeader className="flex flex-row gap-6 items-center">

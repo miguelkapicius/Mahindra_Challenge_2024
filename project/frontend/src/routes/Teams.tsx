@@ -30,12 +30,12 @@ const teams = [
 
 export function Teams() {
     return (
-        <section className="grid grid-cols-3 gap-6">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {teams.map((team) => (
                 <NavLink to={`${team.url}`}>
                     <Card>
                         <CardHeader>
-                            <h2>Mahindra</h2>
+                            <h2 className="font-display text-xl">{team.name}</h2>
                             <img src={team.image} alt={team.name} />
                         </CardHeader>
                         <CardContent>

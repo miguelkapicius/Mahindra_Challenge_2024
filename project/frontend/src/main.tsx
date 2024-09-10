@@ -32,7 +32,6 @@ const router = createBrowserRouter([
                 path: "/community",
                 element: <Community />,
             },
-            // Add new routes
             {
                 path: "/teams",
                 element: <Teams />,
