@@ -20,6 +20,7 @@ const pilots = [
         points: 100,
         wins: 10,
         podiums: 30,
+        best_lap: "08:32.34",
         price: 100,
     },
     {
@@ -30,6 +31,7 @@ const pilots = [
         points: 80,
         wins: 2,
         podiums: 6,
+        best_lap: "09:23.42",
         price: 80,
     },
 ];
@@ -64,6 +66,7 @@ export function TeamStats() {
                                     <TableRow>
                                         <TableHead>Wins</TableHead>
                                         <TableHead>Podiums</TableHead>
+                                        <TableHead>Best Lap</TableHead>
                                         <TableHead className="text-right">
                                             Points
                                         </TableHead>
@@ -73,6 +76,7 @@ export function TeamStats() {
                                     <TableRow>
                                         <TableCell>{pilot.wins}</TableCell>
                                         <TableCell>{pilot.podiums}</TableCell>
+                                        <TableCell>{pilot.best_lap}</TableCell>
                                         <TableCell className="text-right">
                                             {pilot.points}
                                         </TableCell>

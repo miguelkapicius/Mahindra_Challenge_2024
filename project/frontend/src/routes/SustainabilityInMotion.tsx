@@ -1,4 +1,8 @@
 
 export function SustainabilityInMotion() {
-    return <div>Sustainability in Motion Page</div>;
+    return (
+        <section>
+            <h2 className="text-3xl md:text-5xl font-display">Sustainability In Motion</h2>
+        </section>
+    );
 }

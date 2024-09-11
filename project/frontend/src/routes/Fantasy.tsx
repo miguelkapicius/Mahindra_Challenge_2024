@@ -5,19 +5,14 @@ import { PriceFilter } from "@/components/Fantasy/PilotCard/PriceFilter";
 
 export function Fantasy() {
     const [nameFilter, setNameFilter] = useState("");
-    const [teamFilter, setTeamFilter] = useState("");
     const [priceFilter, setPriceFilter] = useState<number>(0);
 
     return (
         <main className="space-y-6">
             <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
                 <Input
-                    placeholder="Search by pilot name"
+                    placeholder="Search by pilot or team name"
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNameFilter(e.target.value)}
-                />
-                <Input
-                    placeholder="Search by team name"
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setTeamFilter(e.target.value)}
                 />
                 <div className="flex items-center gap-2">
                     <PriceFilter
@@ -28,7 +23,6 @@ export function Fantasy() {
             </div>
             <PilotCard
                 nameFilter={nameFilter}
-                teamFilter={teamFilter}
                 priceFilter={priceFilter}
             />
         </main>

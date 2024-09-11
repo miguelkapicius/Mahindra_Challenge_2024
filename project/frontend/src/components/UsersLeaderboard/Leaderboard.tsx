@@ -65,7 +65,7 @@ import {
             <TableRow key={user.id}>
               <TableCell className="font-medium">{`#${user.id}`}</TableCell>
               <TableCell className="font-medium">
-                <img className="rounded-full size-8" src={user.img} alt={user.username} />
+                <img className="rounded-full size-8" draggable="false" src={user.img} alt={user.username} />
               </TableCell>
               <TableCell>{user.pilot}</TableCell>
               <TableCell>{user.username}</TableCell>

@@ -38,9 +38,9 @@ export function CarouselDisplay() {
     >
       <CarouselContent>
         {cards.map((card, index) => (
-          <CarouselItem key={index} className="basis-1/2 md:basis-1/3 lg:basis-1/4">
+          <CarouselItem key={index} className="basis-1/2 md:basis-1/3 lg:basis-1/6">
             <div className="p-1">
-              <Card>
+              <Card className="bg-destructive-foreground">
                 <CardContent className="flex aspect-square items-center justify-center p-6">
                   <img className="p-2 w-full" src={card.img_url} alt="" />
                 </CardContent>

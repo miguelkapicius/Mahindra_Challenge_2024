@@ -18,36 +18,71 @@ const pilots = [
         points: 100,
         price: 100,
     },
-];  
+    {
+        id: 2,
+        name: "Edoardo Mortara",
+        image: "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/728b2253-b9d4-47dd-9051-e970bff2a62f.png",
+        team: "Mahindra",
+        points: 100,
+        price: 100,
+    },
+    {
+        id: 3,
+        name: "Edoardo Mortara",
+        image: "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/728b2253-b9d4-47dd-9051-e970bff2a62f.png",
+        team: "Mahindra",
+        points: 100,
+        price: 100,
+    },
+    {
+        id: 1,
+        name: "Edoardo Mortara",
+        image: "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/728b2253-b9d4-47dd-9051-e970bff2a62f.png",
+        team: "Mahindra",
+        points: 100,
+        price: 100,
+    },
+    {
+        id: 2,
+        name: "Edoardo Mortara",
+        image: "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/728b2253-b9d4-47dd-9051-e970bff2a62f.png",
+        team: "Mahindra",
+        points: 100,
+        price: 100,
+    },
+    {
+        id: 3,
+        name: "Edoardo Mortara",
+        image: "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/728b2253-b9d4-47dd-9051-e970bff2a62f.png",
+        team: "Mahindra",
+        points: 100,
+        price: 100,
+    },
+];
 
 interface PilotCardProps {
     nameFilter: string;
-    teamFilter: string;
     priceFilter: number;
 }
 
-export function PilotCard({ nameFilter, teamFilter, priceFilter }: PilotCardProps) {
+export function PilotCard({ nameFilter, priceFilter }: PilotCardProps) {
     return (
-        <section className="grid grid-cols-4 gap-6">
+        <section className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {pilots
                 .filter(
                     (pilot) =>
                         (nameFilter
-                            ? pilot.name
+                            ? pilot.name.toLowerCase().includes(nameFilter.toLowerCase()) ||
+                              pilot.team
                                   .toLowerCase()
                                   .includes(nameFilter.toLowerCase())
-                            : true) &&
-                        (teamFilter
-                            ? pilot.team
-                                  .toLowerCase()
-                                  .includes(teamFilter.toLowerCase())
                             : true) &&
                         (priceFilter > 0 ? pilot.price <= priceFilter : true)
                 )
                 .map((pilot) => (
                     <Card
                         key={pilot.id}
-                        className="w-64 flex flex-col gap-2 p-4 rounded overflow-hidden"
+                        className="flex flex-col gap-2 p-4 rounded overflow-hidden"
                     >
                         <img
                             src={pilot.image}

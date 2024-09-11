@@ -51,10 +51,10 @@ const NextRaceCountdown = () => {
 
 export function Home() {
     return (
-        <main className="grid grid-cols-1 lg:grid-cols-5 grid-rows-4 gap-6">
-            <div className="grid grid-rows-4 col-span-3 row-span-4 gap-4">
-                <Card className="row-span-3">
-                    <div className="flex flex-col items-center justify-center h-full">
+        <main className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+            <div className="grid col-span-full row-span-4 gap-4">
+                <Card className="h-96">
+                    <div className="flex flex-col items-center justify-center h-full font-display">
                         <h2 className="text-2xl font-bold mb-4 text-muted-foreground">
                             Next Race Countdown
                         </h2>
@@ -63,7 +63,7 @@ export function Home() {
                 </Card>
                 <CarouselDisplay />
             </div>
-            <div className="col-span-2 row-span-3 mt-4 lg:mt-0">
+            <div className="col-span-full">
                 <Leaderboard />
             </div>
         </main>
