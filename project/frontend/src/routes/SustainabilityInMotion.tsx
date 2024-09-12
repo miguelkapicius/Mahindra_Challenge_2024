@@ -1,5 +1,4 @@
 import { SustainabilityHero } from "@/components/Sustainability/SustainabilityHero";
-import { reverse } from "dns";
 
 const sustainabilityInMotion = [
     {
@@ -11,7 +10,7 @@ const sustainabilityInMotion = [
         title: "Ecosystem",
         description:
             "Season after season, we leverage our values and the strength of the Formula E ecosystem of teams and partners to test and highlight innovative solutions. We use our platform to activate projects that can be scaled up to deliver solutions for a more sustainable lifestyle.",
-        link: "https://www.formula-e.com/en/sustainability/ecosystem",
+        link: "https://resources.formula-e.pulselive.com/formula-e/document/2024/04/19/d9630add-7d9b-4915-86b7-c6bba802e052/FormulaE2023Report-FINAL-.pdf",
         image: "https://resources.formula-e.pulselive.com/photo-resources/2024/04/18/fbc52e41-4f7b-4fab-9d53-92920acef5c7/1019479891-LAT-20230210-EPS904_121957_ALS8298.jpg?width=1920&height=1080",
     },
     {
