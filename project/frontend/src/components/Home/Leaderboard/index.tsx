@@ -18,6 +18,13 @@ const leaderboard = pilots.map((pilot, index) => ({
     name: pilot.name,
     team: pilot.team,
     time: "08:32",
+    speed: pilot.speed,
+    battery: pilot.battery,
+    lap: pilot.lap,
+    lastLapTime: pilot.lastLapTime,
+    sector1Time: pilot.sector1Time,
+    sector2Time: pilot.sector2Time,
+    sector3Time: pilot.sector3Time,
 }));
 
 export function Leaderboard() {
@@ -58,7 +65,7 @@ export function Leaderboard() {
                                 {pilot.time}
                             </TableCell>
                             <TableCell className="flex justify-center">
-                                <PilotInfo />
+                                <PilotInfo pilot={{...pilot, id: pilot.id.toString()}} />
                             </TableCell>
                         </TableRow>
                     ))}
