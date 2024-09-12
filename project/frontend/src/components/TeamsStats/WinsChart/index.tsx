@@ -1,6 +1,5 @@
 "use client"
 
-import { TrendingUp } from "lucide-react"
 import { CartesianGrid, Line, LineChart, XAxis } from "recharts"
 
 import {
@@ -17,26 +16,27 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
+import { IChartProps } from "@/Interfaces/IChartProps"
 
-export const description = "A line chart"
+export function WinsChart({color}: IChartProps) {
 
-const chartData = [
-  { month: "January", desktop: 186 },
-  { month: "February", desktop: 305 },
-  { month: "March", desktop: 237 },
-  { month: "April", desktop: 73 },
-  { month: "May", desktop: 209 },
-  { month: "June", desktop: 214 },
-]
+  const chartData = [
+    { month: "January", desktop: 186 },
+    { month: "February", desktop: 305 },
+    { month: "March", desktop: 237 },
+    { month: "April", desktop: 73 },
+    { month: "May", desktop: 209 },
+    { month: "June", desktop: 214 },
+  ]
 
-const chartConfig = {
-  desktop: {
-    label: "Desktop",
-    color: "hsl(var(--chart-1))",
-  },
-} satisfies ChartConfig
+  const chartConfig = {
+    desktop: {
+      label: "Desktop",
+      color: `${color}`,
+    },
+  } satisfies ChartConfig
+  
 
-export function WinsChart() {
   return (
     <Card className="w-full">
       <CardHeader>

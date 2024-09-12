@@ -26,9 +26,9 @@ export function TeamStats() {
                 </h2>
             </div>
             <div className="col-span-full flex flex-col md:flex-row gap-6">
-                <WinsChart />
-                <PodiumsChart />
-                <PointsChart />
+                <WinsChart color={currentTeam?.color} />
+                <PodiumsChart color={currentTeam?.color}/>
+                <PointsChart color={currentTeam?.color}/>
             </div>
             <div className="space-y-6 col-span-full">
                 {currentTeam?.pilots.map((pilot) => (
@@ -36,6 +36,7 @@ export function TeamStats() {
                         <img
                             className="object-cover bg-accent md:bg-transparent p-6 pb-0 rounded w-1/3"
                             src={pilot.image}
+                            draggable="false"
                             alt=""
                         />
                         <CardContent className="w-2/3 space-y-6 overflow-hidden">
