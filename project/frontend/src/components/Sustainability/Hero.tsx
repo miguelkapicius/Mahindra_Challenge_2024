@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
-import React from "react";
 
 export function SustainabilityHero({
     title,

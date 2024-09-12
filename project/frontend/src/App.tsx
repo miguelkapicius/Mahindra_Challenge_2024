@@ -30,7 +30,7 @@ export function App() {
                         <Navbar />
                     </div>
                 </header>
-                <main className="mb-6">
+                <main className="mb-6 min-h-screen">
                     <Outlet />
                 </main>
                 <Footer />
