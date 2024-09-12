@@ -9,7 +9,7 @@ import {
     DrawerTitle,
     DrawerTrigger,
 } from "@/components/ui/drawer";
-import { AudioWaveform, Battery, BatteryFull, BatteryMedium, Clock, Flag, Gauge, Hourglass, PlugZap } from "lucide-react";
+import { AudioWaveform, Battery, BatteryFull, BatteryMedium, Clock, Flag, Gauge, Hourglass} from "lucide-react";
 
 export interface Pilot {
     id: string;
@@ -30,13 +30,13 @@ export interface Pilot {
 export function PilotInfo({ pilot }: { pilot: Pilot }) {
     return (
         <Drawer>
-            <DrawerTrigger asChild>
+            <DrawerTrigger className="mx-auto" asChild>
                 <Button variant="outline" className="flex gap-2">
-                    <PlugZap /> Stats
+                    Stats
                 </Button>
             </DrawerTrigger>
-            <DrawerContent className="h-[70vh]">
-                <div className="mx-auto w-full max-w-6xl h-[60vh]">
+            <DrawerContent className="h-[75vh] md:h-[50vh]">
+                <div className="mx-auto w-full max-w-6xl">
                     <DrawerHeader className="flex items-center gap-4">
                         <img
                             src={pilot.image}
@@ -51,27 +51,27 @@ export function PilotInfo({ pilot }: { pilot: Pilot }) {
                     </DrawerHeader>
                     <div className="p-4 pb-0">
                         <div className="grid grid-cols-2 md:grid-cols-6 gap-2 *:p-6 *:bg-accent *:rounded-lg *:flex *:flex-col *:items-center *:space-y-2">
-                            <div>
+                            <div className="flex flex-col items-center justify-center">
                                 <span className="text-xl md:text-2xl font-bold flex items-center gap-2"><Flag className="size-6" />{pilot.position}</span>
                                 <span className="text-sm text-muted-foreground">Position</span>
                             </div>
-                            <div>
+                            <div className="flex flex-col items-center justify-center">
                                 <span className="text-xl md:text-2xl font-bold flex items-center gap-2"><Clock className="size-6" />{pilot.time}</span>
                                 <span className="text-sm text-muted-foreground">Time</span>
                             </div>
-                            <div>
-                                <span className="text-xl md:text-2xl font-bold flex items-center gap-2"><Gauge className="size-6" />{pilot.speed} km/h</span>
+                            <div className="flex flex-col items-center justify-center">
+                                <span className="text-xl md:text-xl font-bold flex items-center gap-2"><Gauge className="size-6" />{pilot.speed} km/h</span>
                                 <span className="text-sm text-muted-foreground">Speed</span>
                             </div>
-                            <div>
+                            <div className="flex flex-col items-center justify-center">
                                 <span className="text-xl md:text-2xl font-bold flex items-center gap-2">{pilot.battery > 50 ? <BatteryFull /> : pilot.battery > 25 ? <BatteryMedium /> : <Battery />}{pilot.battery}%</span>
                                 <span className="text-sm text-muted-foreground">Battery</span>
                             </div>
-                            <div>
+                            <div className="flex flex-col items-center justify-center">
                                 <span className="text-xl md:text-2xl font-bold flex items-center gap-2"><AudioWaveform className="size-6" />{pilot.lap}</span>
                                 <span className="text-sm text-muted-foreground">Lap</span>
                             </div>
-                            <div>
+                            <div className="flex flex-col items-center justify-center">
                                 <span className="text-xl md:text-2xl font-bold flex items-center gap-2"><Hourglass className="size-6" />{pilot.lastLapTime}</span>
                                 <span className="text-sm text-muted-foreground">Last Lap</span>
                             </div>

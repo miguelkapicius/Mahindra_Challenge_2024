@@ -64,7 +64,7 @@ export function Leaderboard() {
                             <TableCell className="hidden md:table-cell text-center">
                                 {pilot.time}
                             </TableCell>
-                            <TableCell className="flex justify-center">
+                            <TableCell>
                                 <PilotInfo pilot={{...pilot, id: pilot.id.toString()}} />
                             </TableCell>
                         </TableRow>

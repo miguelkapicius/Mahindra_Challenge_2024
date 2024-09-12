@@ -14,11 +14,15 @@ export function App() {
                     <div className="flex flex-1 items-center gap-2 w-full sm:w-auto">
                         <ModeToggle />
                         <Notification />
-                        <Button size="icon" variant="outline" className="p-2">
-                            <NavLink to="/friends-rivals">
+                        <NavLink to="/friends-rivals">
+                            <Button
+                                size="icon"
+                                variant="outline"
+                                className="p-2"
+                            >
                                 <Users size={20} />
-                            </NavLink>
-                        </Button>
+                            </Button>
+                        </NavLink>
                         <Coins />
                     </div>
                     <div className="flex items-center gap-2 w-full sm:w-auto">

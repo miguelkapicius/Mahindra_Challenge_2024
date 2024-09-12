@@ -6,6 +6,7 @@ import {
     TableHeader,
     TableRow,
   } from "@/components/ui/table"
+import { ChartNoAxesGantt } from "lucide-react"
   
   const users = [
     {
@@ -69,7 +70,7 @@ import {
               </TableCell>
               <TableCell>{user.pilot}</TableCell>
               <TableCell>{user.username}</TableCell>
-              <TableCell className="text-right">{user.points}</TableCell>
+              <TableCell className="text-right flex items-center justify-end gap-2"><ChartNoAxesGantt />{user.points}</TableCell>
             </TableRow>
           ))}
         </TableBody>
