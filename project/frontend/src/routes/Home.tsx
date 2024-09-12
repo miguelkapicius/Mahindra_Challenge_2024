@@ -67,7 +67,7 @@ export function Home() {
                 </Card>
                 <CarouselDisplay />
             </div>
-            <div className="w-screen">
+            <div className="col-span-full">
                 <Leaderboard />
             </div>
         </main>
