@@ -36,7 +36,7 @@ export function Leaderboard() {
                     <TableHead className="text-center w-[50px]">
                         Position
                     </TableHead>
-                    <TableHead className="w-[200px] md:w-[200px]">Pilot</TableHead>
+                    <TableHead className="w-[400px] md:w-[200px]">Pilot</TableHead>
                     <TableHead className="w-[150px]">Team</TableHead>
                     <TableHead className="hidden md:table-cell text-center w-[100px]">Time</TableHead>
                     <TableHead className="w-[120px] text-center">

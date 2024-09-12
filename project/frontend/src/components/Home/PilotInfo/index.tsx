@@ -1,5 +1,3 @@
-import { ResponsiveContainer } from "recharts";
-
 import { Button } from "@/components/ui/button";
 import {
     Drawer,
