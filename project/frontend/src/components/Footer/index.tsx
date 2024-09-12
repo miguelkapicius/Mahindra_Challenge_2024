@@ -2,7 +2,7 @@ import { LinkedinLink } from "./LinkedinLink";
 
 export function Footer() {
     return (
-        <footer>
+        <footer className="bg-muted rounded-t">
             <div className="py-6 space-y-6">
                 <div className="flex flex-wrap md:flex-row justify-around items-center gap-6">
                     <LinkedinLink
