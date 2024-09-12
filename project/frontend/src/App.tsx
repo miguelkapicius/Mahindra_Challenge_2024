@@ -5,6 +5,7 @@ import { Navbar } from "./components/Navbar";
 import { Notification } from "./components/Notifications";
 import { Button } from "./components/ui/button";
 import { Users } from "lucide-react";
+import { Footer } from "./components/Footer";
 
 export function App() {
     return (
@@ -32,6 +33,7 @@ export function App() {
                 <main className="mb-6">
                     <Outlet />
                 </main>
+                <Footer />
             </div>
         </>
     );

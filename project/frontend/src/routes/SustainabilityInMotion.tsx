@@ -1,4 +1,4 @@
-import { SustainabilityHero } from "@/components/Sustainability/SustainabilityHero";
+import { SustainabilityHero } from "@/components/Sustainability/SusteinabilityHero/SustainabilityHero";
 
 const sustainabilityInMotion = [
     {
