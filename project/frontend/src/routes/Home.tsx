@@ -39,7 +39,7 @@ const NextRaceCountdown = () => {
 
     return (
         <div className="text-center">
-            <div className="text-4xl font-bold space-y-6">
+            <div className="text-2xl md:text-4xl font-bold space-y-6">
                 <span className="block">
                     {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m{" "}
                     {timeLeft.seconds}s
