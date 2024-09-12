@@ -29,16 +29,16 @@ const leaderboard = pilots.map((pilot, index) => ({
 
 export function Leaderboard() {
     return (
-        <Table className="overflow-x-hidden text-xs md:text-lg">
+        <Table className="text-xs md:text-lg">
             <TableCaption>Leaderboard</TableCaption>
             <TableHeader>
                 <TableRow>
-                    <TableHead className="text-center w-[80px]">
+                    <TableHead className="text-center w-[50px]">
                         Position
                     </TableHead>
-                    <TableHead className="w-[200px]">Pilot</TableHead>
+                    <TableHead className="w-[200px] md:w-[200px]">Pilot</TableHead>
                     <TableHead className="w-[150px]">Team</TableHead>
-                    <TableHead className="text-center w-[100px]">Time</TableHead>
+                    <TableHead className="hidden md:table-cell text-center w-[100px]">Time</TableHead>
                     <TableHead className="w-[120px] text-center">
                         More Info
                     </TableHead>
@@ -48,7 +48,7 @@ export function Leaderboard() {
                 {leaderboard
                     .sort((a, b) => a.position - b.position)
                     .map((pilot) => (
-                        <TableRow key={pilot.id}>
+                        <TableRow key={pilot.id} className="gap-y-2 md:gap-y-0">
                             <TableCell
                                 className={`text-center font-medium ${
                                     pilot.position <= 3 && "text-green-500"
@@ -56,12 +56,12 @@ export function Leaderboard() {
                             >
                                 {pilot.position}
                             </TableCell>
-                            <TableCell className="flex items-center gap-4">
-                                <img className="rounded-full size-10" src={pilot.image} alt={pilot.name} />
+                            <TableCell className="flex items-center gap-2 md:gap-4 truncate">
+                                <img className="rounded-full size-8 md:size-10" src={pilot.image} alt={pilot.name} />
                                 {pilot.name}
                             </TableCell>
                             <TableCell>{pilot.team}</TableCell>
-                            <TableCell className="text-center">
+                            <TableCell className="hidden md:table-cell text-center">
                                 {pilot.time}
                             </TableCell>
                             <TableCell className="flex justify-center">

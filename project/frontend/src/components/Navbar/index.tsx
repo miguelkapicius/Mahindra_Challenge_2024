@@ -98,7 +98,7 @@ export function Navbar() {
                 <NavigationMenuItem>
                     <NavigationMenuTrigger>Stats</NavigationMenuTrigger>
                     <NavigationMenuContent>
-                        <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                        <ul className="grid w-[300px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                             {stats.map((component) => (
                                 <ListItem
                                     key={component.title}

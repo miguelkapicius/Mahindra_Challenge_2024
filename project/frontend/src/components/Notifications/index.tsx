@@ -18,7 +18,7 @@ import { Button } from "../ui/button"
 export function Notification() {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
+      <DropdownMenuTrigger className="p-2"  asChild>
         <Button size="icon" variant="outline">
             <Bell size={20} />
         </Button>

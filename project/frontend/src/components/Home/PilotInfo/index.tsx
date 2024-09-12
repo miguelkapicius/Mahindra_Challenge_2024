@@ -37,8 +37,8 @@ export function PilotInfo({ pilot }: { pilot: Pilot }) {
                     <PlugZap /> Stats
                 </Button>
             </DrawerTrigger>
-            <DrawerContent>
-                <div className="mx-auto w-full max-w-6xl">
+            <DrawerContent className="h-[70vh]">
+                <div className="mx-auto w-full max-w-6xl h-[60vh]">
                     <DrawerHeader className="flex items-center gap-4">
                         <img
                             src={pilot.image}
@@ -54,35 +54,30 @@ export function PilotInfo({ pilot }: { pilot: Pilot }) {
                     <div className="p-4 pb-0">
                         <div className="grid grid-cols-2 md:grid-cols-6 gap-2 *:p-6 *:bg-accent *:rounded-lg *:flex *:flex-col *:items-center *:space-y-2">
                             <div>
-                                <span className="text-2xl font-bold flex items-center gap-2"><Flag className="size-6" />{pilot.position}</span>
+                                <span className="text-xl md:text-2xl font-bold flex items-center gap-2"><Flag className="size-6" />{pilot.position}</span>
                                 <span className="text-sm text-muted-foreground">Position</span>
                             </div>
                             <div>
-                                <span className="text-2xl font-bold flex items-center gap-2"><Clock className="size-6" />{pilot.time}</span>
+                                <span className="text-xl md:text-2xl font-bold flex items-center gap-2"><Clock className="size-6" />{pilot.time}</span>
                                 <span className="text-sm text-muted-foreground">Time</span>
                             </div>
                             <div>
-                                <span className="text-2xl font-bold flex items-center gap-2"><Gauge className="size-6" />{pilot.speed} km/h</span>
+                                <span className="text-xl md:text-2xl font-bold flex items-center gap-2"><Gauge className="size-6" />{pilot.speed} km/h</span>
                                 <span className="text-sm text-muted-foreground">Speed</span>
                             </div>
                             <div>
-                                <span className="text-2xl font-bold flex items-center gap-2">{pilot.battery > 50 ? <BatteryFull /> : pilot.battery > 25 ? <BatteryMedium /> : <Battery />}{pilot.battery}%</span>
+                                <span className="text-xl md:text-2xl font-bold flex items-center gap-2">{pilot.battery > 50 ? <BatteryFull /> : pilot.battery > 25 ? <BatteryMedium /> : <Battery />}{pilot.battery}%</span>
                                 <span className="text-sm text-muted-foreground">Battery</span>
                             </div>
                             <div>
-                                <span className="text-2xl font-bold flex items-center gap-2"><AudioWaveform className="size-6" />{pilot.lap}</span>
+                                <span className="text-xl md:text-2xl font-bold flex items-center gap-2"><AudioWaveform className="size-6" />{pilot.lap}</span>
                                 <span className="text-sm text-muted-foreground">Lap</span>
                             </div>
                             <div>
-                                <span className="text-2xl font-bold flex items-center gap-2"><Hourglass className="size-6" />{pilot.lastLapTime}</span>
+                                <span className="text-xl md:text-2xl font-bold flex items-center gap-2"><Hourglass className="size-6" />{pilot.lastLapTime}</span>
                                 <span className="text-sm text-muted-foreground">Last Lap</span>
                             </div>
                             
-                        </div>
-                        <div className="mt-3 h-[120px]">
-                            <ResponsiveContainer width="100%" height="100%">
-                                <div></div>
-                            </ResponsiveContainer>
                         </div>
                     </div>
                     <DrawerFooter>
