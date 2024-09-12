@@ -28,7 +28,7 @@ export function LinkedinLink({
                     </Link>
                 </div>
             </HoverCardTrigger>
-            <HoverCardContent className="w-80 flex items-center justify-center">
+            <HoverCardContent className="max-w-max flex items-center justify-center">
                 <Link to={link}>
                     <div className="flex space-x-4">
                         <img src={image} alt={name} className="size-12 rounded" />
