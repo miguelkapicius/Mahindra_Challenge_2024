@@ -35,8 +35,8 @@ export function PilotInfo({ pilot }: { pilot: Pilot }) {
                     Stats
                 </Button>
             </DrawerTrigger>
-            <DrawerContent className="h-[75vh] md:h-[50vh]">
-                <div className="mx-auto w-full max-w-6xl">
+            <DrawerContent className="h-max">
+                <div className="mx-auto w-full max-w-6xl space-y-6">
                     <DrawerHeader className="flex items-center gap-4">
                         <img
                             src={pilot.image}
@@ -80,7 +80,7 @@ export function PilotInfo({ pilot }: { pilot: Pilot }) {
                     </div>
                     <DrawerFooter>
                         <DrawerClose asChild>
-                            <Button variant="outline">Back</Button>
+                            <Button className="w-full md:w-1/2 md:mx-auto" variant="outline">Back</Button>
                         </DrawerClose>
                     </DrawerFooter>
                 </div>
