@@ -1,5 +1,7 @@
 import { openDb } from "../config/configDB.js";
 
+
+// cria a tabela de usuários caso não exista
 export async function createUserTable(req, res) {
     const db = await openDb();
     db.exec(
@@ -7,6 +9,7 @@ export async function createUserTable(req, res) {
     );
 }
 
+// cria um novo usuário
 export async function createUser(req, res) {
     const db = await openDb();
     let user = req.body;
@@ -26,6 +29,7 @@ export async function createUser(req, res) {
     });
 }
 
+// lê todos os usuários
 export async function readUsers(req, res) {
     const db = await openDb();
     const users = await db.all("SELECT * FROM users");
@@ -35,6 +39,7 @@ export async function readUsers(req, res) {
     });
 }
 
+// lê um usuário específico
 export async function readUser(req, res) {
     const db = await openDb();
     const user = await db.get(
@@ -47,6 +52,7 @@ export async function readUser(req, res) {
     });
 }
 
+// atualiza um usuário específico
 export async function updateUser(req, res) {
     const db = await openDb();
     const user = req.body;
@@ -67,6 +73,7 @@ export async function updateUser(req, res) {
     });
 }
 
+// deleta um usuário específico
 export async function deleteUser(req, res) {
     const db = await openDb();
     db.get("DELETE FROM users WHERE id = ?", req.params.id);

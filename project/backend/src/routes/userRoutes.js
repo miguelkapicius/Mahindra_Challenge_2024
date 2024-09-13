@@ -7,8 +7,10 @@ import {
     deleteUser,
 } from "../controllers/userController.js";
 
+// cria o roteador de usuários
 const userRouter = Router();
 
+// rotas dos usuários
 userRouter.post("/users", createUser);
 userRouter.get("/users", readUsers);
 userRouter.get("/users/:id", readUser);
