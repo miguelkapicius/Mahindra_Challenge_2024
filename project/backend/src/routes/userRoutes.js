@@ -5,6 +5,7 @@ import {
     readUsers,
     readUser,
     deleteUser,
+    loginUser,
 } from "../controllers/userController.js";
 
 // cria o roteador de usuários
@@ -12,6 +13,7 @@ const userRouter = Router();
 
 // rotas dos usuários
 userRouter.post("/users", createUser);
+userRouter.post("/login", loginUser);
 userRouter.get("/users", readUsers);
 userRouter.get("/users/:id", readUser);
 userRouter.put("/users/:id", updateUser);

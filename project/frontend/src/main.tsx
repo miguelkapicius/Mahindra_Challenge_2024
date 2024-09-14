@@ -14,6 +14,8 @@ import { RaceHistory } from "./routes/RaceHistory.tsx";
 import { SustainabilityInMotion } from "./routes/SustainabilityInMotion.tsx";
 import { FriendsRivals } from "./routes/FriendsRivals.tsx";
 import { TeamStats } from "./routes/TeamStats.tsx";
+import { RecoilRoot } from "recoil";
+import { Login } from "./routes/Login.tsx";
 
 const router = createBrowserRouter([
     {
@@ -62,12 +64,18 @@ const router = createBrowserRouter([
             },
         ],
     },
+    {
+        path: "/login",
+        element: <Login />,
+    },
 ]);
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
-        <ThemeProvider>
-            <RouterProvider router={router} />
-        </ThemeProvider>
+        <RecoilRoot>
+            <ThemeProvider>
+                <RouterProvider router={router} />
+            </ThemeProvider>
+        </RecoilRoot>
     </StrictMode>
 );
