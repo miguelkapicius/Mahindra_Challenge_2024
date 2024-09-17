@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "./components/theme-provider.tsx";
 import { Pilots } from "./routes/Pilots.tsx";
 import { RecoilRoot } from "recoil";
+import NotFound from "./routes/NotFound.tsx";
 
 // Dynamic Imports
 const Home = lazy(() => import("./routes/Home.tsx"));
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <App />,
+        errorElement: <NotFound />,
         children: [
             {
                 path: "/",
