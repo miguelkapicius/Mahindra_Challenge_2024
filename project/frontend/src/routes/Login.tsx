@@ -14,7 +14,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { useCreateUser } from "@/hooks/useCreateUser";
 import { useState } from "react";
 
-export function Login() {
+export default function Login() {
     const { login }: any = useAuth();
     const { createUser }: any = useCreateUser();
     const [loginEmail, setLoginEmail] = useState("");

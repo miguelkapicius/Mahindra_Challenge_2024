@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/table";
 import { teams } from "./Teams";
 
-export function TeamStats() {
+export default function TeamStats() {
     const currentTeam = teams.find(team => team.name.toLowerCase() === new URL(window.location.href).pathname.split('/').pop());
 
     return (

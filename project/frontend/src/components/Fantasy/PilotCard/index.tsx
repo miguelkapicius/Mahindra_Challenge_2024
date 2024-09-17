@@ -8,6 +8,7 @@ import {
     TableRow,
 } from "@/components/ui/table";
 import { CoinsIcon } from "lucide-react";
+import { memo } from "react";
 
 export const pilots = [
     {
@@ -42,12 +43,12 @@ export const pilots = [
     },
 ];
 
-interface PilotCardProps {
+interface PilotCardsProps {
     nameFilter: string;
     priceFilter: number;
 }
 
-export function PilotCard({ nameFilter, priceFilter }: PilotCardProps) {
+function PilotCards({ nameFilter, priceFilter }: PilotCardsProps) {
     return (
         <section className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {pilots
@@ -113,3 +114,5 @@ export function PilotCard({ nameFilter, priceFilter }: PilotCardProps) {
         </section>
     );
 }
+
+export const PilotCard = memo(PilotCards)

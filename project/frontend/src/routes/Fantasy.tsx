@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { PilotCard } from "@/components/Fantasy/PilotCard";
 import { PriceFilter } from "@/components/Fantasy/PilotCard/PriceFilter";
 
-export function Fantasy() {
+export default function Fantasy() {
     const [nameFilter, setNameFilter] = useState("");
     const [priceFilter, setPriceFilter] = useState<number>(0);
 

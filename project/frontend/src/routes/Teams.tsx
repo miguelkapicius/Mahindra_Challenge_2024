@@ -78,7 +78,7 @@ export const teams = [
     },
 ];
 
-export function Teams() {
+export default function Teams() {
     return (
         <div className="space-y-6">
             <h2 className="text-3xl md:text-5xl font-display">Teams</h2>

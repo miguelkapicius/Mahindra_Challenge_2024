@@ -1,21 +1,26 @@
-import { StrictMode } from "react";
+import { lazy, StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./App.tsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "./components/theme-provider.tsx";
-import { Home } from "./routes/Home.tsx";
-import { Fantasy } from "./routes/Fantasy.tsx";
-import { Community } from "./routes/Community.tsx";
-import { Teams } from "./routes/Teams.tsx";
 import { Pilots } from "./routes/Pilots.tsx";
-import { UsersLeaderboard } from "./routes/UsersLeaderboard.tsx";
-import { RaceHistory } from "./routes/RaceHistory.tsx";
-import { SustainabilityInMotion } from "./routes/SustainabilityInMotion.tsx";
-import { FriendsRivals } from "./routes/FriendsRivals.tsx";
-import { TeamStats } from "./routes/TeamStats.tsx";
 import { RecoilRoot } from "recoil";
-import { Login } from "./routes/Login.tsx";
+import { Fallback } from "./components/Fallback/index.tsx";
+
+// Dynamic Imports
+const Home = lazy(() => import("./routes/Home.tsx"));
+const Fantasy = lazy(() => import("./routes/Fantasy.tsx"));
+const Community = lazy(() => import("./routes/Community.tsx"));
+const Teams = lazy(() => import("./routes/Teams.tsx"));
+const UsersLeaderboard = lazy(() => import("./routes/UsersLeaderboard.tsx"));
+const RaceHistory = lazy(() => import("./routes/RaceHistory.tsx"));
+const FriendsRivals = lazy(() => import("./routes/FriendsRivals.tsx"));
+const TeamStats = lazy(() => import("./routes/TeamStats.tsx"));
+const SustainabilityInMotion = lazy(
+    () => import("./routes/SustainabilityInMotion.tsx")
+);
+const Login = lazy(() => import("./routes/Login.tsx"));
 
 const router = createBrowserRouter([
     {
@@ -74,7 +79,9 @@ createRoot(document.getElementById("root")!).render(
     <StrictMode>
         <RecoilRoot>
             <ThemeProvider>
-                <RouterProvider router={router} />
+                <Suspense fallback={<Fallback />}>
+                    <RouterProvider router={router} />
+                </Suspense>
             </ThemeProvider>
         </RecoilRoot>
     </StrictMode>

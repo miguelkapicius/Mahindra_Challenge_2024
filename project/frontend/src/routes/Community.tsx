@@ -3,7 +3,7 @@ import { Posts } from "@/components/Community/Posts";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
-export function Community() {
+export default function Community() {
     return (
         <section className="grid grid-cols-1 md:grid-cols-4 gap-6 overflow-y-hidden">
             <main className="col-span-3 space-y-4 overflow-y-auto pb-6">

@@ -37,7 +37,7 @@ const sustainabilityInMotion = [
         reverse: true,
     },
 ];
-export function SustainabilityInMotion() {
+export default function SustainabilityInMotion() {
     return (
         <section className="space-y-12 md:space-y-24">
             {sustainabilityInMotion.map((item) => (

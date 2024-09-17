@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card";
 import { NextRaceCountdown } from "@/components/Home/NextRaceCountdown";
 
 
-export function Home() {
+export default function Home() {
     return (
         <main className="grid grid-cols-1 lg:grid-cols-5 gap-6">
             <div className="grid col-span-full row-span-4 gap-4">
