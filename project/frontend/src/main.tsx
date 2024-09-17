@@ -1,4 +1,4 @@
-import { lazy, StrictMode, Suspense } from "react";
+import { lazy, StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./App.tsx";
 import "./index.css";
@@ -6,7 +6,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "./components/theme-provider.tsx";
 import { Pilots } from "./routes/Pilots.tsx";
 import { RecoilRoot } from "recoil";
-import { Fallback } from "./components/Fallback/index.tsx";
 
 // Dynamic Imports
 const Home = lazy(() => import("./routes/Home.tsx"));
