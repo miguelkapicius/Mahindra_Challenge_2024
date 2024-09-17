@@ -7,9 +7,11 @@ import { Button } from "./components/ui/button";
 import { Users } from "lucide-react";
 import { Footer } from "./components/Footer";
 import { useAuth } from "./hooks/useAuth";
+import { Suspense } from "react";
+import { Fallback } from "./components/Fallback";
 
 export function App() {
-    const {auth} = useAuth();
+    const { auth } = useAuth();
 
     return (
         <>
@@ -35,7 +37,9 @@ export function App() {
                         </div>
                     </header>
                     <main className="mb-6 min-h-screen">
-                        <Outlet />
+                        <Suspense fallback={<Fallback />}>
+                            <Outlet />
+                        </Suspense>
                     </main>
                     <Footer />
                 </div>

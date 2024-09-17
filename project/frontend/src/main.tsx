@@ -79,9 +79,7 @@ createRoot(document.getElementById("root")!).render(
     <StrictMode>
         <RecoilRoot>
             <ThemeProvider>
-                <Suspense fallback={<Fallback />}>
-                    <RouterProvider router={router} />
-                </Suspense>
+                <RouterProvider router={router} />
             </ThemeProvider>
         </RecoilRoot>
     </StrictMode>
