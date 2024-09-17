@@ -11,12 +11,20 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useAuth } from "@/hooks/useAuth";
+import { useCreateUser } from "@/hooks/useCreateUser";
 import { useState } from "react";
 
 export function Login() {
-    const { login }: { login: any } = useAuth();
+    const { login }: any = useAuth();
+    const { createUser }: any = useCreateUser();
     const [loginEmail, setLoginEmail] = useState("");
     const [loginPassword, setLoginPassword] = useState("");
+    const [fullName, setFullName] = useState("");
+    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
+    const [image, setImage] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
 
     return (
         <section className="h-screen flex justify-center items-center p-4">
@@ -97,7 +105,17 @@ export function Login() {
                                     account
                                 </CardDescription>
                             </CardHeader>
-                            <form action="">
+                            <form
+                                onSubmit={() =>
+                                    createUser(
+                                        fullName,
+                                        username,
+                                        email,
+                                        image,
+                                        password,
+                                    )
+                                }
+                            >
                                 <CardContent className="space-y-4">
                                     <div className="space-y-1">
                                         <Label htmlFor="name">Full Name</Label>
@@ -106,6 +124,10 @@ export function Login() {
                                             type="text"
                                             minLength={5}
                                             placeholder="John Doe"
+                                            onChange={(e) =>
+                                                setFullName(e.target.value)
+                                            }
+                                            required
                                         />
                                     </div>
                                     <div className="space-y-1">
@@ -114,6 +136,10 @@ export function Login() {
                                             id="email"
                                             type="email"
                                             placeholder="example@gmail.com"
+                                            onChange={(e) =>
+                                                setEmail(e.target.value)
+                                            }
+                                            required
                                         />
                                     </div>
                                     <div className="space-y-1">
@@ -125,6 +151,10 @@ export function Login() {
                                             type="text"
                                             minLength={5}
                                             placeholder="johndoe123"
+                                            onChange={(e) =>
+                                                setUsername(e.target.value)
+                                            }
+                                            required
                                         />
                                     </div>
                                     <div className="space-y-1">
@@ -136,6 +166,10 @@ export function Login() {
                                             type="text"
                                             minLength={5}
                                             placeholder="https://example.com/profile-picture.jpg"
+                                            onChange={(e) =>
+                                                setImage(e.target.value)
+                                            }
+                                            required
                                         />
                                     </div>
                                     <div className="space-y-1">
@@ -147,6 +181,10 @@ export function Login() {
                                             type="password"
                                             minLength={8}
                                             placeholder="Min 8 characters"
+                                            onChange={(e) =>
+                                                setPassword(e.target.value)
+                                            }
+                                            required
                                         />
                                     </div>
                                     <div className="space-y-1">
@@ -158,12 +196,18 @@ export function Login() {
                                             type="password"
                                             minLength={8}
                                             placeholder="Min 8 characters"
+                                            onChange={(e) =>
+                                                setConfirmPassword(
+                                                    e.target.value
+                                                )
+                                            }
+                                            required
                                         />
                                     </div>
                                 </CardContent>
                                 <CardFooter>
-                                    <Button className="w-full">
-                                        Create Account
+                                    <Button disabled={confirmPassword !== password} className="w-full">
+                                        {confirmPassword === password ? "Create Account" : "Passwords do not match."}
                                     </Button>
                                 </CardFooter>
                             </form>

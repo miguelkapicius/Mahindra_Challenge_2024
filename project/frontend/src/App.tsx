@@ -9,7 +9,8 @@ import { Footer } from "./components/Footer";
 import { useAuth } from "./hooks/useAuth";
 
 export function App() {
-    const { auth } = useAuth();
+    const {auth} = useAuth();
+
     return (
         <>
             {auth.isAuthenticated ? (

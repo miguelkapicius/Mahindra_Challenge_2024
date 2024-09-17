@@ -1,7 +1,7 @@
 import { authState } from "@/atoms/authState";
 import { useNavigate } from "react-router-dom";
-import { useRecoilState } from "recoil";
 import axios from "axios";
+import { useRecoilState } from "recoil";
 
 export function useAuth() {
     const [auth, setAuth] = useRecoilState(authState);
@@ -32,6 +32,7 @@ export function useAuth() {
     };
 
     const logout = () => {
+        
         setAuth({
             isAuthenticated: false,
             user: null,
@@ -42,6 +43,7 @@ export function useAuth() {
 
     return {
         auth,
+        setAuth,
         login,
         logout,
     };
