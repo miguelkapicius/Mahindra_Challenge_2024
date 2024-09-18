@@ -1,0 +1,134 @@
+Round,ePrix,Country,Track,Date,raceId,seasonId
+1,Beijing ePrix,China,Beijing Olympic Green Circuit,41895,1900-01-01,1
+2,Putrajaya ePrix,Malaysia,Putrajaya Street Circuit,41965,1900-01-02,1
+3,Punta del Este ePrix,Uruguay,Punta del Este Street Circuit,41986,1900-01-03,1
+4,Buenos Aires ePrix,Argentina,Puerto Madero Street Circuit,42014,1900-01-04,1
+5,Miami ePrix,United States,Biscayne Bay Street Circuit,42077,1900-01-05,1
+6,Long Beach ePrix,United States,Long Beach Street Circuit,42098,1900-01-06,1
+7,Monaco ePrix,Monaco,Circuit de Monaco,42133,1900-01-07,1
+8,Berlin ePrix,Germany,Tempelhof Airport Street Circuit,42147,1900-01-08,1
+9,Moscow ePrix,Russia,Moscow Street Circuit,42161,1900-01-09,1
+10,London ePrix Race 1,United Kingdom,Battersea Park Street Circuit,42182,1900-01-10,1
+11,London ePrix Race 2,United Kingdom,Battersea Park Street Circuit,42183,1900-01-11,1
+1,Beijing ePrix,China,Beijing Olympic Green Circuit,42301,1900-01-12,2
+2,Putrajaya ePrix,Malaysia,Putrajaya Street Circuit,42315,1900-01-13,2
+3,Punta del Este ePrix,Uruguay,Punta del Este Street Circuit,42357,1900-01-14,2
+4,Buenos Aires ePrix,Argentina,Puerto Madero Street Circuit,42406,1900-01-15,2
+5,Mexico City ePrix,Mexico,Autódromo Hermanos Rodríguez,42441,1900-01-16,2
+6,Long Beach ePrix,United States,Long Beach Street Circuit,42462,1900-01-17,2
+7,Paris ePrix,France,Paris Street Circuit,42483,1900-01-18,2
+8,Berlin ePrix,Germany,Berlin Street Circuit,42511,1900-01-19,2
+9,London ePrix Race 1,United Kingdom,Battersea Park Street Circuit,42553,1900-01-20,2
+10,London ePrix Race 2,United Kingdom,Battersea Park Street Circuit,42554,1900-01-21,2
+1,Hong Kong ePrix,Hong Kong,Hong Kong Central Harbourfront Circuit,42652,1900-01-22,3
+2,Marrakesh ePrix,Morocco,Circuit International Automobile Moulay El Hassan,42686,1900-01-23,3
+3,Buenos Aires ePrix,Argentina,Puerto Madero Street Circuit,42784,1900-01-24,3
+4,Mexico City ePrix,Mexico,Autódromo Hermanos Rodríguez,42826,1900-01-25,3
+5,Monaco ePrix,Monaco,Circuit de Monaco,42868,1900-01-26,3
+6,Paris ePrix,France,Paris Street Circuit,42875,1900-01-27,3
+7,Berlin ePrix Race 1,Germany,Tempelhof Airport Street Circuit,42896,1900-01-28,3
+8,Berlin ePrix Race 2,Germany,Tempelhof Airport Street Circuit,42897,1900-01-29,3
+9,New York City ePrix Race 1,United States,Brooklyn Street Circuit,42931,1900-01-30,3
+10,New York City ePrix Race 2,United States,Brooklyn Street Circuit,42932,1900-01-31,3
+11,Montreal ePrix Race 1,Canada,Montreal Street Circuit,42945,1900-02-01,3
+12,Montreal ePrix Race 2,Canada,Montreal Street Circuit,42946,1900-02-02,3
+1,Hong Kong ePrix Race 1,Hong Kong,Hong Kong Central Harbourfront Circuit,43071,1900-02-03,4
+2,Hong Kong ePrix Race 2,Hong Kong,Hong Kong Central Harbourfront Circuit,43072,1900-02-04,4
+3,Marrakesh ePrix,Morocco,Circuit International Automobile Moulay El Hassan,43113,1900-02-05,4
+4,Santiago ePrix,Chile,Santiago Street Circuit,43134,1900-02-06,4
+5,Mexico City ePrix,Mexico,Autódromo Hermanos Rodríguez,43162,1900-02-07,4
+6,Punta del Este ePrix,Uruguay,Punta del Este Street Circuit,43176,1900-02-08,4
+7,Rome ePrix,Italy,Circuito Cittadino dell'EUR,43204,1900-02-09,4
+8,Paris ePrix,France,Paris Street Circuit,43218,1900-02-10,4
+9,Berlin ePrix,Germany,Tempelhof Airport Street Circuit,43239,1900-02-11,4
+10,Zürich ePrix,Switzerland,Zürich Street Circuit,43261,1900-02-12,4
+11,New York City ePrix Race 1,United States,Brooklyn Street Circuit,43295,1900-02-13,4
+12,New York City ePrix Race 2,United States,Brooklyn Street Circuit,43296,1900-02-14,4
+1,Diriyah ePrix,Saudi Arabia,Riyadh Street Circuit,43449,1900-02-15,5
+2,Marrakesh ePrix,Morocco,Circuit International Automobile Moulay El Hassan,43477,1900-02-16,5
+3,Santiago ePrix,Chile,Parque O'Higgins Circuit,43491,1900-02-17,5
+4,Mexico City ePrix,Mexico,Autódromo Hermanos Rodríguez,43512,1900-02-18,5
+5,Hong Kong ePrix,Hong Kong,Hong Kong Central Harbourfront Circuit,43534,1900-02-19,5
+6,Sanya ePrix,China,Haitang Bay Circuit,43547,1900-02-20,5
+7,Rome ePrix,Italy,Circuito Cittadino dell'EUR,43568,1900-02-21,5
+8,Paris ePrix,France,Paris Street Circuit,43582,1900-02-22,5
+9,Monaco ePrix,Monaco,Circuit de Monaco,43596,1900-02-23,5
+10,Berlin ePrix,Germany,Tempelhof Airport Street Circuit,43610,1900-02-24,5
+11,Swiss ePrix,Switzerland,Bern Street Circuit,43638,1900-02-25,5
+12,New York City ePrix Race 1,United States,Brooklyn Street Circuit,43659,1900-02-26,5
+13,New York City ePrix Race 2,United States,Brooklyn Street Circuit,43660,1900-02-27,5
+1,Diriyah ePrix,Saudi Arabia,Riyadh Street Circuit,43791,1900-02-28,6
+2,Diriyah ePrix,Saudi Arabia,Riyadh Street Circuit,43792,1900-02-29,6
+3,Santiago ePrix,Chile,Parque O'Higgins Circuit,43848,1900-03-01,6
+4,Mexico City ePrix,Mexico,Autódromo Hermanos Rodríguez,43876,1900-03-02,6
+5,Marrakesh ePrix,Morocco,Circuit International Automobile Moulay El Hassan,43890,1900-03-03,6
+6,Berlin ePrix,Germany,Tempelhof Airport Street Circuit,44048,1900-03-04,6
+7,Berlin ePrix,Germany,Tempelhof Airport Street Circuit,44049,1900-03-05,6
+8,Berlin ePrix,Germany,Tempelhof Airport Street Circuit,44051,1900-03-06,6
+9,Berlin ePrix,Germany,Tempelhof Airport Street Circuit,44052,1900-03-07,6
+10,Berlin ePrix,Germany,Tempelhof Airport Street Circuit,44055,1900-03-08,6
+11,Berlin ePrix,Germany,Tempelhof Airport Street Circuit,44056,1900-03-09,6
+1,Diriyah ePrix,Saudi Arabia,Riyadh Street Circuit,44253,1900-03-10,7
+2,Diriyah ePrix,Saudi Arabia,Riyadh Street Circuit,44254,1900-03-11,7
+3,Rome ePrix,Italy,Circuito Cittadino dell'EUR,44296,1900-03-12,7
+4,Rome ePrix,Italy,Circuito Cittadino dell'EUR,44297,1900-03-13,7
+5,Valencia ePrix,Spain,Circuit Ricardo Tormo,44310,1900-03-14,7
+6,Valencia ePrix,Spain,Circuit Ricardo Tormo,44311,1900-03-15,7
+7,Monaco ePrix,Monaco,Circuit de Monaco,44324,1900-03-16,7
+8,Puebla ePrix,Mexico,Autódromo Miguel E. Abed,44366,1900-03-17,7
+9,Puebla ePrix,Mexico,Autódromo Miguel E. Abed,44367,1900-03-18,7
+10,New York City ePrix,United States,Brooklyn Street Circuit,44387,1900-03-19,7
+11,New York City ePrix,United States,Brooklyn Street Circuit,44388,1900-03-20,7
+12,London ePrix,United Kingdom,ExCeL London,44401,1900-03-21,7
+13,London ePrix,United Kingdom,ExCeL London,44402,1900-03-22,7
+14,Berlin ePrix I,Germany,Tempelhof Airport Street Circuit,44422,1900-03-23,7
+15,Berlin ePrix II,Germany,Tempelhof Airport Street Circuit,44423,1900-03-24,7
+1,Diriyah ePrix,Saudi Arabia,Riyadh Street Circuit,44589,1900-03-25,8
+2,Diriyah ePrix,Saudi Arabia,Riyadh Street Circuit,44590,1900-03-26,8
+3,Mexico City ePrix,Mexico,Autódromo Hermanos Rodríguez,44604,1900-03-27,8
+4,Rome ePrix,Italy,Circuito Cittadino dell'EUR,44660,1900-03-28,8
+5,Rome ePrix,Italy,Circuito Cittadino dell'EUR,44661,1900-03-29,8
+6,Monaco ePrix,Monaco,Circuit de Monaco,44681,1900-03-30,8
+7,Berlin ePrix I,Germany,Tempelhof Airport Street Circuit,44695,1900-03-31,8
+8,Berlin ePrix II,Germany,Tempelhof Airport Street Circuit,44696,1900-04-01,8
+9,Jakarta ePrix,Indonesia,Jakarta International e-Prix Circuit,44716,1900-04-02,8
+10,Marrakesh ePrix,Morocco,Circuit International Automobile Moulay El Hassan,44744,1900-04-03,8
+11,New York City ePrix,United States,Brooklyn Street Circuit,44758,1900-04-04,8
+12,New York City ePrix,United States,Brooklyn Street Circuit,44759,1900-04-05,8
+13,London ePrix,United Kingdom,ExCeL London,44772,1900-04-06,8
+14,London ePrix,United Kingdom,ExCeL London,44773,1900-04-07,8
+15,Seoul ePrix,South Korea,Seoul Street Circuit,44786,1900-04-08,8
+16,Seoul ePrix,South Korea,Seoul Street Circuit,44787,1900-04-09,8
+1,Hankook Mexico City ePrix,Mexico,Autódromo Hermanos Rodríguez,44940,1900-04-10,9
+2,CORE Diriyah ePrix,Saudi Arabia,Riyadh Street Circuit,44953,1900-04-11,9
+3,CORE Diriyah ePrix,Saudi Arabia,Riyadh Street Circuit,44954,1900-04-12,9
+4,Greenko Hyderabad ePrix,India,Hyderabad Street Circuit,44968,1900-04-13,9
+5,Cape Town ePrix,South Africa,Cape Town Street Circuit,44982,1900-04-14,9
+6,Julius Baer São Paulo ePrix,Brazil,São Paulo Street Circuit,45010,1900-04-15,9
+7,SABIC Berlin ePrix,Germany,Tempelhof Airport Street Circuit,45038,1900-04-16,9
+8,SABIC Berlin ePrix,Germany,Tempelhof Airport Street Circuit,45039,1900-04-17,9
+9,Monaco ePrix,Monaco,Circuit de Monaco,45052,1900-04-18,9
+10,Gulavit Jakarta ePrix,Indonesia,Jakarta International e-Prix Circuit,45080,1900-04-19,9
+11,Gulavit Jakarta ePrix,Indonesia,Jakarta International e-Prix Circuit,45081,1900-04-20,9
+12,Southwire Portland ePrix,United States,Portland International Raceway,45101,1900-04-21,9
+13,Hankook Rome ePrix,Italy,Circuito Cittadino dell'EUR,45122,1900-04-22,9
+14,Hankook Rome ePrix,Italy,Circuito Cittadino dell'EUR,45123,1900-04-23,9
+15,Hankook London ePrix,United Kingdom,ExCeL London,45136,1900-04-24,9
+16,Hankook London ePrix,United Kingdom,ExCeL London,45137,1900-04-25,9
+1,Mexico City E-Prix,Mexico,Autódromo Hermanos Rodríguez,45304,1900-04-26,10
+2,Diriyah E-Prix,Saudi Arabia,Riyadh Street Circuit,45317,1900-04-27,10
+3,Diriyah E-Prix,Saudi Arabia,Riyadh Street Circuit,45318,1900-04-28,10
+4,Hyderabad E-Prix,India,Hyderabad Street Circuit,45332,1900-04-29,10
+5,São Paulo E-Prix,Brazil,São Paulo Street Circuit,45367,1900-04-30,10
+6,Tokyo E-Prix,Japan,Tokyo Street Circuit,45381,1900-05-01,10
+7,Misano Adriatico E-Prix,Italy,Misano World Circuit Marco Simoncelli,45395,1900-05-02,10
+8,Misano Adriatico E-Prix,Italy,Misano World Circuit Marco Simoncelli,45396,1900-05-03,10
+9,Monaco E-Prix,Monaco,Circuit de Monaco,45409,1900-05-04,10
+10,Berlin E-Prix,Germany,Tempelhof Airport Street Circuit,45423,1900-05-05,10
+11,Berlin E-Prix,Germany,Tempelhof Airport Street Circuit,45424,1900-05-06,10
+12,Shanghai E-Prix,China,Shanghai International Circuit,45437,1900-05-07,10
+13,Shanghai E-Prix,China,Shanghai International Circuit,45438,1900-05-08,10
+14,Portland E-Prix,United States,Portland International Raceway,45472,1900-05-09,10
+15,Portland E-Prix,United States,Portland International Raceway,45473,1900-05-10,10
+16,London E-Prix,United Kingdom,ExCeL London,45493,1900-05-11,10
+17,London E-Prix,United Kingdom,ExCeL London,45494,1900-05-12,10

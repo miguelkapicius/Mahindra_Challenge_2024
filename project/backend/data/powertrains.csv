@@ -1,0 +1,63 @@
+powertrainsId,powertrain,team,season
+1,nextev tcr formulae 001,nextev tcr formula e team,2
+2,virgin dsv-01,ds virgin racing formula e team,2
+3,venturi vm200-fe-01,multiple,2
+4,renault z.e 15,renault e.dams,2
+5,motomatica jt-01,trulli formula e team,2
+6,abt schaeffler fe01,abt schaeffler audi sport,2
+7,mahindra m2electro,mahindra racing formula e team,2
+8,ds virgin dsv-02,ds virgin racing,3
+9,nextev tcr formula 002,nextev nio,3
+10,venturi vm200-fe-02,venturi formula e team,3
+11,penske 701-ev,faraday future dragon racing,3
+12,renault z.e 16,multiple,3
+13,abt schaeffler fe02,abt schaeffler audi sport,3
+14,mahindra m3electro,mahindra racing,3
+15,jaguar i-type 1,panasonic jaguar racing,3
+16,andretti atec-02,ms amlin andretti formula e,3
+17,audi e-tron fe04,audi sport abt schaeffler,4
+18,ds virgin dsv-03,ds virgin racing,4
+19,jaguar i-type 2,panasonic jaguar racing,4
+20,venturi vm200-fe-03,venturi formula e team,4
+21,penske ev-2,dragon racing,4
+22,renault z.e. 17,multiple,4
+23,nextev nio sport 003,nio formula e team,4
+24,mahindra m4electro,mahindra racing,4
+25,andretti atec-03,ms&ad andretti formula e,4
+26,audi e-tron fe05,multiple,5
+27,jaguar i-type 3,panasonic jaguar racing,5
+28,venturi vfe05,multiple,5
+29,penske ev-3,geox dragon,5
+30,nio sport 004,nio formula e team,5
+31,nissan im01,nissan e.dams,5
+32,ds e-tense fe 19,ds techeetah,5
+33,bmw ife.18,bmw i andretti motorsport,5
+34,mahindra m5electro,mahindra racing,5
+35,audi e-tron fe06,multiple,6
+36,nio fe-005,nio 333 fe team,6
+37,mercedes-benz eq silver arrow 01,multiple,6
+38,jaguar i-type 4,panasonic jaguar racing,6
+39,bmw ife.20,bmw i andretti motorsport,6
+40,mahindra m6electro,mahindra racing,6
+41,penske ev-4,dragon / penske autosport,7
+42,ds e-tense fe20,ds techeetah,7
+43,nissan im02,nissan e.dams,7
+44,bmw ife.21,bmw i andretti motorsport,7
+45,mahindra m7electro,mahindra racing,7
+46,nio 333 001,nio 333 formula e team,8
+47,audi e-tron fe07,multiple,8
+48,mercedes-eq silver arrow 02,multiple,8
+49,penske ev-5,dragon / penske autosport,8
+50,jaguar i-type 5,jaguar tcs racing,8
+51,ds e-tense fe21,ds techeetah,8
+52,nissan im03,nissan e.dams,8
+53,bmw i fe.21,avalanche andretti formula e,8
+54,mahindra m8electro,mahindra racing,8
+55,ds e-tense fe23,ds penske,9
+56,nio 333 er9,nio 333 racing,9
+57,mahindra m9electro,multiple,9
+58,nissan e-4orce 04,neom mclaren formula e team,9
+59,maserati tipo folgore,maserati msg racing,9
+60,jaguar i-type 6,multiple,9
+61,porsche 99x electric,multiple,9
+62,srt01-e,multiple,multiple

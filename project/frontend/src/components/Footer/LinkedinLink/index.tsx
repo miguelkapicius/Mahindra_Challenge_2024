@@ -11,12 +11,10 @@ export function LinkedinLink({
     name,
     link,
     image,
-    role,
 }: {
     name: string;
     link: string;
     image: string;
-    role: string;
 }) {
     return (
         <HoverCard>
@@ -30,12 +28,13 @@ export function LinkedinLink({
             </HoverCardTrigger>
             <HoverCardContent className="max-w-max flex items-center justify-center">
                 <Link to={link}>
-                    <div className="flex space-x-4">
-                        <img src={image} alt={name} className="size-12 rounded" />
-                        <div className="space-y-1">
-                            <h4 className="text-sm font-semibold">{name}</h4>
-                            <p className="text-sm">{role}</p>
-                        </div>
+                    <div className="flex items-center space-x-4">
+                        <img
+                            src={image}
+                            alt={name}
+                            className="size-12 rounded"
+                        />
+                        <h4 className="text-sm font-semibold">{name}</h4>
                     </div>
                 </Link>
             </HoverCardContent>

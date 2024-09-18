@@ -1,7 +1,13 @@
 import express from "express";
-import { createUserTable } from "./controllers/userController.js";
-import userRouter from "./routes/userRoutes.js";
 import cors from "cors";
+
+import { userRouter } from "./routes/userRoutes.js";
+import { driverRouter } from "./routes/driverRoutes.js";
+import { teamRouter } from "./routes/teamsRoutes.js";
+
+import { createUserTable } from "./controllers/userController.js";
+import { createDriverTable } from "./controllers/driverController.js";
+import { createTeamTable } from "./controllers/teamController.js";
 
 const app = express();
 
@@ -16,11 +22,16 @@ app.options(
 
 app.use(express.json()); // permite receber dados no formato json
 
-app.use(userRouter); // rotas dos usuários
+app.use(userRouter);
+app.use(driverRouter);
+app.use(teamRouter);
 
 const PORT = process.env.PORT || 3000;
 
+// cria as tables
 createUserTable();
+createDriverTable();
+createTeamTable();
 
 app.listen(3000, () => {
     console.log(`Server is running on port ${PORT}`);

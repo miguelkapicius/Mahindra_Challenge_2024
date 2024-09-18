@@ -35,11 +35,13 @@ export function SustainabilityHero({
                         </h3>
                         <p className="md:text-xl">{description}</p>
                         {link && (
-                            <Button>
-                                <Link target="_blank" to={link}>
-                                    Learn More
-                                </Link>
-                            </Button>
+                            <Link
+                                target="_blank"
+                                className="block w-max"
+                                to={link}
+                            >
+                                <Button>Learn More</Button>
+                            </Link>
                         )}
                     </div>
                 </article>
@@ -55,11 +57,13 @@ export function SustainabilityHero({
                         </h3>
                         <p className="md:text-xl">{description}</p>
                         {link && (
-                            <Button>
-                                <Link target="_blank" to={link}>
-                                    Learn More
-                                </Link>
-                            </Button>
+                            <Link
+                                target="_blank"
+                                className="block w-max"
+                                to={link}
+                            >
+                                <Button>Learn More</Button>
+                            </Link>
                         )}
                     </div>
                     {image && (
