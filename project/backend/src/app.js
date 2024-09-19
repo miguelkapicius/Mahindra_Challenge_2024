@@ -22,17 +22,24 @@ app.options(
 
 app.use(express.json()); // permite receber dados no formato json
 
-app.use(userRouter);
-app.use(driverRouter);
-app.use(teamRouter);
+async function InitApp() {
+    try {
+        await createUserTable();
+        await createDriverTable();
+        await createTeamTable();
 
-const PORT = process.env.PORT || 3000;
+        app.use(userRouter);
+        app.use(driverRouter);
+        app.use(teamRouter);
 
-// cria as tables
-createUserTable();
-createDriverTable();
-createTeamTable();
+        const PORT = process.env.PORT || 3000;
 
-app.listen(3000, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+        app.listen(3000, () => {
+            console.log(`Server is running on port ${PORT}`);
+        });
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+InitApp();

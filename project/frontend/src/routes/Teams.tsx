@@ -41,7 +41,7 @@ export const teams = [
                 best_lap: "09:23.42",
                 price: 80,
             },
-        ]
+        ],
     },
     {
         name: "ERT",
@@ -74,7 +74,7 @@ export const teams = [
                 best_lap: "09:45.48",
                 price: 90,
             },
-        ]
+        ],
     },
 ];
 

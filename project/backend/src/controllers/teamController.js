@@ -5,17 +5,23 @@ import fs from "fs";
 export async function createTeamTable(req, res) {
     const db = await openDb();
     db.exec(
-        "CREATE TABLE IF NOT EXISTS Teams (id INTEGER PRIMARY KEY AUTOINCREMENT, teamRef TEXT, name TEXT, nationality TEXT, imageUrl TEXT, UNIQUE(name))"
+        "CREATE TABLE IF NOT EXISTS Teams (id INTEGER PRIMARY KEY AUTOINCREMENT, teamRef TEXT, name TEXT, nationality TEXT, imageUrl TEXT, carImage TEXT, UNIQUE(name))"
     );
 }
 
-export async function insertTeamsData(teamRef, name, nationality, imageUrl) {
+export async function insertTeamsData(
+    teamRef,
+    name,
+    nationality,
+    imageUrl,
+    carImage
+) {
     const db = await openDb();
 
     try {
         db.run(
-            "INSERT OR IGNORE INTO Teams (teamRef, name, nationality, imageUrl) VALUES (?, ?, ?, ?)",
-            [teamRef, name, nationality, imageUrl]
+            "INSERT OR IGNORE INTO Teams (teamRef, name, nationality, imageUrl, carImage) VALUES (?, ?, ?, ?, ?)",
+            [teamRef, name, nationality, imageUrl, carImage]
         );
     } catch (error) {
         return console.log("🔴 Error on insert TEAM data!", error);
@@ -27,8 +33,8 @@ export const importTeamsCSV = () => {
     fs.createReadStream(filePath)
         .pipe(csv())
         .on("data", (row) => {
-            const { teamRef, name, nationality, imageUrl } = row;
-            insertTeamsData(teamRef, name, nationality, imageUrl);
+            const { teamRef, name, nationality, imageUrl, carImage } = row;
+            insertTeamsData(teamRef, name, nationality, imageUrl, carImage);
         })
         .on("end", () => {
             console.log("👍 Teams CSV import completed");
