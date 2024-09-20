@@ -1,4 +1,4 @@
-import { Navigate, NavLink, Outlet } from "react-router-dom";
+import { Link, Navigate, NavLink, Outlet } from "react-router-dom";
 import { Coins } from "./components/Coins";
 import { ModeToggle } from "./components/mode-toggle";
 import { Navbar } from "./components/Navbar";
@@ -19,6 +19,13 @@ export function App() {
                 <div className="max-w-6xl mx-auto min-h-screen px-4 sm:px-6 lg:px-8">
                     <header className="py-4 sm:py-6 flex flex-col sm:flex-row gap-3 items-center justify-between">
                         <div className="flex flex-1 items-center gap-2 w-full sm:w-auto">
+                            <Link to={"/"}>
+                                <img
+                                    src="/favicon.ico"
+                                    alt="e-pit Logo"
+                                    className="mr-6 size-10"
+                                />
+                            </Link>
                             <ModeToggle />
                             <Notification />
                             <NavLink to="/friends-rivals">
