@@ -1,0 +1,37 @@
+eprixId,eprixRef,circuit,location,country,racesPerTrack
+1,battersea,battersea park street circuit,london eprix,united kingdom,4
+2,beijing,beijing olympic green circuit,beijing eprix,china,2
+3,berlin,berlin street circuit,berlin eprix,germany,1
+4,bern,bern street circuit,swiss eprix,switzerland,1
+5,biscayne bay,biscayne bay street circuit,miami eprix,united states,1
+6,brooklyn,brooklyn street circuit,new york city eprix,united states,10
+7,capte_town,cape town street circuit,cape town eprix,south africa,1
+8,eur,circuito cittadino dell'eur,rome eprix,italy,8
+9,haiting,haitang bay circuit,sanya eprix,china,1
+10,hermanos,autodromo hermanos rodríguez,mexico city eprix,mexico,7
+11,hong kong,hong kong central harbourfront circuit,hong kong eprix,hong kong,4
+12,hyderabad,hyderabad street circuit,hyderabad eprix,india,1
+13,jakarta,jakarta international e-prix circuit,jakarta eprix,indonesia,3
+14,london,excel london circuit,london eprix,united kingdom,6
+15,long beach,long beach street circuit,long beach eprix,united states,2
+16,miguel,autodromo miguel e. abed,puebla eprix,mexico,2
+17,misano,misano world circuit marco simoncelli,misano adriatico eprix,italy,0
+18,monaco,circuit de monaco,monaco eprix,monaco,6
+20,montreal,montreal street circuit,montreal eprix,canada,2
+21,moscow,moscow street circuit,moscow eprix,russia,1
+22,moulay,circuit international automobile moulay el hassan,marrakesh eprix,morocco,5
+23,o'higgins,parque o'higgins circuit,santiago eprix,chile,2
+24,paris,paris street circuit,paris eprix,france,4
+25,portland,portland international raceway,portland eprix,united states,1
+26,puerto_madero,puerto madero street circuit,buenos aires eprix,argentina,3
+27,punta_del_este,punta del este street circuit,punta del este eprix,uruguay,3
+28,putrajaya,putrajaya street circuit,putrajaya eprix,malaysia,2
+29,ricardo,circuit ricardo tormo,valencia eprix,spain,2
+30,riyadh,riyadh street circuit,diriyah eprix,saudi arabia,9
+31,santiago,santiago street circuit,santiago eprix,chile,1
+32,sao_paulo,sao paulo street circuit,sao paulo eprix,brazil,1
+33,seoul,seoul street circuit,seoul eprix,south korea,2
+34,shanghai,shanghai international circuit,shanghai eprix,china,0
+35,tempelhof,tempelhof airport street circuit,berlin eprix,germany,17
+36,tokyo,tokyo street circuit,tokyo eprix,japan,0
+37,zurich,zurich street circuit,zurich eprix,switzerland,1

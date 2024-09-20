@@ -106,13 +106,14 @@ export default function Login() {
                                 </CardDescription>
                             </CardHeader>
                             <form
-                                onSubmit={() =>
+                                onSubmit={(e) =>
                                     createUser(
+                                        e,
                                         fullName,
                                         username,
                                         email,
                                         image,
-                                        password,
+                                        password
                                     )
                                 }
                             >
@@ -206,8 +207,13 @@ export default function Login() {
                                     </div>
                                 </CardContent>
                                 <CardFooter>
-                                    <Button disabled={confirmPassword !== password} className="w-full">
-                                        {confirmPassword === password ? "Create Account" : "Passwords do not match."}
+                                    <Button
+                                        disabled={confirmPassword !== password}
+                                        className="w-full"
+                                    >
+                                        {confirmPassword === password
+                                            ? "Create Account"
+                                            : "Passwords do not match."}
                                     </Button>
                                 </CardFooter>
                             </form>
