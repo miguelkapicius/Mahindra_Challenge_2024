@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 
 interface Author {
     username: string;
-    image_url: string;
+    imageUrl: string;
 }
 
 interface Post {
@@ -21,7 +21,7 @@ interface Post {
     content: string;
     likes: number;
     author: Author;
-    createAt: Date;
+    createdAt: Date;
 }
 
 export function Posts() {
@@ -47,11 +47,11 @@ export function Posts() {
             {posts.map((post) => (
                 <Card key={post._id}>
                     <CardHeader className="flex flex-row gap-6 items-center">
-                        <ProfileAvatar image_url={post.author.image_url} />
+                        <ProfileAvatar image_url={post?.author?.imageUrl} />
                         <div className="flex flex-col m-0">
-                            <span>{post.author.username}</span>
+                            <span>{post?.author?.username}</span>
                             <span className="text-muted-foreground text-sm">
-                                {formatDistanceToNow(post.createAt)}
+                                {formatDistanceToNow(post.createdAt)}
                             </span>
                         </div>
                     </CardHeader>

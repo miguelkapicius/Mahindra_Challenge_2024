@@ -8,6 +8,8 @@ interface User {
     _id: string;
     email: string;
     name: string;
+    username: string;
+    imageUrl: string;
     // Adicione outras propriedades conforme necessário
 }
 

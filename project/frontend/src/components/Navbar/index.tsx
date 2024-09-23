@@ -121,7 +121,7 @@ export function Navbar() {
                         onClick={() => signOut()}
                     >
                         Profile
-                        <ProfileAvatar image_url={user.imageUrl} />
+                        <ProfileAvatar image_url={user?.imageUrl} />
                     </NavigationMenuLink>
                 </NavigationMenuItem>
             </NavigationMenuList>

@@ -2,15 +2,17 @@ import { ProfileAvatar } from "@/components/Avatar";
 import { Button } from "@/components/ui/button";
 import { Card, CardFooter, CardHeader } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
+import { AuthContext } from "@/context/auth";
 import axios from "axios";
 import { Camera, Image, MapPin, Paperclip } from "lucide-react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 export function CreatePost() {
     const [postContent, setPostContent] = useState("");
+    const { user } = useContext(AuthContext);
     function onHandleSubmit() {
         axios.post("http://localhost:3000/posts", {
-            author: "66edb87b104fde8288c2acf6",
+            author: user?._id,
             content: postContent,
         });
         setPostContent("");

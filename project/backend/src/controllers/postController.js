@@ -1,8 +1,8 @@
 import { Post } from "../models/postModel.js";
 
 export const getPosts = async (req, res) => {
-    const posts = await Post.find().populate("author", "image_url username");
-    return res.send(posts);
+    const posts = await Post.find().populate("author", "imageUrl username");
+    return res.json(posts);
 };
 
 export const createPost = async (req, res) => {
