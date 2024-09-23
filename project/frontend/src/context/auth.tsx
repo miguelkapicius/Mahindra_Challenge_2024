@@ -10,6 +10,8 @@ interface User {
     name: string;
     username: string;
     imageUrl: string;
+    banner: string;
+    drivers: string[];
     // Adicione outras propriedades conforme necessário
 }
 

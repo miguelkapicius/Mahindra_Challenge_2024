@@ -12,6 +12,7 @@ export const userSchema = new mongoose.Schema({
             ref: "Driver",
         },
     ],
+    banner: String,
 });
 
 export const User = mongoose.model("User", userSchema);

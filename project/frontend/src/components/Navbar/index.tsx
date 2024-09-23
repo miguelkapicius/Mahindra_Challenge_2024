@@ -8,11 +8,25 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { ProfileAvatar } from "../Avatar";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+    Sheet,
+    SheetClose,
+    SheetContent,
+    SheetDescription,
+    SheetFooter,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+} from "@/components/ui/sheet";
 import { Link } from "react-router-dom";
+import { ProfileAvatar } from "../Avatar";
 import { AuthContext } from "@/context/auth";
+import { LogOut } from "lucide-react";
+import api from "@/axiosInstance";
 
 const stats: { title: string; href: string; description: string }[] = [
     {
@@ -22,10 +36,10 @@ const stats: { title: string; href: string; description: string }[] = [
             "A modal dialog that interrupts the user with important content and expects a response.",
     },
     {
-        title: "Pilots",
-        href: "/pilots",
+        title: "My Team",
+        href: "/myTeam",
         description:
-            "For sighted users to preview content available behind a link.",
+            "View and manage your team, track performance, and make adjustments to stay ahead in the competition.",
     },
     {
         title: "Users Leaderboard",
@@ -54,11 +68,22 @@ const stats: { title: string; href: string; description: string }[] = [
 ];
 
 export function Navbar() {
-    const { signOut } = React.useContext(AuthContext);
-    const { user } = React.useContext(AuthContext);
+    const { user, signOut } = React.useContext(AuthContext);
+
+    const [name, setName] = React.useState(user?.name);
+    const [username, setUsername] = React.useState(user?.username);
+    const [imageUrl, setImageUrl] = React.useState(user?.imageUrl);
+
+    function updateUser() {
+        api.put(`/users/${user?._id}`, {
+            name,
+            username,
+            imageUrl,
+        });
+    }
 
     return (
-        <NavigationMenu>
+        <NavigationMenu className="z-50">
             <NavigationMenuList>
                 <NavigationMenuItem>
                     <NavigationMenuTrigger>Races</NavigationMenuTrigger>
@@ -116,14 +141,95 @@ export function Navbar() {
                     </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <NavigationMenuLink
-                        className={`${navigationMenuTriggerStyle()} flex gap-2`}
-                        onClick={() => signOut()}
-                    >
-                        Profile
-                        <ProfileAvatar image_url={user?.imageUrl} />
-                    </NavigationMenuLink>
+                    <Sheet>
+                        <SheetTrigger asChild>
+                            <Button
+                                variant={"ghost"}
+                                className="flex gap-4 items-center"
+                            >
+                                <span>{user?.username}</span>
+                                <ProfileAvatar image_url={user?.imageUrl} />
+                            </Button>
+                        </SheetTrigger>
+                        <SheetContent>
+                            <SheetHeader>
+                                <SheetTitle>Edit Profile</SheetTitle>
+                                <SheetDescription>
+                                    Make changes to your profile here. Click
+                                    save when you're done.
+                                </SheetDescription>
+                            </SheetHeader>
+                            <div className="grid gap-4 py-4">
+                                <div className="grid grid-cols-4 items-center gap-4">
+                                    <Label
+                                        htmlFor="name"
+                                        className="text-right"
+                                    >
+                                        Name
+                                    </Label>
+                                    <Input
+                                        id="name"
+                                        value={name}
+                                        className="col-span-3"
+                                        onChange={(e) =>
+                                            setName(e.target.value)
+                                        }
+                                    />
+                                </div>
+                                <div className="grid grid-cols-4 items-center gap-4">
+                                    <Label
+                                        htmlFor="username"
+                                        className="text-right"
+                                    >
+                                        Username
+                                    </Label>
+                                    <Input
+                                        id="username"
+                                        value={username}
+                                        className="col-span-3"
+                                        onChange={(e) =>
+                                            setUsername(e.target.value)
+                                        }
+                                    />
+                                </div>
+                                <div className="grid grid-cols-4 items-center gap-4">
+                                    <Label
+                                        htmlFor="image"
+                                        className="text-right"
+                                    >
+                                        Image URL
+                                    </Label>
+                                    <Input
+                                        id="image"
+                                        value={imageUrl}
+                                        className="col-span-3"
+                                        onChange={(e) =>
+                                            setImageUrl(e.target.value)
+                                        }
+                                    />
+                                </div>
+                            </div>
+                            <SheetFooter>
+                                <SheetClose asChild>
+                                    <Button
+                                        type="submit"
+                                        onClick={() => updateUser()}
+                                    >
+                                        Save changes
+                                    </Button>
+                                </SheetClose>
+                            </SheetFooter>
+                        </SheetContent>
+                    </Sheet>
                 </NavigationMenuItem>
+                <Button
+                    className="flex gap-2"
+                    variant={"ghost"}
+                    size={"icon"}
+                    onClick={() => signOut()}
+                >
+                    <LogOut className="size-5" />
+                </Button>
             </NavigationMenuList>
         </NavigationMenu>
     );

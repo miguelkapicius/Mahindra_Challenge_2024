@@ -10,8 +10,8 @@ import { useContext, useState } from "react";
 export function CreatePost() {
     const [postContent, setPostContent] = useState("");
     const { user } = useContext(AuthContext);
-    function onHandleSubmit() {
-        axios.post("http://localhost:3000/posts", {
+    async function onHandleSubmit() {
+        await axios.post("http://localhost:3000/posts", {
             author: user?._id,
             content: postContent,
         });
@@ -20,7 +20,7 @@ export function CreatePost() {
     return (
         <Card>
             <CardHeader className="flex flex-row items-start gap-6">
-                <ProfileAvatar />
+                <ProfileAvatar image_url={user?.imageUrl} />
                 <Textarea
                     onChange={(e) => setPostContent(e.target.value)}
                     value={postContent}

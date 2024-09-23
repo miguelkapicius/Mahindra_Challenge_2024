@@ -38,7 +38,8 @@ export default function Login() {
         }
     }
 
-    async function handleCreateUser() {
+    async function handleCreateUser(e: FormEvent) {
+        e.preventDefault();
         const data = {
             name,
             username,
@@ -48,6 +49,7 @@ export default function Login() {
         };
 
         await api.post("/users", data);
+        navigate("/");
     }
     return (
         <>
@@ -140,7 +142,7 @@ export default function Login() {
                                             an account
                                         </CardDescription>
                                     </CardHeader>
-                                    <form onSubmit={() => handleCreateUser()}>
+                                    <form onSubmit={(e) => handleCreateUser(e)}>
                                         <CardContent className="space-y-4">
                                             <div className="space-y-1">
                                                 <Label htmlFor="name">

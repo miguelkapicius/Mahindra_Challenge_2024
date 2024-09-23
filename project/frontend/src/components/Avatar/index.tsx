@@ -7,7 +7,7 @@ interface ProfileAvatarProps {
 export function ProfileAvatar({ image_url }: ProfileAvatarProps) {
     return (
         <Avatar>
-            <AvatarImage src={image_url} alt="@shadcn" />
+            <AvatarImage draggable="false" src={image_url} alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>
         </Avatar>
     );

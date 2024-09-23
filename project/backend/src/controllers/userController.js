@@ -25,6 +25,8 @@ export const createUser = async (req, res) => {
         email,
         imageUrl,
         password: hashPassword,
+        drivers: [],
+        banner: "",
     });
 
     await user
@@ -48,14 +50,13 @@ export const loginUser = async (req, res) => {
 export const logoutUser = async (req, res) => {};
 
 export const updateUser = async (req, res) => {
-    const { name, username, email, imageUrl, password } = req.body;
-    const hashPassword = await hash(password, 10);
+    const { name, username, email, imageUrl, banner } = req.body;
     await User.findByIdAndUpdate(req.params.id, {
         name,
         username,
         email,
         imageUrl,
-        password: hashPassword,
+        banner,
     });
     return res.json({ message: "User Updated!" });
 };
