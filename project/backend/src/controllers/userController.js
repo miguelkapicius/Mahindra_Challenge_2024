@@ -25,8 +25,10 @@ export const createUser = async (req, res) => {
         email,
         imageUrl,
         password: hashPassword,
-        drivers: [],
-        banner: "",
+        banner: "https://i.imgur.com/Z5dzbZ0.png",
+        drivers: ["66edaa3aba9edffa6b02f06b", "66edaa3aba9edffa6b02f06c"],
+        coins: 120,
+        points: 0,
     });
 
     await user
@@ -36,7 +38,10 @@ export const createUser = async (req, res) => {
 
 export const loginUser = async (req, res) => {
     const { email, password } = req.body;
-    const user = await User.findOne({ email: email });
+    const user = await User.findOne({ email: email }).populate(
+        "drivers",
+        "firstname lastname nationality team"
+    );
     if (!user) return res.status(404).json({ error: "User is not found" });
     const isValuePassword = await compare(password, user.password);
     if (!isValuePassword)
@@ -50,13 +55,17 @@ export const loginUser = async (req, res) => {
 export const logoutUser = async (req, res) => {};
 
 export const updateUser = async (req, res) => {
-    const { name, username, email, imageUrl, banner } = req.body;
+    const { name, username, email, imageUrl, banner, drivers, coins, points } =
+        req.body;
     await User.findByIdAndUpdate(req.params.id, {
         name,
         username,
         email,
         imageUrl,
+        drivers,
         banner,
+        coins,
+        points,
     });
     return res.json({ message: "User Updated!" });
 };

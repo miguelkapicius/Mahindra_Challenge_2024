@@ -12,6 +12,8 @@ interface User {
     imageUrl: string;
     banner: string;
     drivers: string[];
+    points: Number;
+    coins: Number;
     // Adicione outras propriedades conforme necessário
 }
 

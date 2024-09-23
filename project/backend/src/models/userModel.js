@@ -13,6 +13,8 @@ export const userSchema = new mongoose.Schema({
         },
     ],
     banner: String,
+    coins: Number,
+    points: Number,
 });
 
 export const User = mongoose.model("User", userSchema);

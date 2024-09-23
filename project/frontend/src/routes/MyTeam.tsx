@@ -8,7 +8,16 @@ import {
 } from "@/components/ui/alert-dialog";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import {
+    Table,
+    TableHeader,
+    TableRow,
+    TableHead,
+    TableBody,
+    TableCell,
+} from "@/components/ui/table";
 import { AuthContext } from "@/context/auth";
 import {
     AlertDialog,
@@ -41,7 +50,7 @@ export function MyTeam() {
                 <div className="absolute bottom-0 left-0 p-2 flex justify-between items-end w-full">
                     <img
                         draggable="false"
-                        className="rounded size-24"
+                        className="hidden md:block rounded size-24"
                         src={user?.imageUrl}
                         alt={`${user?.name} image profile`}
                     />
@@ -80,6 +89,7 @@ export function MyTeam() {
                         </AlertDialogContent>
                     </AlertDialog>
                 </div>
+
                 <img
                     draggable="false"
                     className="size-full rounded object-cover"
@@ -88,6 +98,46 @@ export function MyTeam() {
                 />
             </AspectRatio>
             <PointsChart />
+            <div className="space-y-6">
+                <h3 className="text-3xl md:text-5xl font-display">My Pilots</h3>
+                {user?.drivers.map((pilot) => (
+                    <Card className="flex flex-col pt-6 md:flex-row items-center gap-6">
+                        <img
+                            className="object-cover bg-accent md:bg-transparent p-6 pb-0 rounded w-1/3"
+                            src={pilot}
+                            draggable="false"
+                            alt=""
+                        />
+                        <CardContent className="w-2/3 space-y-6 overflow-hidden">
+                            <h2 className="text-2xl md:text-5xl font-display">
+                                {pilot.firstname}
+                            </h2>
+                            <Table className="text-2xl">
+                                <TableHeader>
+                                    <TableRow>
+                                        <TableHead>Wins</TableHead>
+                                        <TableHead>Podiums</TableHead>
+                                        <TableHead>Best Lap</TableHead>
+                                        <TableHead className="text-right">
+                                            Points
+                                        </TableHead>
+                                    </TableRow>
+                                </TableHeader>
+                                <TableBody>
+                                    <TableRow>
+                                        <TableCell>{pilot.wins}</TableCell>
+                                        <TableCell>{pilot.podiums}</TableCell>
+                                        <TableCell>{pilot.best_lap}</TableCell>
+                                        <TableCell className="text-right">
+                                            {pilot.points}
+                                        </TableCell>
+                                    </TableRow>
+                                </TableBody>
+                            </Table>
+                        </CardContent>
+                    </Card>
+                ))}
+            </div>
         </section>
     );
 }
