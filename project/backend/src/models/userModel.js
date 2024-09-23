@@ -4,7 +4,7 @@ export const userSchema = new mongoose.Schema({
     name: String,
     username: String,
     email: String,
-    image_url: String,
+    imageUrl: String,
     password: String,
     drivers: [
         {

@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { ProfileAvatar } from "../Avatar";
 import { Link } from "react-router-dom";
+import { AuthContext } from "@/context/auth";
 
 const stats: { title: string; href: string; description: string }[] = [
     {
@@ -53,6 +54,9 @@ const stats: { title: string; href: string; description: string }[] = [
 ];
 
 export function Navbar() {
+    const { signOut } = React.useContext(AuthContext);
+    const { user } = React.useContext(AuthContext);
+
     return (
         <NavigationMenu>
             <NavigationMenuList>
@@ -114,9 +118,10 @@ export function Navbar() {
                 <NavigationMenuItem>
                     <NavigationMenuLink
                         className={`${navigationMenuTriggerStyle()} flex gap-2`}
+                        onClick={() => signOut()}
                     >
                         Profile
-                        <ProfileAvatar />
+                        <ProfileAvatar image_url={user.imageUrl} />
                     </NavigationMenuLink>
                 </NavigationMenuItem>
             </NavigationMenuList>

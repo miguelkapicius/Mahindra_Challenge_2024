@@ -1,111 +1,69 @@
 import { ProfileAvatar } from "@/components/Avatar";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { formatDistanceToNow } from 'date-fns';
+import {
+    Card,
+    CardContent,
+    CardFooter,
+    CardHeader,
+} from "@/components/ui/card";
+import axios from "axios";
+import { formatDistanceToNow } from "date-fns";
 import { HandHeart, MessageCircle, Share } from "lucide-react";
+import { useEffect, useState } from "react";
 
-const posts = [
-    {
-        userId: {
-            Image: "https://images.unsplash.com/photo-1640951613773-54706e06851d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
-            name: "Miguel Kapicius",
-        },
-        date: new Date(),
-        content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus deleniti fuga eaque veritatis sit molestiae. Veritatis quis possimus dolorum quisquam beatae sed magni optio error fugiat necessitatibus. Magnam, voluptas aliquam?",
-    },
-    {
-        userId: {
-            Image: "https://images.unsplash.com/photo-1640951613773-54706e06851d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
-            name: "Miguel Kapicius",
-        },
-        date: new Date(),
-        content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus deleniti fuga eaque veritatis sit molestiae. Veritatis quis possimus dolorum quisquam beatae sed magni optio error fugiat necessitatibus. Magnam, voluptas aliquam?",
-    },
-    {
-        userId: {
-            Image: "https://images.unsplash.com/photo-1640951613773-54706e06851d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
-            name: "Miguel Kapicius",
-        },
-        date: new Date(),
-        content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus deleniti fuga eaque veritatis sit molestiae. Veritatis quis possimus dolorum quisquam beatae sed magni optio error fugiat necessitatibus. Magnam, voluptas aliquam?",
-    },
-    {
-        userId: {
-            Image: "https://images.unsplash.com/photo-1640951613773-54706e06851d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
-            name: "Miguel Kapicius",
-        },
-        date: new Date(),
-        content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus deleniti fuga eaque veritatis sit molestiae. Veritatis quis possimus dolorum quisquam beatae sed magni optio error fugiat necessitatibus. Magnam, voluptas aliquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus deleniti fuga eaque veritatis sit molestiae. Veritatis quis possimus dolorum quisquam beatae sed magni optio error fugiat necessitatibus. Magnam, voluptas aliquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus deleniti fuga eaque veritatis sit molestiae. Veritatis quis possimus dolorum quisquam beatae sed magni optio error fugiat necessitatibus. Magnam, voluptas aliquam?",
-    },
-    {
-        userId: {
-            Image: "https://images.unsplash.com/photo-1640951613773-54706e06851d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
-            name: "Miguel Kapicius",
-        },
-        date: new Date(),
-        content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus deleniti fuga eaque veritatis sit molestiae. Veritatis quis possimus dolorum quisquam beatae sed magni optio error fugiat necessitatibus. Magnam, voluptas aliquam?",
-    },
-    {
-        userId: {
-            Image: "https://images.unsplash.com/photo-1640951613773-54706e06851d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
-            name: "Miguel Kapicius",
-        },
-        date: new Date(),
-        content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus deleniti fuga eaque veritatis sit molestiae. Veritatis quis possimus dolorum quisquam beatae sed magni optio error fugiat necessitatibus. Magnam, voluptas aliquam?",
-    },
-    {
-        userId: {
-            Image: "https://images.unsplash.com/photo-1640951613773-54706e06851d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
-            name: "Miguel Kapicius",
-        },
-        date: new Date(),
-        content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus deleniti fuga eaque veritatis sit molestiae. Veritatis quis possimus dolorum quisquam beatae sed magni optio error fugiat necessitatibus. Magnam, voluptas aliquam?",
-    },
-    {
-        userId: {
-            Image: "https://images.unsplash.com/photo-1640951613773-54706e06851d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
-            name: "Miguel Kapicius",
-        },
-        date: new Date(),
-        content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus deleniti fuga eaque veritatis sit molestiae. Veritatis quis possimus dolorum quisquam beatae sed magni optio error fugiat necessitatibus. Magnam, voluptas aliquam?",
-    },
-    {
-        userId: {
-            Image: "https://images.unsplash.com/photo-1640951613773-54706e06851d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
-            name: "Miguel Kapicius",
-        },
-        date: new Date(),
-        content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus deleniti fuga eaque veritatis sit molestiae. Veritatis quis possimus dolorum quisquam beatae sed magni optio error fugiat necessitatibus. Magnam, voluptas aliquam?",
-    },
-];
+interface Author {
+    username: string;
+    image_url: string;
+}
+
+interface Post {
+    _id: string;
+    title: string;
+    content: string;
+    likes: number;
+    author: Author;
+    createAt: Date;
+}
 
 export function Posts() {
+    const [posts, setPosts] = useState<Post[]>([]);
+    useEffect(() => {
+        axios.get("http://localhost:3000/posts").then((response) => {
+            setPosts(response.data);
+        });
+    }, [posts]);
+    async function Like(postId: string) {
+        const response = await axios.put<Post>(
+            `http://localhost:3000/posts/${postId}/like`
+        );
+
+        const updatedPost = await response.data;
+
+        setPosts((prevPost) =>
+            prevPost.map((post) => (post._id === postId ? updatedPost : post))
+        );
+    }
     return (
         <section className="space-y-6 pb-6">
             {posts.map((post) => (
-                <Card>
+                <Card key={post._id}>
                     <CardHeader className="flex flex-row gap-6 items-center">
-                        <ProfileAvatar image_url={post.userId.Image} />
+                        <ProfileAvatar image_url={post.author.image_url} />
                         <div className="flex flex-col m-0">
-                            <span>{post.userId.name}</span>
+                            <span>{post.author.username}</span>
                             <span className="text-muted-foreground text-sm">
-                                {formatDistanceToNow(post.date)}
+                                {formatDistanceToNow(post.createAt)}
                             </span>
                         </div>
                     </CardHeader>
-                    <CardContent>
-                        {post.content}
-                    </CardContent>
-                    <CardFooter className="flex gap-6 text-muted-foreground *:size-5">
-                        <HandHeart />
+                    <CardContent>{post.content}</CardContent>
+                    <CardFooter className="flex gap-6 text-muted-foreground">
+                        <div
+                            className="flex gap-2 items-center hover:text-foreground"
+                            onClick={() => Like(post._id)}
+                        >
+                            <HandHeart />
+                            <span>{post.likes}</span>
+                        </div>
                         <MessageCircle />
                         <Share />
                     </CardFooter>

@@ -3,13 +3,20 @@ import {
     createUser,
     deleteUser,
     getUsers,
+    loginUser,
+    logoutUser,
     updateUser,
 } from "../controllers/userController.js";
+import { authMiddleware } from "../middlewares/auth.js";
 
 export const userRouter = Router();
-const URL = "/users";
 
-userRouter.get(URL, getUsers);
-userRouter.post(URL, createUser);
-userRouter.put(URL, updateUser);
-userRouter.delete(URL, deleteUser);
+// users
+userRouter.get("/users", authMiddleware, getUsers);
+userRouter.post("/users", createUser);
+userRouter.put("/users/:id", authMiddleware, updateUser);
+userRouter.delete("/users/:id", authMiddleware, deleteUser);
+
+// login
+userRouter.post("/login", loginUser);
+userRouter.post("/logout", authMiddleware, logoutUser);

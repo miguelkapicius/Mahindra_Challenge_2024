@@ -1,43 +1,66 @@
+import sign from "jsonwebtoken/sign.js";
 import { User } from "../models/userModel.js";
-import { Driver } from "../models/driverModel.js";
+import { compare, hash } from "bcrypt";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export const getUsers = async (req, res) => {
     const users = await User.find();
-    return res.send(users);
+    return res.json(users);
 };
 
 export const createUser = async (req, res) => {
-    const { driversId } = req.body;
+    const { name, username, email, imageUrl, password } = req.body;
 
-    const drivers = await Driver.find({ _id: { $in: driversId } });
-    if (drivers.lenght !== driversId.lenght) {
-        return res.status(404).json({ message: "Some drivers is not found" });
-    }
+    const hashPassword = await hash(password, 10);
+    const userExists = await User.findOne({ username: username });
+    const emailExists = await User.findOne({ email: email });
+    if (userExists || emailExists)
+        return res.status(400).json({ error: "User already exist" });
 
     const user = new User({
-        name: req.body.name,
-        username: req.body.username,
-        email: req.body.email,
-        image_url: req.body.image_url,
-        password: req.body.password,
-        drivers: driversId,
+        name,
+        username,
+        email,
+        imageUrl,
+        password: hashPassword,
     });
 
-    await user.save().then(() => res.send("User Created"));
+    await user
+        .save()
+        .then(() => res.status(201).json({ message: "User Created" }));
 };
 
-export const updateUser = async (req, res) => {
-    await User.findByIdAndUpdate(req.params.id, {
-        name: req.body.name,
-        username: req.body.username,
-        email: req.body.email,
-        image_url: req.body.image_url,
-        password: req.body.password,
+export const loginUser = async (req, res) => {
+    const { email, password } = req.body;
+    const user = await User.findOne({ email: email });
+    if (!user) return res.status(404).json({ error: "User is not found" });
+    const isValuePassword = await compare(password, user.password);
+    if (!isValuePassword)
+        return res.status(404).json({ error: "Password is not found" });
+    const token = sign({ id: user._id }, process.env.SECRET, {
+        expiresIn: "1d",
     });
-    return res.send("User Updated!");
+    return res.json({ user, token });
+};
+
+export const logoutUser = async (req, res) => {};
+
+export const updateUser = async (req, res) => {
+    const { name, username, email, imageUrl, password } = req.body;
+    const hashPassword = await hash(password, 10);
+    await User.findByIdAndUpdate(req.params.id, {
+        name,
+        username,
+        email,
+        imageUrl,
+        password: hashPassword,
+    });
+    return res.json({ message: "User Updated!" });
 };
 
 export const deleteUser = async (req, res) => {
     await User.findByIdAndDelete(req.params.id);
-    return res.send("User Deleted!");
+    return res.json({ message: "User Deleted!" });
 };

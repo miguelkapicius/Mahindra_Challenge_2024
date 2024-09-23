@@ -6,6 +6,7 @@ import { driverRouter } from "./routes/driverRouter.js";
 import { teamRouter } from "./routes/teamRouter.js";
 import { seasonRouter } from "./routes/seasonRouter.js";
 import { resultRouter } from "./routes/resultRouter.js";
+import { postRouter } from "./routes/postRouter.js";
 
 dotenv.config();
 
@@ -19,3 +20,4 @@ app.use(driverRouter);
 app.use(teamRouter);
 app.use(seasonRouter);
 app.use(resultRouter);
+app.use(postRouter);

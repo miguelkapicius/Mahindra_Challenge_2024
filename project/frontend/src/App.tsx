@@ -6,16 +6,16 @@ import { Notification } from "./components/Notifications";
 import { Button } from "./components/ui/button";
 import { Users } from "lucide-react";
 import { Footer } from "./components/Footer";
-import { useAuth } from "./hooks/useAuth";
-import { Suspense } from "react";
+import { Suspense, useContext } from "react";
 import { Fallback } from "./components/Fallback";
+import { AuthContext } from "./context/auth";
 
 export function App() {
-    const { auth } = useAuth();
+    const { signed } = useContext(AuthContext);
 
     return (
         <>
-            {auth.isAuthenticated ? (
+            {signed ? (
                 <div className="max-w-6xl mx-auto min-h-screen px-4 sm:px-6 lg:px-8">
                     <header className="py-4 sm:py-6 flex flex-col sm:flex-row gap-3 items-center justify-between">
                         <div className="flex flex-1 items-center gap-2 w-full sm:w-auto">
@@ -51,7 +51,7 @@ export function App() {
                     <Footer />
                 </div>
             ) : (
-                <Navigate to="/login" />
+                <Navigate to={"login"} />
             )}
         </>
     );

@@ -7,6 +7,7 @@ import { ThemeProvider } from "./components/theme-provider.tsx";
 import { Pilots } from "./routes/Pilots.tsx";
 import { RecoilRoot } from "recoil";
 import NotFound from "./routes/NotFound.tsx";
+import { AuthProvider } from "./context/auth.jsx";
 
 // Dynamic Imports
 const Home = lazy(() => import("./routes/Home.tsx"));
@@ -20,7 +21,7 @@ const TeamStats = lazy(() => import("./routes/TeamStats.tsx"));
 const SustainabilityInMotion = lazy(
     () => import("./routes/SustainabilityInMotion.tsx")
 );
-const Login = lazy(() => import("./routes/Login.tsx"));
+const Login = lazy(() => import("./routes/Login.jsx"));
 
 const router = createBrowserRouter([
     {
@@ -78,10 +79,12 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
-        <RecoilRoot>
-            <ThemeProvider>
-                <RouterProvider router={router} />
-            </ThemeProvider>
-        </RecoilRoot>
+        <AuthProvider>
+            <RecoilRoot>
+                <ThemeProvider>
+                    <RouterProvider router={router} />
+                </ThemeProvider>
+            </RecoilRoot>
+        </AuthProvider>
     </StrictMode>
 );

@@ -7,8 +7,9 @@ import {
     TableHead,
     TableRow,
 } from "@/components/ui/table";
+import axios from "axios";
 import { CoinsIcon } from "lucide-react";
-import { memo } from "react";
+import { memo, useEffect, useState } from "react";
 
 export const pilots = [
     {
@@ -49,13 +50,22 @@ interface PilotCardsProps {
 }
 
 function PilotCards({ nameFilter, priceFilter }: PilotCardsProps) {
+    const [pilots, setPilots] = useState([]);
+    useEffect(() => {
+        axios.get("http://localhost:3000/drivers").then((response) => {
+            console.log(response.data);
+            setPilots(response.data);
+        });
+    }, []);
     return (
         <section className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {pilots
                 .filter(
                     (pilot) =>
                         (nameFilter
-                            ? pilot.name.toLowerCase().includes(nameFilter.toLowerCase()) ||
+                            ? pilot.name
+                                  .toLowerCase()
+                                  .includes(nameFilter.toLowerCase()) ||
                               pilot.team
                                   .toLowerCase()
                                   .includes(nameFilter.toLowerCase())
@@ -64,7 +74,7 @@ function PilotCards({ nameFilter, priceFilter }: PilotCardsProps) {
                 )
                 .map((pilot) => (
                     <Card
-                        key={pilot.id}
+                        key={pilot._id}
                         className="flex flex-col gap-2 p-4 rounded overflow-hidden"
                     >
                         <img
@@ -79,7 +89,7 @@ function PilotCards({ nameFilter, priceFilter }: PilotCardsProps) {
                                         Name
                                     </TableHead>
                                     <TableCell className="font-medium">
-                                        {pilot.name}
+                                        {pilot.firstname} {pilot.lastname}
                                     </TableCell>
                                 </TableRow>
                                 <TableRow>
@@ -115,4 +125,4 @@ function PilotCards({ nameFilter, priceFilter }: PilotCardsProps) {
     );
 }
 
-export const PilotCard = memo(PilotCards)
+export const PilotCard = memo(PilotCards);

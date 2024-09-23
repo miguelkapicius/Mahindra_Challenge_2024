@@ -10,25 +10,31 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table";
-import { teams } from "./Teams";
+import { useTeams } from "@/hooks/useTeams";
 
 export default function TeamStats() {
-    const currentTeam = teams.find(team => team.name.toLowerCase() === new URL(window.location.href).pathname.split('/').pop());
+    const teams = useTeams();
+    const currentTeam = teams.find(
+        (team) =>
+            team.name.toLowerCase ===
+            new URL(window.location.href).pathname.split("/").pop()
+    );
 
     return (
         <section className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div 
+            <div
                 className="col-span-full h-60 rounded drop-shadow-lg flex justify-center items-center"
                 style={{ backgroundColor: currentTeam?.color }}
             >
                 <h2 className="text-center text-accent p-6 rounded text-5xl font-display">
-                    {currentTeam?.name}
+                    {currentTeam?.teamRef}
                 </h2>
+                <p>{currentTeam?.name}</p>
             </div>
             <div className="col-span-full flex flex-col md:flex-row gap-6">
                 <WinsChart color={currentTeam?.color} />
-                <PodiumsChart color={currentTeam?.color}/>
-                <PointsChart color={currentTeam?.color}/>
+                <PodiumsChart color={currentTeam?.color} />
+                <PointsChart color={currentTeam?.color} />
             </div>
             <div className="space-y-6 col-span-full">
                 {currentTeam?.pilots.map((pilot) => (
