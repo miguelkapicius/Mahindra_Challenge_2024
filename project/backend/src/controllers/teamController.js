@@ -1,7 +1,7 @@
 import { Team } from "../models/teamModel.js";
 
 export const getTeams = async (req, res) => {
-    const teams = await Team.find();
+    const teams = await Team.find().populate("");
     return res.send(teams);
 };
 

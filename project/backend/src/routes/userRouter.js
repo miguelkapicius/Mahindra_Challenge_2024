@@ -12,7 +12,7 @@ import { authMiddleware } from "../middlewares/auth.js";
 export const userRouter = Router();
 
 // users
-userRouter.get("/users", authMiddleware, getUsers);
+userRouter.get("/users", getUsers);
 userRouter.post("/users", createUser);
 userRouter.put("/users/:id", authMiddleware, updateUser);
 userRouter.delete("/users/:id", authMiddleware, deleteUser);

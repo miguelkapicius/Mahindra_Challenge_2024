@@ -23,7 +23,7 @@ export function App() {
                                 <img
                                     src="/favicon.ico"
                                     alt="e-pit Logo"
-                                    className="mr-6 size-10"
+                                    className="mr-6 size-10 hidden md:block"
                                 />
                             </Link>
                             <ModeToggle />

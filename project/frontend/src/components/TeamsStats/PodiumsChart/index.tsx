@@ -6,7 +6,6 @@ import {
     Card,
     CardContent,
     CardDescription,
-    CardFooter,
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
@@ -83,10 +82,6 @@ export function PodiumsChart({ color, data }: IPodiumsChartProps) {
                     </LineChart>
                 </ChartContainer>
             </CardContent>
-            <CardFooter className="flex-col items-center justify-center gap-2 text-sm">
-                <span className="text-7xl">12</span>
-                <span>Total</span>
-            </CardFooter>
         </Card>
     );
 }
