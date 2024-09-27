@@ -9,22 +9,31 @@ import {
     DrawerTitle,
     DrawerTrigger,
 } from "@/components/ui/drawer";
-import { AudioWaveform, Battery, BatteryFull, BatteryMedium, Clock, Flag, Gauge, Hourglass} from "lucide-react";
+import {
+    AudioWaveform,
+    Battery,
+    BatteryFull,
+    BatteryMedium,
+    Clock,
+    Flag,
+    Gauge,
+    Hourglass,
+} from "lucide-react";
 
 export interface Pilot {
-    id: string;
-    name: string;
-    team: string;
-    image: string;
+    id: String;
+    name: String;
+    team: String;
+    image: String;
     position: number;
-    time: string;
+    time: String;
     speed: number;
     battery: number;
     lap: number;
-    lastLapTime: string;
-    sector1Time: string;
-    sector2Time: string;
-    sector3Time: string;
+    lastLapTime: String;
+    sector1Time: String;
+    sector2Time: String;
+    sector3Time: String;
 }
 
 export function PilotInfo({ pilot }: { pilot: Pilot }) {
@@ -39,8 +48,8 @@ export function PilotInfo({ pilot }: { pilot: Pilot }) {
                 <div className="mx-auto w-full max-w-6xl space-y-6">
                     <DrawerHeader className="flex items-center gap-4">
                         <img
-                            src={pilot.image}
-                            alt={pilot.name}
+                            src={`${pilot.image}`}
+                            alt={`${pilot.name}`}
                             draggable="false"
                             className="rounded-full bg-accent object-cover size-20"
                         />
@@ -52,35 +61,75 @@ export function PilotInfo({ pilot }: { pilot: Pilot }) {
                     <div className="p-4 pb-0">
                         <div className="grid grid-cols-2 md:grid-cols-6 gap-2 *:p-6 *:bg-accent *:rounded-lg *:flex *:flex-col *:items-center *:space-y-2">
                             <div className="flex flex-col items-center justify-center">
-                                <span className="text-xl md:text-2xl font-bold flex items-center gap-2"><Flag className="size-6" />{pilot.position}</span>
-                                <span className="text-sm text-muted-foreground">Position</span>
+                                <span className="text-xl md:text-2xl font-bold flex items-center gap-2">
+                                    <Flag className="size-6" />
+                                    {pilot.position}
+                                </span>
+                                <span className="text-sm text-muted-foreground">
+                                    Position
+                                </span>
                             </div>
                             <div className="flex flex-col items-center justify-center">
-                                <span className="text-xl md:text-2xl font-bold flex items-center gap-2"><Clock className="size-6" />{pilot.time}</span>
-                                <span className="text-sm text-muted-foreground">Time</span>
+                                <span className="text-xl md:text-2xl font-bold flex items-center gap-2">
+                                    <Clock className="size-6" />
+                                    {pilot.time}
+                                </span>
+                                <span className="text-sm text-muted-foreground">
+                                    Time
+                                </span>
                             </div>
                             <div className="flex flex-col items-center justify-center">
-                                <span className="text-xl md:text-xl font-bold flex items-center gap-2"><Gauge className="size-6" />{pilot.speed} km/h</span>
-                                <span className="text-sm text-muted-foreground">Speed</span>
+                                <span className="text-xl md:text-xl font-bold flex items-center gap-2">
+                                    <Gauge className="size-6" />
+                                    {pilot.speed} km/h
+                                </span>
+                                <span className="text-sm text-muted-foreground">
+                                    Speed
+                                </span>
                             </div>
                             <div className="flex flex-col items-center justify-center">
-                                <span className="text-xl md:text-2xl font-bold flex items-center gap-2">{pilot.battery > 50 ? <BatteryFull /> : pilot.battery > 25 ? <BatteryMedium /> : <Battery />}{pilot.battery}%</span>
-                                <span className="text-sm text-muted-foreground">Battery</span>
+                                <span className="text-xl md:text-2xl font-bold flex items-center gap-2">
+                                    {pilot.battery > 50 ? (
+                                        <BatteryFull />
+                                    ) : pilot.battery > 25 ? (
+                                        <BatteryMedium />
+                                    ) : (
+                                        <Battery />
+                                    )}
+                                    {pilot.battery}%
+                                </span>
+                                <span className="text-sm text-muted-foreground">
+                                    Battery
+                                </span>
                             </div>
                             <div className="flex flex-col items-center justify-center">
-                                <span className="text-xl md:text-2xl font-bold flex items-center gap-2"><AudioWaveform className="size-6" />{pilot.lap}</span>
-                                <span className="text-sm text-muted-foreground">Lap</span>
+                                <span className="text-xl md:text-2xl font-bold flex items-center gap-2">
+                                    <AudioWaveform className="size-6" />
+                                    {pilot.lap}
+                                </span>
+                                <span className="text-sm text-muted-foreground">
+                                    Lap
+                                </span>
                             </div>
                             <div className="flex flex-col items-center justify-center">
-                                <span className="text-xl md:text-2xl font-bold flex items-center gap-2"><Hourglass className="size-6" />{pilot.lastLapTime}</span>
-                                <span className="text-sm text-muted-foreground">Last Lap</span>
+                                <span className="text-xl md:text-2xl font-bold flex items-center gap-2">
+                                    <Hourglass className="size-6" />
+                                    {pilot.lastLapTime}
+                                </span>
+                                <span className="text-sm text-muted-foreground">
+                                    Last Lap
+                                </span>
                             </div>
-                            
                         </div>
                     </div>
                     <DrawerFooter>
                         <DrawerClose asChild>
-                            <Button className="w-full md:w-1/2 md:mx-auto" variant="outline">Back</Button>
+                            <Button
+                                className="w-full md:w-1/2 md:mx-auto"
+                                variant="outline"
+                            >
+                                Back
+                            </Button>
                         </DrawerClose>
                     </DrawerFooter>
                 </div>

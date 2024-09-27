@@ -10,6 +10,11 @@ export const createDriver = async (req, res) => {
         firstname: req.body.firstname,
         lastname: req.body.lastname,
         nationality: req.body.nationality,
+        image: req.body.image,
+        wins: req.body.wins,
+        podiums: req.body.podiums,
+        points: req.body.points,
+        team: req.body.team,
     });
     await driver.save().then(() => res.send("Driver Created"));
 };
@@ -19,6 +24,11 @@ export const updateDriver = async (req, res) => {
         firstname: req.body.firstname,
         lastname: req.body.lastname,
         nationality: req.body.nationality,
+        image: req.body.image,
+        wins: req.body.wins,
+        podiums: req.body.podiums,
+        points: req.body.points,
+        team: req.body.team,
     });
     return res.send("Driver Updated!");
 };

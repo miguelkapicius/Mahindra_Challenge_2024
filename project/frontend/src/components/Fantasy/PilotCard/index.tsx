@@ -7,42 +7,9 @@ import {
     TableHead,
     TableRow,
 } from "@/components/ui/table";
-import axios from "axios";
+import { usePilots } from "@/hooks/usePilots";
 import { CoinsIcon } from "lucide-react";
-import { memo, useEffect, useState } from "react";
-
-export const pilots = [
-    {
-        id: 1,
-        name: "Edoardo Mortara",
-        image: "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/728b2253-b9d4-47dd-9051-e970bff2a62f.png",
-        team: "Mahindra",
-        points: 100,
-        price: 100,
-        speed: 322,
-        battery: 100,
-        lap: 1,
-        lastLapTime: "08:32",
-        sector1Time: "08:32",
-        sector2Time: "08:32",
-        sector3Time: "08:32",
-    },
-    {
-        id: 2,
-        name: "Nick De Vries",
-        image: "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/728b2253-b9d4-47dd-9051-e970bff2a62f.png",
-        team: "Mahindra",
-        points: 100,
-        price: 100,
-        speed: 350,
-        battery: 100,
-        lap: 1,
-        lastLapTime: "08:32",
-        sector1Time: "08:32",
-        sector2Time: "08:32",
-        sector3Time: "08:32",
-    },
-];
+import { memo } from "react";
 
 interface PilotCardsProps {
     nameFilter: string;
@@ -50,20 +17,14 @@ interface PilotCardsProps {
 }
 
 function PilotCards({ nameFilter, priceFilter }: PilotCardsProps) {
-    const [pilots, setPilots] = useState([]);
-    useEffect(() => {
-        axios.get("http://localhost:3000/drivers").then((response) => {
-            console.log(response.data);
-            setPilots(response.data);
-        });
-    }, []);
+    const pilots = usePilots();
     return (
         <section className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {pilots
                 .filter(
                     (pilot) =>
                         (nameFilter
-                            ? pilot.name
+                            ? pilot.firstname
                                   .toLowerCase()
                                   .includes(nameFilter.toLowerCase()) ||
                               pilot.team
@@ -74,12 +35,14 @@ function PilotCards({ nameFilter, priceFilter }: PilotCardsProps) {
                 )
                 .map((pilot) => (
                     <Card
-                        key={pilot._id}
+                        key={`${pilot._id}`}
                         className="flex flex-col gap-2 p-4 rounded overflow-hidden"
                     >
                         <img
-                            src={pilot.image}
-                            alt=""
+                            src={`${pilot.image}`}
+                            fetchPriority="high"
+                            alt={`${pilot.firstname}`}
+                            draggable="false"
                             className="w-full object-cover bg-accent"
                         />
                         <Table className="text-sm flex-grow">
