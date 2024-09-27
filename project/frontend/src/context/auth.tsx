@@ -1,4 +1,5 @@
 import api from "@/axiosInstance";
+import { IPilot } from "@/hooks/usePilots";
 import { createContext, useEffect, useState, ReactNode, FC } from "react";
 import { Navigate } from "react-router-dom";
 
@@ -11,7 +12,7 @@ interface User {
     username: string;
     imageUrl: string;
     banner: string;
-    drivers: string[];
+    drivers: IPilot[];
     points: Number;
     coins: Number;
     // Adicione outras propriedades conforme necessário

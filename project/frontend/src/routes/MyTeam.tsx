@@ -104,7 +104,7 @@ export function MyTeam() {
                     <Card className="flex flex-col pt-6 md:flex-row items-center gap-6">
                         <img
                             className="object-cover bg-accent md:bg-transparent p-6 pb-0 rounded w-1/3"
-                            src={pilot}
+                            src={`${pilot.image}`}
                             draggable="false"
                             alt=""
                         />
@@ -117,7 +117,6 @@ export function MyTeam() {
                                     <TableRow>
                                         <TableHead>Wins</TableHead>
                                         <TableHead>Podiums</TableHead>
-                                        <TableHead>Best Lap</TableHead>
                                         <TableHead className="text-right">
                                             Points
                                         </TableHead>
@@ -127,7 +126,6 @@ export function MyTeam() {
                                     <TableRow>
                                         <TableCell>{pilot.wins}</TableCell>
                                         <TableCell>{pilot.podiums}</TableCell>
-                                        <TableCell>{pilot.best_lap}</TableCell>
                                         <TableCell className="text-right">
                                             {pilot.points}
                                         </TableCell>

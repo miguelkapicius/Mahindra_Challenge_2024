@@ -8,19 +8,10 @@ import {
     TableRow,
 } from "@/components/ui/table";
 import { PilotInfo } from "../PilotInfo";
-
-import { IPilot } from "@/components/Fantasy/PilotCard";
-import { useEffect, useState } from "react";
-import api from "@/axiosInstance";
+import { usePilots } from "@/hooks/usePilots";
 
 export function Leaderboard() {
-    const [pilots, setPilots] = useState<IPilot[]>([]);
-    useEffect(() => {
-        api.get("/drivers").then((response) => {
-            console.log(response.data);
-            setPilots(response.data);
-        });
-    }, []);
+    const pilots = usePilots();
 
     const leaderboard = pilots.map((pilot, index) => ({
         position: index + 1,
