@@ -12,19 +12,34 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { FormEvent, useContext, useState } from "react";
+import { FormEvent, useContext, useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
+import { GithubIcon } from "lucide-react";
 
 export default function Login() {
     const [loginEmail, setLoginEmail] = useState("");
     const [loginPassword, setLoginPassword] = useState("");
-
     const [name, setName] = useState("");
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [imageUrl, setImageUrl] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
+    const [isBackendRunning, setIsBackendRunning] = useState(false);
+
+    useEffect(() => {
+        try {
+            api.get("/users").then((response) => {
+                if (response.data) {
+                    setIsBackendRunning(true);
+                } else {
+                    setIsBackendRunning(false);
+                }
+            });
+        } catch (error) {
+            setIsBackendRunning(false);
+        }
+    }, []);
 
     const { signIn, signed } = useContext(AuthContext);
 
@@ -54,7 +69,21 @@ export default function Login() {
     return (
         <>
             {!signed ? (
-                <section className="h-screen flex justify-center items-center p-4">
+                <section className="h-screen flex flex-col justify-center items-center p-4 gap-6">
+                    {!isBackendRunning && (
+                        <Card className="flex justify-between items-center p-4 w-full max-w-5xl">
+                            <CardTitle>
+                                É necessário rodar o backend do projeto no nosso
+                                repositório, clique no botão ao lado
+                            </CardTitle>
+                            <a href="https://github.com/miguelkapicius/Mahindra_Challenge_2024/tree/main/project/backend">
+                                <Button className="flex items-center gap-2">
+                                    <GithubIcon size={16} />
+                                    Github
+                                </Button>
+                            </a>
+                        </Card>
+                    )}
                     <Card className="flex gap-2 p-2 drop-shadow-xl w-full max-w-5xl h-[700px]">
                         <img
                             className="rounded-lg hidden lg:block w-1/2 object-cover"
