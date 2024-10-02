@@ -38,7 +38,7 @@ export default function Teams() {
                                             <TableHead>Wins</TableHead>
                                             <TableHead>Podiums</TableHead>
                                             <TableHead className="text-right">
-                                                Points
+                                                Races
                                             </TableHead>
                                         </TableRow>
                                     </TableHeader>
