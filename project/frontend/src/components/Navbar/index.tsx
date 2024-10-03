@@ -83,7 +83,7 @@ export function Navbar() {
     }
 
     return (
-        <NavigationMenu className="z-50">
+        <NavigationMenu className="z-30">
             <NavigationMenuList className="">
                 <NavigationMenuItem>
                     <NavigationMenuTrigger>Races</NavigationMenuTrigger>

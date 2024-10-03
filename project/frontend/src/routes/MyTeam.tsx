@@ -19,6 +19,7 @@ import {
     TableCell,
 } from "@/components/ui/table";
 import { AuthContext } from "@/context/auth";
+import { usePilots } from "@/hooks/usePilots";
 import {
     AlertDialog,
     AlertDialogCancel,
@@ -30,6 +31,7 @@ import { useContext, useState } from "react";
 
 export function MyTeam() {
     const { user } = useContext(AuthContext);
+    const pilots = usePilots();
     const [bannerUrl, setBannerUrl] = useState("");
     const [banner, setBanner] = useState(user?.banner);
     function changeBanner() {
@@ -100,41 +102,46 @@ export function MyTeam() {
             <PointsChart />
             <div className="space-y-6">
                 <h3 className="text-3xl md:text-5xl font-display">My Pilots</h3>
-                {user?.drivers.map((pilot) => (
-                    <Card className="flex flex-col pt-6 md:flex-row items-center gap-6">
-                        <img
-                            className="object-cover bg-accent md:bg-transparent p-6 pb-0 rounded w-1/3"
-                            src={`${pilot.image}`}
-                            draggable="false"
-                            alt=""
-                        />
-                        <CardContent className="w-2/3 space-y-6 overflow-hidden">
-                            <h2 className="text-2xl md:text-5xl font-display">
-                                {pilot.firstname}
-                            </h2>
-                            <Table className="text-2xl">
-                                <TableHeader>
-                                    <TableRow>
-                                        <TableHead>Wins</TableHead>
-                                        <TableHead>Podiums</TableHead>
-                                        <TableHead className="text-right">
-                                            Points
-                                        </TableHead>
-                                    </TableRow>
-                                </TableHeader>
-                                <TableBody>
-                                    <TableRow>
-                                        <TableCell>{pilot.wins}</TableCell>
-                                        <TableCell>{pilot.podiums}</TableCell>
-                                        <TableCell className="text-right">
-                                            {pilot.points}
-                                        </TableCell>
-                                    </TableRow>
-                                </TableBody>
-                            </Table>
-                        </CardContent>
-                    </Card>
-                ))}
+                {user?.drivers.map((pilotId) => {
+                    const pilot = pilots.find((p) => p._id === pilotId);
+                    return (
+                        <Card className="flex flex-col pt-6 md:flex-row items-center gap-6">
+                            <img
+                                className="object-cover bg-accent md:bg-transparent p-6 pb-0 rounded w-1/3"
+                                src={`${pilot?.image}`}
+                                draggable="false"
+                                alt=""
+                            />
+                            <CardContent className="w-2/3 space-y-6 overflow-hidden">
+                                <h2 className="text-2xl md:text-5xl font-display">
+                                    {pilot?.firstname}
+                                </h2>
+                                <Table className="text-2xl">
+                                    <TableHeader>
+                                        <TableRow>
+                                            <TableHead>Wins</TableHead>
+                                            <TableHead>Podiums</TableHead>
+                                            <TableHead className="text-right">
+                                                Points
+                                            </TableHead>
+                                        </TableRow>
+                                    </TableHeader>
+                                    <TableBody>
+                                        <TableRow>
+                                            <TableCell>{pilot?.wins}</TableCell>
+                                            <TableCell>
+                                                {pilot?.podiums}
+                                            </TableCell>
+                                            <TableCell className="text-right">
+                                                {pilot?.points}
+                                            </TableCell>
+                                        </TableRow>
+                                    </TableBody>
+                                </Table>
+                            </CardContent>
+                        </Card>
+                    );
+                })}
             </div>
         </section>
     );

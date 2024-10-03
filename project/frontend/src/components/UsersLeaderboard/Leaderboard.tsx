@@ -6,11 +6,13 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table";
+import { usePilots } from "@/hooks/usePilots";
 import { useUsers } from "@/hooks/useUsers";
 import { ChartNoAxesGantt } from "lucide-react";
 
 export function Leaderboard() {
     const users = useUsers();
+    const pilots = usePilots();
 
     return (
         <Table>
@@ -24,27 +26,32 @@ export function Leaderboard() {
                 </TableRow>
             </TableHeader>
             <TableBody>
-                {users.map((user) => (
-                    <TableRow key={user._id}>
-                        <TableCell className="font-medium">{`#${user._id}`}</TableCell>
-                        <TableCell className="font-medium">
-                            <img
-                                className="rounded-full size-8"
-                                draggable="false"
-                                src={user.imageUrl}
-                                alt={user.username}
-                            />
-                        </TableCell>
-                        <TableCell>
-                            {user.drivers![0].firstname || "N/A"}
-                        </TableCell>
-                        <TableCell>{user.username}</TableCell>
-                        <TableCell className="text-right flex items-center justify-end gap-2">
-                            <ChartNoAxesGantt />
-                            {user.points}
-                        </TableCell>
-                    </TableRow>
-                ))}
+                {users.map((user) => {
+                    const bestPilot = pilots.find(
+                        (pilot) => pilot._id === user.drivers?.[0]
+                    );
+                    return (
+                        <TableRow key={user._id}>
+                            <TableCell className="font-medium">{`#${user._id}`}</TableCell>
+                            <TableCell className="font-medium">
+                                <img
+                                    className="rounded-full size-8"
+                                    draggable="false"
+                                    src={user.imageUrl}
+                                    alt={user.username}
+                                />
+                            </TableCell>
+                            <TableCell>
+                                {bestPilot?.firstname || "N/A"}
+                            </TableCell>
+                            <TableCell>{user.username}</TableCell>
+                            <TableCell className="text-right flex items-center justify-end gap-2">
+                                <ChartNoAxesGantt />
+                                {user.points}
+                            </TableCell>
+                        </TableRow>
+                    );
+                })}
             </TableBody>
         </Table>
     );

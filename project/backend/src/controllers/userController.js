@@ -26,7 +26,7 @@ export const createUser = async (req, res) => {
         imageUrl,
         password: hashPassword,
         banner: "https://i.imgur.com/Z5dzbZ0.png",
-        drivers: ["66edaa3aba9edffa6b02f06b", "66edaa3aba9edffa6b02f06c"],
+        drivers: [],
         coins: 120,
         points: 0,
     });
@@ -57,16 +57,20 @@ export const logoutUser = async (req, res) => {};
 export const updateUser = async (req, res) => {
     const { name, username, email, imageUrl, banner, drivers, coins, points } =
         req.body;
-    await User.findByIdAndUpdate(req.params.id, {
-        name,
-        username,
-        email,
-        imageUrl,
-        drivers,
-        banner,
-        coins,
-        points,
-    });
+    await User.findByIdAndUpdate(
+        req.params.id,
+        {
+            name,
+            username,
+            email,
+            imageUrl,
+            drivers,
+            banner,
+            coins,
+            points,
+        },
+        { new: true }
+    );
     return res.json({ message: "User Updated!" });
 };
 

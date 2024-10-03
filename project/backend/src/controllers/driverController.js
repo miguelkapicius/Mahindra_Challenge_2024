@@ -14,6 +14,7 @@ export const createDriver = async (req, res) => {
         wins: req.body.wins,
         podiums: req.body.podiums,
         points: req.body.points,
+        price: req.body.price,
         team: req.body.team,
     });
     await driver.save().then(() => res.send("Driver Created"));
@@ -28,6 +29,7 @@ export const updateDriver = async (req, res) => {
         wins: req.body.wins,
         podiums: req.body.podiums,
         points: req.body.points,
+        price: req.body.price,
         team: req.body.team,
     });
     return res.send("Driver Updated!");

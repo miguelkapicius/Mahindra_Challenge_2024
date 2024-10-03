@@ -1,40 +1,35 @@
 import api from "@/axiosInstance";
-import { IPilot } from "@/hooks/usePilots";
 import { createContext, useEffect, useState, ReactNode, FC } from "react";
 import { Navigate } from "react-router-dom";
 
-// Defina a interface para o usuário
 interface User {
-    // Defina as propriedades do usuário conforme necessário
     _id: string;
     email: string;
     name: string;
     username: string;
     imageUrl: string;
     banner: string;
-    drivers: IPilot[];
-    points: Number;
-    coins: Number;
-    // Adicione outras propriedades conforme necessário
+    drivers: string[];
+    points: number;
+    coins: number;
 }
 
-// Defina a interface para o contexto
 interface AuthContextType {
     user: User | null;
     signed: boolean;
     signOut: () => void;
     signIn: (email: string, password: string) => Promise<void>;
+    updateUserDrivers: (drivers: string[]) => void;
 }
 
-// Crie um valor padrão para o contexto
 const defaultContextValue: AuthContextType = {
     user: null,
     signed: false,
     signOut: () => {},
     signIn: async () => {},
+    updateUserDrivers: () => {},
 };
 
-// Crie o contexto com o valor padrão
 export const AuthContext = createContext<AuthContextType>(defaultContextValue);
 
 interface AuthProviderProps {
@@ -87,8 +82,21 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
         setUser(null);
     }
 
+    function updateUserDrivers(drivers: string[]) {
+        if (user) {
+            const updatedUser = {
+                ...user,
+                drivers,
+            };
+            setUser(updatedUser);
+            localStorage.setItem("@Auth:user", JSON.stringify(updatedUser));
+        }
+    }
+
     return (
-        <AuthContext.Provider value={{ user, signed: !!user, signIn, signOut }}>
+        <AuthContext.Provider
+            value={{ user, signed: !!user, signIn, signOut, updateUserDrivers }}
+        >
             {children}
         </AuthContext.Provider>
     );

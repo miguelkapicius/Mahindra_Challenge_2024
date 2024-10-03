@@ -4,16 +4,16 @@ import { useEffect } from "react";
 import { useRecoilState } from "recoil";
 
 export interface IPilot {
-    _id: String;
-    firstname: String;
-    lastname: String;
-    nationality: String;
-    image: String;
+    _id: string;
+    firstname: string;
+    lastname: string;
+    nationality: string;
+    image: string;
     wins: number;
     podiums: number;
     points: number;
     price: number;
-    team: String;
+    team: string;
     time: "08:32";
     speed: 320;
     battery: 95;
