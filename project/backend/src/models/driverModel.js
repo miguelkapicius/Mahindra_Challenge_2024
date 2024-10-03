@@ -12,7 +12,6 @@ export const driverSchema = new mongoose.Schema({
     team: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Team",
-        required: true,
     },
 });
 
