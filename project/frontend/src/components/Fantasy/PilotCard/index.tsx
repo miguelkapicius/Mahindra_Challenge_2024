@@ -20,7 +20,8 @@ interface PilotCardsProps {
 
 function PilotCards({ nameFilter, priceFilter }: PilotCardsProps) {
     const pilots = usePilots();
-    const { user, updateUserDrivers } = useContext(AuthContext);
+    const { user, updateUserDrivers, updateUserCoins } =
+        useContext(AuthContext);
     const [pilotToReplace, setPilotToReplace] = useState<string | null>(null);
 
     useEffect(() => {
@@ -49,8 +50,10 @@ function PilotCards({ nameFilter, priceFilter }: PilotCardsProps) {
             if (!user?.drivers.includes(pilot)) {
                 const updatedDrivers = [...user?.drivers!, pilot];
                 updateUserDrivers(updatedDrivers);
+                updateUserCoins(price);
                 await api.put(`/users/${user?._id}`, {
                     drivers: updatedDrivers,
+                    coins: user?.coins! - price,
                 });
             } else {
                 alert("This driver already selected");
@@ -61,13 +64,19 @@ function PilotCards({ nameFilter, priceFilter }: PilotCardsProps) {
         }
     }
 
-    async function replaceDriver(driverId: string, newDriverId: string) {
+    async function replaceDriver(
+        driverId: string,
+        newDriverId: string,
+        price: number
+    ) {
         const updatedDrivers = user?.drivers.map((driver) =>
             driver === driverId ? newDriverId : driver
         );
         updateUserDrivers(updatedDrivers!);
+        updateUserCoins(price);
         await api.put(`/users/${user?._id}`, {
             drivers: updatedDrivers,
+            coins: user?.coins! - price,
         });
         setPilotToReplace(null);
     }
@@ -143,7 +152,8 @@ function PilotCards({ nameFilter, priceFilter }: PilotCardsProps) {
                                                 onClick={() =>
                                                     replaceDriver(
                                                         pilot._id,
-                                                        pilotToReplace!
+                                                        pilotToReplace!,
+                                                        pilot.price
                                                     )
                                                 }
                                             >

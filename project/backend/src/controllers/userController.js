@@ -38,10 +38,7 @@ export const createUser = async (req, res) => {
 
 export const loginUser = async (req, res) => {
     const { email, password } = req.body;
-    const user = await User.findOne({ email: email }).populate(
-        "drivers",
-        "firstname lastname nationality team"
-    );
+    const user = await User.findOne({ email: email });
     if (!user) return res.status(404).json({ error: "User is not found" });
     const isValuePassword = await compare(password, user.password);
     if (!isValuePassword)

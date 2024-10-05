@@ -20,6 +20,7 @@ interface AuthContextType {
     signOut: () => void;
     signIn: (email: string, password: string) => Promise<void>;
     updateUserDrivers: (drivers: string[]) => void;
+    updateUserCoins: (price: number) => void;
 }
 
 const defaultContextValue: AuthContextType = {
@@ -28,6 +29,7 @@ const defaultContextValue: AuthContextType = {
     signOut: () => {},
     signIn: async () => {},
     updateUserDrivers: () => {},
+    updateUserCoins: () => {},
 };
 
 export const AuthContext = createContext<AuthContextType>(defaultContextValue);
@@ -93,9 +95,27 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
         }
     }
 
+    function updateUserCoins(price: number) {
+        if (user) {
+            const updatedUser = {
+                ...user,
+                coins: user.coins - price,
+            };
+            setUser(updatedUser);
+            localStorage.setItem("@Auth:user", JSON.stringify(updatedUser));
+        }
+    }
+
     return (
         <AuthContext.Provider
-            value={{ user, signed: !!user, signIn, signOut, updateUserDrivers }}
+            value={{
+                user,
+                signed: !!user,
+                signIn,
+                signOut,
+                updateUserDrivers,
+                updateUserCoins,
+            }}
         >
             {children}
         </AuthContext.Provider>
