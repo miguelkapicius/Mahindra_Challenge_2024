@@ -19,8 +19,7 @@ interface AuthContextType {
     signed: boolean;
     signOut: () => void;
     signIn: (email: string, password: string) => Promise<void>;
-    updateUserDrivers: (drivers: string[]) => void;
-    updateUserCoins: (price: number) => void;
+    updateUserDrivers: (drivers: string[], price: number) => void;
 }
 
 const defaultContextValue: AuthContextType = {
@@ -29,7 +28,6 @@ const defaultContextValue: AuthContextType = {
     signOut: () => {},
     signIn: async () => {},
     updateUserDrivers: () => {},
-    updateUserCoins: () => {},
 };
 
 export const AuthContext = createContext<AuthContextType>(defaultContextValue);
@@ -84,24 +82,18 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
         setUser(null);
     }
 
-    function updateUserDrivers(drivers: string[]) {
+    function updateUserDrivers(drivers: string[], price: number) {
         if (user) {
             const updatedUser = {
                 ...user,
                 drivers,
-            };
-            setUser(updatedUser);
-            localStorage.setItem("@Auth:user", JSON.stringify(updatedUser));
-        }
-    }
-
-    function updateUserCoins(price: number) {
-        if (user) {
-            const updatedUser = {
-                ...user,
                 coins: user.coins - price,
             };
             setUser(updatedUser);
+            api.put(`/users/${user._id}`, {
+                drivers: updatedUser.drivers,
+                coins: updatedUser.coins,
+            });
             localStorage.setItem("@Auth:user", JSON.stringify(updatedUser));
         }
     }
@@ -114,7 +106,6 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
                 signIn,
                 signOut,
                 updateUserDrivers,
-                updateUserCoins,
             }}
         >
             {children}

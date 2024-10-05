@@ -1,4 +1,3 @@
-import api from "@/axiosInstance";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardTitle } from "@/components/ui/card";
 import {
@@ -20,8 +19,7 @@ interface PilotCardsProps {
 
 function PilotCards({ nameFilter, priceFilter }: PilotCardsProps) {
     const pilots = usePilots();
-    const { user, updateUserDrivers, updateUserCoins } =
-        useContext(AuthContext);
+    const { user, updateUserDrivers } = useContext(AuthContext);
     const [pilotToReplace, setPilotToReplace] = useState<string | null>(null);
 
     useEffect(() => {
@@ -37,10 +35,6 @@ function PilotCards({ nameFilter, priceFilter }: PilotCardsProps) {
     }, [pilotToReplace]);
 
     async function buyPilot(pilot: string, price: number) {
-        const updatedDrivers = [...user?.drivers!, pilot];
-
-        console.log(updatedDrivers);
-
         if (user?.coins! < price) {
             alert("Your coins are not enough!");
             return;
@@ -49,12 +43,7 @@ function PilotCards({ nameFilter, priceFilter }: PilotCardsProps) {
         if (user?.drivers?.length! < 2) {
             if (!user?.drivers.includes(pilot)) {
                 const updatedDrivers = [...user?.drivers!, pilot];
-                updateUserDrivers(updatedDrivers);
-                updateUserCoins(price);
-                await api.put(`/users/${user?._id}`, {
-                    drivers: updatedDrivers,
-                    coins: user?.coins! - price,
-                });
+                await updateUserDrivers(updatedDrivers, price);
             } else {
                 alert("This driver already selected");
                 return;
@@ -72,12 +61,7 @@ function PilotCards({ nameFilter, priceFilter }: PilotCardsProps) {
         const updatedDrivers = user?.drivers.map((driver) =>
             driver === driverId ? newDriverId : driver
         );
-        updateUserDrivers(updatedDrivers!);
-        updateUserCoins(price);
-        await api.put(`/users/${user?._id}`, {
-            drivers: updatedDrivers,
-            coins: user?.coins! - price,
-        });
+        await updateUserDrivers(updatedDrivers!, price);
         setPilotToReplace(null);
     }
 
