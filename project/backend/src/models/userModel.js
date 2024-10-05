@@ -6,15 +6,21 @@ export const userSchema = new mongoose.Schema({
     email: String,
     imageUrl: String,
     password: String,
+    banner: String,
+    coins: Number,
+    points: Number,
     drivers: [
         {
             type: mongoose.Schema.Types.ObjectId,
             ref: "Driver",
         },
     ],
-    banner: String,
-    coins: Number,
-    points: Number,
+    friends: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User",
+        },
+    ],
 });
 
 export const User = mongoose.model("User", userSchema);

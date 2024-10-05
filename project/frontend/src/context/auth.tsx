@@ -10,6 +10,7 @@ interface User {
     imageUrl: string;
     banner: string;
     drivers: string[];
+    friends: string[];
     points: number;
     coins: number;
 }
@@ -20,6 +21,7 @@ interface AuthContextType {
     signOut: () => void;
     signIn: (email: string, password: string) => Promise<void>;
     updateUserDrivers: (drivers: string[], price: number) => void;
+    addFriend: (friendId: string) => void;
 }
 
 const defaultContextValue: AuthContextType = {
@@ -28,6 +30,7 @@ const defaultContextValue: AuthContextType = {
     signOut: () => {},
     signIn: async () => {},
     updateUserDrivers: () => {},
+    addFriend: () => {},
 };
 
 export const AuthContext = createContext<AuthContextType>(defaultContextValue);
@@ -98,6 +101,24 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
         }
     }
 
+    function addFriend(friendId: string) {
+        if (user) {
+            if (user.friends.includes(friendId)) {
+                return alert("This friend already in your list");
+            }
+            const updatedUser = {
+                ...user,
+                friends: [...(user?.friends || []), friendId],
+            };
+            setUser(updatedUser);
+            api.put(`/users/${user!._id}`, {
+                drivers: updatedUser.drivers,
+                coins: updatedUser.coins,
+            });
+            localStorage.setItem("@Auth:user", JSON.stringify(updatedUser));
+        }
+    }
+
     return (
         <AuthContext.Provider
             value={{
@@ -106,6 +127,7 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
                 signIn,
                 signOut,
                 updateUserDrivers,
+                addFriend,
             }}
         >
             {children}

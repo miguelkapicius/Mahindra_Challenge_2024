@@ -10,6 +10,7 @@ export interface User {
     email: string;
     imageUrl: string;
     drivers?: Array<string>;
+    friends?: Array<string>;
     banner: string;
     coins: number;
     points: number;
@@ -17,6 +18,7 @@ export interface User {
 
 export function useUsers() {
     const [users, setUsers] = useRecoilState<User[]>(usersState);
+
     useEffect(() => {
         api.get("/users").then((response) => {
             setUsers(response.data);
