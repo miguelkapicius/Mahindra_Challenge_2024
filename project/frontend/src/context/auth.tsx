@@ -110,10 +110,13 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
                 ...user,
                 friends: [...(user?.friends || []), friendId],
             };
+
             setUser(updatedUser);
             api.put(`/users/${user!._id}`, {
-                drivers: updatedUser.drivers,
-                coins: updatedUser.coins,
+                friends: updatedUser.friends,
+            });
+            api.put(`/users/${friendId}`, {
+                friends: [...(user?.friends || []), user._id],
             });
             localStorage.setItem("@Auth:user", JSON.stringify(updatedUser));
         }
