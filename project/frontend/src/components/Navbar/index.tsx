@@ -48,12 +48,6 @@ const stats: { title: string; href: string; description: string }[] = [
             "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
     },
     {
-        title: "Race History",
-        href: "/race-history",
-        description:
-            "Explore past Formula E race results, track the performance of your favorite teams and drivers, and relive the excitement of previous seasons.",
-    },
-    {
         title: "Sustainability in Motion",
         href: "/sustainability-in-motion",
         description:

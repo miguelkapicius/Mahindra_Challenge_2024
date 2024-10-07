@@ -22,7 +22,8 @@ import {
 
 export interface Pilot {
     id: String;
-    name: String;
+    firstname: string;
+    lastname: string;
     team: String;
     image: String;
     position: number;
@@ -49,12 +50,12 @@ export function PilotInfo({ pilot }: { pilot: Pilot }) {
                     <DrawerHeader className="flex items-center gap-4">
                         <img
                             src={`${pilot.image}`}
-                            alt={`${pilot.name}`}
+                            alt={`${pilot.firstname}`}
                             draggable="false"
                             className="rounded-full bg-accent object-cover size-20"
                         />
                         <div>
-                            <DrawerTitle>{pilot.name}</DrawerTitle>
+                            <DrawerTitle>{pilot.firstname}</DrawerTitle>
                             <DrawerDescription>{pilot.team}</DrawerDescription>
                         </div>
                     </DrawerHeader>

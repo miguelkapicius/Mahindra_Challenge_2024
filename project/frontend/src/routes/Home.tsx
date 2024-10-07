@@ -3,9 +3,14 @@ import { Leaderboard } from "@/components/Home/Leaderboard";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { NextRaceCountdown } from "@/components/Home/NextRaceCountdown";
-
+import { useState } from "react";
 
 export default function Home() {
+    const [isSimulating, setIsSimulating] = useState(false);
+
+    const startSimulation = () => {
+        setIsSimulating((prev) => !prev); // Alterna para iniciar a simulação
+    };
     return (
         <main className="grid grid-cols-1 lg:grid-cols-5 gap-6">
             <div className="grid col-span-full row-span-4 gap-4">
@@ -15,13 +20,19 @@ export default function Home() {
                             Next Race Countdown
                         </h2>
                         <NextRaceCountdown />
-                        <Button>Simulate Race</Button>
+                        <Button
+                            onClick={startSimulation}
+                            className={isSimulating ? "animate-pulse" : ""}
+                            disabled={isSimulating}
+                        >
+                            {isSimulating ? "Simulating..." : "Simulate Race"}
+                        </Button>
                     </div>
                 </Card>
                 <CarouselDisplay />
             </div>
             <div className="col-span-full">
-                <Leaderboard />
+                <Leaderboard onSimulateRace={isSimulating} />
             </div>
         </main>
     );
