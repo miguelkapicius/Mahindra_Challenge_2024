@@ -7,10 +7,20 @@ import { useState } from "react";
 
 export default function Home() {
     const [isSimulating, setIsSimulating] = useState(false);
+    const [isDisabled, setIsDisabled] = useState(false);
 
-    const startSimulation = () => {
-        setIsSimulating((prev) => !prev); // Alterna para iniciar a simulação
-    };
+    function startSimulation() {
+        setIsSimulating((prev) => !prev);
+    }
+
+    function handleClick() {
+        setIsDisabled(true);
+        setTimeout(() => {
+            setIsDisabled(false);
+            setIsSimulating(false);
+        }, 10000);
+    }
+
     return (
         <main className="grid grid-cols-1 lg:grid-cols-5 gap-6">
             <div className="grid col-span-full row-span-4 gap-4">
@@ -21,9 +31,11 @@ export default function Home() {
                         </h2>
                         <NextRaceCountdown />
                         <Button
-                            onClick={startSimulation}
+                            onClick={() => {
+                                startSimulation(), handleClick();
+                            }}
                             className={isSimulating ? "animate-pulse" : ""}
-                            disabled={isSimulating}
+                            disabled={isDisabled}
                         >
                             {isSimulating ? "Simulating..." : "Simulate Race"}
                         </Button>

@@ -24,7 +24,7 @@ export interface Pilot {
     id: String;
     firstname: string;
     lastname: string;
-    team: String;
+    team: string;
     image: String;
     position: number;
     time: String;

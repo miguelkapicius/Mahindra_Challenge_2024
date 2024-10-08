@@ -94,48 +94,44 @@ export function Leaderboard({ onSimulateRace }: { onSimulateRace: any }) {
                     </TableHead>
                 </TableRow>
             </TableHeader>
-            {isRacing && (
-                <TableBody>
-                    {simulatePilots
-                        .sort((a, b) => a.position - b.position)
-                        .map((pilot) => (
-                            <TableRow
-                                key={`${pilot.id}`}
-                                className="gap-y-2 md:gap-y-0 duration-150"
+            <TableBody>
+                {simulatePilots
+                    .sort((a, b) => a.position - b.position)
+                    .map((pilot) => (
+                        <TableRow
+                            key={`${pilot.id}`}
+                            className="gap-y-2 md:gap-y-0 duration-150"
+                        >
+                            <TableCell
+                                className={`text-center font-medium ${
+                                    pilot.position <= 3 && "text-green-500"
+                                } ${pilot.position >= 12 && "text-red-500"}`}
                             >
-                                <TableCell
-                                    className={`text-center font-medium ${
-                                        pilot.position <= 3 && "text-green-500"
-                                    } ${
-                                        pilot.position >= 12 && "text-red-500"
-                                    }`}
-                                >
-                                    {pilot.position}
-                                </TableCell>
-                                <TableCell className="flex items-center gap-2 md:gap-4 truncate">
-                                    <img
-                                        className="rounded-full size-8 md:size-10"
-                                        src={`${pilot.image}`}
-                                        alt={`${pilot.firstname}`}
-                                    />
-                                    {pilot.firstname} {pilot.lastname}
-                                </TableCell>
-                                <TableCell>{pilot.team}</TableCell>
-                                <TableCell className="hidden md:table-cell text-center">
-                                    {pilot.time}
-                                </TableCell>
-                                <TableCell>
-                                    <PilotInfo
-                                        pilot={{
-                                            ...pilot,
-                                            id: pilot.id,
-                                        }}
-                                    />
-                                </TableCell>
-                            </TableRow>
-                        ))}
-                </TableBody>
-            )}
+                                {pilot.position}
+                            </TableCell>
+                            <TableCell className="flex items-center gap-2 md:gap-4 truncate">
+                                <img
+                                    className="rounded-full size-8 md:size-10"
+                                    src={`${pilot.image}`}
+                                    alt={`${pilot.firstname}`}
+                                />
+                                {pilot.firstname} {pilot.lastname}
+                            </TableCell>
+                            <TableCell>{pilot.team}</TableCell>
+                            <TableCell className="hidden md:table-cell text-center">
+                                {pilot.time}
+                            </TableCell>
+                            <TableCell>
+                                <PilotInfo
+                                    pilot={{
+                                        ...pilot,
+                                        id: pilot.id,
+                                    }}
+                                />
+                            </TableCell>
+                        </TableRow>
+                    ))}
+            </TableBody>
         </Table>
     );
 }

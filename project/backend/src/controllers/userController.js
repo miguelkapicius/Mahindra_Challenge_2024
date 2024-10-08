@@ -28,8 +28,8 @@ export const createUser = async (req, res) => {
         banner: "https://i.imgur.com/Z5dzbZ0.png",
         drivers: [],
         friends: [],
-        coins: 120,
-        points: 0,
+        coins: 300,
+        points: 200,
     });
 
     await user

@@ -8,7 +8,6 @@ export function Simulate() {
     );
     const [isRacing, setIsRacing] = useState(false);
 
-    // Função para iniciar a corrida
     function startRace() {
         setIsRacing(true);
     }
