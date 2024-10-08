@@ -24,30 +24,17 @@ export default function TeamStats() {
 
     return (
         <section className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="col-span-full h-60 rounded drop-shadow-lg flex items-center">
-                <div className="w-1/2 flex flex-col gap-2 items-center justify-center h-full p-6 rounded-l bg-destructive-foreground text-muted-foreground">
-                    <img
-                        draggable="false"
-                        className="w-52"
-                        src={currentTeam?.logo}
-                        alt={currentTeam?.name}
-                    />
-                    <p>{currentTeam?.name}</p>
-                </div>
-                <div
-                    className="w-1/2 flex flex-col gap-2 items-center justify-center h-full p-6 rounded-r"
-                    style={{ backgroundColor: `${currentTeam?.color}` }}
-                >
-                    <img
-                        src={`${currentTeam?.carImage}`}
-                        alt={`${currentTeam?.carModel}`}
-                        draggable="false"
-                    />
-                    <p className="font-display text-destructive-foreground">
-                        Car Model: {currentTeam?.carModel}
-                    </p>
-                </div>
+            <div className="col-span-full flex flex-col gap-2 items-center justify-center h-full p-6 rounded drop-shadow-lg bg-destructive-foreground text-muted-foreground font-display">
+                <img
+                    draggable="false"
+                    className="w-52"
+                    src={currentTeam?.logo}
+                    alt={currentTeam?.name}
+                />
+                <p className="text-black">{currentTeam?.name}</p>
+                <p>Car Model: {currentTeam?.carModel}</p>
             </div>
+
             <div className="col-span-full grid flex-col grid-cols-1 lg:grid-cols-3 gap-6">
                 <WinsChart
                     data={currentTeam?.winsChart}

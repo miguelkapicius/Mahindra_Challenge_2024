@@ -21,14 +21,15 @@ export default function Teams() {
                         key={`{$team._id}`}
                         to={`${team.teamRef.toLowerCase()}`}
                     >
-                        <Card className="hover:scale-105 duration-500">
-                            <CardHeader>
+                        <Card className="hover:scale-105 duration-500 bg-destructive-foreground text-black">
+                            <CardHeader className="flex items-center justify-center gap-6">
                                 <h2 className="font-display text-xl">
                                     {team.teamRef}
                                 </h2>
                                 <img
-                                    src={`${team.carImage}`}
+                                    src={`${team.logo}`}
                                     alt={`${team.teamRef}`}
+                                    className="w-72"
                                 />
                             </CardHeader>
                             <CardContent>
