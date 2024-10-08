@@ -23,6 +23,12 @@ export const teamSchema = new mongoose.Schema({
             month: String,
         },
     ],
+    pilots: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Driver",
+        },
+    ],
 });
 
 export const Team = mongoose.model("Team", teamSchema);
