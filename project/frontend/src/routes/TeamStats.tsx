@@ -1,6 +1,14 @@
 import { PodiumsChart } from "@/components/TeamsStats/PodiumsChart";
 import { WinsChart } from "@/components/TeamsStats/WinsChart";
-import { Card, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import {
+    TableHeader,
+    TableRow,
+    TableHead,
+    TableBody,
+    TableCell,
+    Table,
+} from "@/components/ui/table";
 import { useTeams } from "@/hooks/useTeams";
 
 export default function TeamStats() {
@@ -55,7 +63,7 @@ export default function TeamStats() {
                 </Card>
             </div>
             <div className="space-y-6 col-span-full">
-                {/* {currentTeam?.pilots!.map((pilot) => (
+                {currentTeam?.pilots!.map((pilot) => (
                     <Card className="flex flex-col pt-6 md:flex-row items-center gap-6">
                         <img
                             className="object-cover bg-accent md:bg-transparent p-6 pb-0 rounded w-1/3"
@@ -93,7 +101,7 @@ export default function TeamStats() {
                             </Table>
                         </CardContent>
                     </Card>
-                ))} */}
+                ))}
             </div>
         </section>
     );
