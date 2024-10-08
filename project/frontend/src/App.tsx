@@ -2,7 +2,6 @@ import { Link, Navigate, NavLink, Outlet } from "react-router-dom";
 import { Coins } from "./components/Coins";
 import { ModeToggle } from "./components/mode-toggle";
 import { Navbar } from "./components/Navbar";
-import { Notification } from "./components/Notifications";
 import { Button } from "./components/ui/button";
 import { Users } from "lucide-react";
 import { Footer } from "./components/Footer";
@@ -27,7 +26,6 @@ export function App() {
                                 />
                             </Link>
                             <ModeToggle />
-                            <Notification />
                             <NavLink to="/friends-rivals">
                                 <Button
                                     size="icon"
