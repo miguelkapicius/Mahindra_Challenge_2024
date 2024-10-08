@@ -9,7 +9,7 @@ import {
 export const driverRouter = Router();
 const URL = "/drivers";
 
-driverRouter.get(URL, getDrivers);
-driverRouter.post(URL, createDriver);
-driverRouter.put(URL, updateDriver);
-driverRouter.delete(URL, deleteDriver);
+driverRouter.get("/drivers", getDrivers);
+driverRouter.post("/drivers", createDriver);
+driverRouter.put("/drivers/:id", updateDriver);
+driverRouter.delete("/drivers/:id", deleteDriver);

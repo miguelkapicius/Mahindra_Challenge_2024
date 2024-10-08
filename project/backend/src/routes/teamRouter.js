@@ -11,5 +11,5 @@ const URL = "/teams";
 
 teamRouter.get(URL, getTeams);
 teamRouter.post(URL, createTeam);
-teamRouter.put(URL, updateTeam);
-teamRouter.delete(URL, deleteTeam);
+teamRouter.put("/teams/:id", updateTeam);
+teamRouter.delete("/teams/:id", deleteTeam);
