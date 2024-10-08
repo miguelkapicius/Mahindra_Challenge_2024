@@ -35,7 +35,6 @@ export function Leaderboard({ onSimulateRace }: { onSimulateRace: any }) {
 
     const [isRacing, setIsRacing] = useState(false);
 
-    // Função para embaralhar as posições
     const shufflePositions = (pilotsArray: any) => {
         const positions = pilotsArray.map((_: any, index: any) => index + 1);
 
@@ -53,7 +52,6 @@ export function Leaderboard({ onSimulateRace }: { onSimulateRace: any }) {
         }));
     };
 
-    // Função de simulação da corrida
     useEffect(() => {
         if (isRacing) {
             const interval = setInterval(() => {
