@@ -13,7 +13,6 @@ export interface IPilot {
     podiums: number;
     points: number;
     price: number;
-    team: string;
     time: "08:32";
     speed: 320;
     battery: 95;
