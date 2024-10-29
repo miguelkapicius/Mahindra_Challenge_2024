@@ -11,8 +11,10 @@ export default function Fantasy() {
         <main className="space-y-6">
             <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
                 <Input
-                    placeholder="Search by pilot or team name"
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNameFilter(e.target.value)}
+                    placeholder="Search by pilot name"
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                        setNameFilter(e.target.value)
+                    }
                 />
                 <div className="flex items-center gap-2">
                     <PriceFilter
@@ -21,10 +23,7 @@ export default function Fantasy() {
                     />
                 </div>
             </div>
-            <PilotCard
-                nameFilter={nameFilter}
-                priceFilter={priceFilter}
-            />
+            <PilotCard nameFilter={nameFilter} priceFilter={priceFilter} />
         </main>
     );
 }

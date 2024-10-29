@@ -187,9 +187,6 @@ function PilotCards({ nameFilter, priceFilter }: PilotCardsProps) {
                             (nameFilter
                                 ? pilot.firstname
                                       .toLowerCase()
-                                      .includes(nameFilter.toLowerCase()) ||
-                                  pilot.team
-                                      .toLowerCase()
                                       .includes(nameFilter.toLowerCase())
                                 : true) &&
                             (priceFilter > 0
@@ -217,12 +214,6 @@ function PilotCards({ nameFilter, priceFilter }: PilotCardsProps) {
                                         <TableCell className="font-medium">
                                             {pilot.firstname} {pilot.lastname}
                                         </TableCell>
-                                    </TableRow>
-                                    <TableRow>
-                                        <TableHead className="text-left">
-                                            Team
-                                        </TableHead>
-                                        <TableCell>{pilot.team}</TableCell>
                                     </TableRow>
                                     <TableRow>
                                         <TableHead className="text-left">
