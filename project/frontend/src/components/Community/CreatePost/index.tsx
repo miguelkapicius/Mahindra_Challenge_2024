@@ -1,9 +1,9 @@
+import api from "@/axiosInstance";
 import { ProfileAvatar } from "@/components/Avatar";
 import { Button } from "@/components/ui/button";
 import { Card, CardFooter, CardHeader } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { AuthContext } from "@/context/auth";
-import axios from "axios";
 import { Camera, Image, MapPin, Paperclip } from "lucide-react";
 import { useContext, useState } from "react";
 
@@ -11,7 +11,7 @@ export function CreatePost() {
     const [postContent, setPostContent] = useState("");
     const { user } = useContext(AuthContext);
     async function onHandleSubmit() {
-        await axios.post("http://localhost:3000/posts", {
+        await api.post("/posts", {
             author: user?._id,
             content: postContent,
         });

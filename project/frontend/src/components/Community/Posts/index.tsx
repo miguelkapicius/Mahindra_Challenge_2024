@@ -1,3 +1,4 @@
+import api from "@/axiosInstance";
 import { ProfileAvatar } from "@/components/Avatar";
 import {
     Card,
@@ -27,7 +28,7 @@ interface Post {
 export function Posts() {
     const [posts, setPosts] = useState<Post[]>([]);
     useEffect(() => {
-        axios.get("http://localhost:3000/posts").then((response) => {
+        api.get("/posts").then((response) => {
             setPosts(response.data);
         });
     }, [posts]);
