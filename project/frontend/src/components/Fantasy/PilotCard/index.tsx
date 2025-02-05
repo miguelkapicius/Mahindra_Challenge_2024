@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/table";
 import { AuthContext } from "@/context/auth";
 import { usePilots } from "@/hooks/usePilots";
-import { useTeams } from "@/hooks/useTeams";
 import { CoinsIcon, Replace } from "lucide-react";
 import { memo, useContext, useEffect, useState } from "react";
 
@@ -20,7 +19,6 @@ interface PilotCardsProps {
 
 function PilotCards({ nameFilter, priceFilter }: PilotCardsProps) {
     const pilots = usePilots();
-    const teams = useTeams();
     const { user, updateUserDrivers } = useContext(AuthContext);
     const [pilotToReplace, setPilotToReplace] = useState<string | null>(null);
 
@@ -67,24 +65,6 @@ function PilotCards({ nameFilter, priceFilter }: PilotCardsProps) {
         setPilotToReplace(null);
     }
 
-    function getPilotTeams(pilots: any, teams: any) {
-        return pilots.map((pilot: any) => {
-            const team = teams.find((t: any) => t.pilotIds.includes(pilot._id));
-            return {
-                ...pilot,
-                team: team ? team.name : "No Team", // Se não encontrar time, coloca "No Team"
-            };
-        });
-    }
-
-    const pilotsWithTeams = pilots.map((pilot) => {
-        const team = teams.find((t) => t.pilots?.includes(pilot._id));
-        return {
-            ...pilot,
-            team: team ? team.name : "No Team",
-        };
-    });
-
     return (
         <>
             {pilotToReplace !== null && (
@@ -129,9 +109,6 @@ function PilotCards({ nameFilter, priceFilter }: PilotCardsProps) {
                                                         <TableHead className="text-left">
                                                             Team
                                                         </TableHead>
-                                                        <TableCell>
-                                                            {pilot.team}
-                                                        </TableCell>
                                                     </TableRow>
                                                     <TableRow>
                                                         <TableHead className="text-left">

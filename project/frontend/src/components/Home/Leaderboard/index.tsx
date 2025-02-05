@@ -7,7 +7,6 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table";
-import { PilotInfo } from "../PilotInfo";
 import { usePilots } from "@/hooks/usePilots";
 import { useEffect, useState } from "react";
 
