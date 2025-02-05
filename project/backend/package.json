@@ -2,7 +2,7 @@
     "name": "backend",
     "version": "1.0.0",
     "main": "app.js",
-    "type": "module",
+    "type": "commonjs",
     "scripts": {
         "build": "npm install && npx babel src --out-dir dist",
         "start": "node dist/server.js",
