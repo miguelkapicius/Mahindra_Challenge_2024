@@ -12,9 +12,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { FormEvent, useContext, useEffect, useState } from "react";
+import { FormEvent, useContext, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
-import { GithubIcon } from "lucide-react";
 
 export default function Login() {
     const [loginEmail, setLoginEmail] = useState("");
