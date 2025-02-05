@@ -21,7 +21,6 @@ export function Leaderboard({ onSimulateRace }: { onSimulateRace: any }) {
             image: pilot.image,
             firstname: pilot.firstname,
             lastname: pilot.lastname,
-            team: pilot.team,
             time: "08:32",
             speed: 320,
             battery: 95,
@@ -115,17 +114,8 @@ export function Leaderboard({ onSimulateRace }: { onSimulateRace: any }) {
                                 />
                                 {pilot.firstname} {pilot.lastname}
                             </TableCell>
-                            <TableCell>{pilot.team}</TableCell>
                             <TableCell className="hidden md:table-cell text-center">
                                 {pilot.time}
-                            </TableCell>
-                            <TableCell>
-                                <PilotInfo
-                                    pilot={{
-                                        ...pilot,
-                                        id: pilot.id,
-                                    }}
-                                />
                             </TableCell>
                         </TableRow>
                     ))}
